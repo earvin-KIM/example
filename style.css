@@ -1,0 +1,39 @@
+.header {
+  background: gray;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h1 {
+  margin: auto;
+}
+table,
+td,
+tr {
+  border: solid 2px black;
+  text-align: center;
+}
+table {
+  margin: auto;
+  width: 90vw;
+}
+tr,
+td {
+  height: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.button {
+  text-align: center;
+}
+button {
+  margin-left: 10px;
+}
+#t_2 {
+  display: none;
+}
