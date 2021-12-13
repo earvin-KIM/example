@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+}
+#mg {
+  width: 1920px;
+  height: 150px;
+  background: yellow;
+}
+#header {
+  width: 100vw;
+  height: 150px;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  text-transform: uppercase;
+  background: white;
+  padding-top: 10px;
+  z-index: 10;
+}
+.banner:hover {
+  font-weight: bold;
+}
+
+#headertel,
+#headergb,
+#headerb {
+  display: inline;
+  margin-left: 10px;
+}
+.banner {
+  font-size: 20px;
+  display: inline-block;
+  margin: 50px;
+}
+a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+}
+#logo {
+  font-size: 20px;
+}
+article {
+  text-align: center;
+}
+#slide1 {
+  background-image: url(./img/banner11.png);
+}
+
+#slide2 {
+  background-image: url(./img/banner12.png);
+}
+
+#slide3 {
+  background-image: url(./img/banner13.png);
+}
+
+#slideshow {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+}
+.slide {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 800px;
+  margin: 0 auto;
+  max-width: 100%;
+  transition: opacity 300ms;
+  z-index: 1;
+}
+
+.slidecontent {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+#space {
+  height: 800px;
+  margin-bottom: 50px;
+}
+#plan,
+#delivery,
+#design,
+#structure {
+  display: inline-block;
+  margin-left: 20px;
+  transition: 1s;
+  border: solid black 2px;
+  width: 280px;
+  height: 460px;
+  overflow: hidden;
+}
+/* #plan {
+  background: url(./img/main1_plan.png);
+  background-position: center;
+}
+#delivery {
+  background: url(./img/main1_deliv.png);
+  background-position: center;
+}
+#design {
+  background: url(./img/main1_design.png);
+  background-position: center;
+}
+#structure {
+  background: url(./img/main1_struct.png);
+  background-position: center;
+} */
+#plan:hover {
+  background: url(./img/main1_plan_over.png);
+  background-size: 110%;
+  background-position: center;
+}
+#delivery:hover {
+  background: url(./img/main1_deliv_over.png);
+  background-position: center;
+  background-size: 110%;
+}
+#design:hover {
+  background: url(./img/main1_design_over.png);
+  background-position: center;
+  background-size: 110%;
+}
+#structure:hover {
+  background: url(./img/main1_struct_over.png);
+  background-size: 110%;
+  background-position: center;
+}
+.intro > img {
+  width: 100vw;
+  margin-bottom: 100px;
+}
+#plan,
+#delivery,
+#design,
+#structure {
+  margin-bottom: 100px;
+}
+
+#bottom {
+  text-align: center;
+}

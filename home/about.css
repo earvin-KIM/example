@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+#mg {
+  width: 100vw;
+  height: 150px;
+  background: yellow;
+}
+#header {
+  width: 100vw;
+  height: 150px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  text-transform: uppercase;
+  background: white;
+}
+#headertel,
+#headergb,
+#headerb {
+  display: inline;
+  margin-left: 10px;
+}
+.banner {
+  font-size: 20px;
+  display: inline-block;
+  margin: 50px;
+}
+a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+}
+#logo {
+  font-size: 20px;
+}
+#about {
+  text-align: center;
+}

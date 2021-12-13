@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style_page.css">
 </head>
 <body>
-    <div class=top><h1><a href="./board_home.php">홈화면</a></h1></div>
+    <div class=top><h1><a href="./portfolio.php">홈화면</a></h1></div>
     <div class=para>
     <?php
     $conn=mysqli_connect(

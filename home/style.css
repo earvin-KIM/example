@@ -18,11 +18,11 @@ tr {
 }
 table {
   margin: auto;
-  width: 90vw;
+  max-width: 90vw;
 }
 tr,
 td {
-  height: 30px;
+  width: fit-content;
 }
 a {
   text-decoration: none;
@@ -34,6 +34,9 @@ a {
 button {
   margin-left: 10px;
 }
-#t_2 {
+table {
   display: none;
+}
+#t_1 {
+  display: table;
 }

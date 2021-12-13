@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+}
+#mg {
+  width: 1920px;
+  height: 150px;
+  background: yellow;
+}
+#header {
+  width: 100vw;
+  height: 150px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  text-transform: uppercase;
+  background: white;
+}
+#headertel,
+#headergb,
+#headerb {
+  display: inline;
+  margin-left: 10px;
+}
+.banner {
+  font-size: 20px;
+  display: inline-block;
+  margin: 50px;
+}
+a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+}
+#logo {
+  font-size: 20px;
+}
+article {
+  text-align: center;
+}
+article > div > img {
+  width: 100vw;
+}
+#bottom {
+  text-align: center;
+}
+#foot {
+  width: 100vw;
+}
