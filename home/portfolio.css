@@ -22,6 +22,9 @@
   display: inline;
   margin-left: 10px;
 }
+.banner:hover {
+  font-weight: bold;
+}
 .banner {
   font-size: 20px;
   display: inline-block;
@@ -67,9 +70,12 @@ a {
 button {
   margin-left: 10px;
 }
-table {
-  display: none;
+ul li {
+  list-style: none;
+  float: none;
+  display: inline-block;
+  margin-left: 20px;
 }
-#t_1 {
-  display: table;
+.page_b {
+  text-align: center;
 }

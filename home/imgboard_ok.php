@@ -1,13 +1,14 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/과제/db.php";
+    include $_SERVER['DOCUMENT_ROOT']."/home/db.php";
      $filename=$_FILES['filepath']['name'];
     // $uploads = pathinfo($_POST['filepath'], PATHINFO_DIRNAME);
-    $folder="./upload/".$filename;
+    $randfile=rand().$filename;
+    $folder="./upload/".$randfile;
     move_uploaded_file($_FILES['filepath']['tmp_name'],$folder);
 //    echo $uploads;
    
     if($filename){
-    $sql=mq("insert into board(img_path) values('".$filename."')");
+    $sql=mq("insert into board(img_path) values('".$randfile."')");
     echo "<script>
     alert('글쓰기 완료되었습니다.');
     location.href='portfolio.php';</script>";

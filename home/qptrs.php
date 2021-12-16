@@ -6,26 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    link
     <link rel="stylesheet" href="./qptrs.css">
-    <script src="https://kit.fontawesome.com/dc4edc30cd.js" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="mg"></div>
     <div id="header">
 
-        <a href="qptrs.html" id="logo"><img src="./img/header_logo-top.png" alt=""></a>
+        <a href="qptrs.php" id="logo"><img src="./img/header_logo-top.png" alt=""></a>
         <div class="banner">
-            <a href="about.html">about us</a>
+            <a href="about.php">about us</a>
         </div>
         <div class="banner">
-            <a href="ourwork.html">our work</a>
+            <a href="ourwork.php">our work</a>
         </div>
         <div class="banner">
-            <a href="http://localhost/%EA%B3%BC%EC%A0%9C/portfolio.php">portfolio</a>
+            <a href="http://localhost/home/portfolio.php">portfolio</a>
         </div>
         <div class="banner">
-            <a href="contact us.html">contact us</a>
+            <a href="contact us.php">contact us</a>
         </div>
         <div id="headertel"><img src="./img/header_tel.png" alt=""></div>
         <div id="headergb"><img src="./img/header_goodbox.png" alt=""></div>
@@ -55,29 +58,14 @@
 
         <div id="space"></div>
         <!-- 아래쪽 -->
-        <div id="plan"><img id="plan_" src="./img/main1_plan.png" alt="">
-            <script type='text/javascript'>
-                var plan = document.getElementById("plan_");
-                plan.src = "./img/main1_plan_over.png";
-            </script>
+        <div id="plan">
         </div>
-        <div id="delivery"><img id="delivery_" src="./img/main1_deliv.png" alt="">
-            <script type='text/javascript'>
-                var delivery = document.getElementById("delivery_");
-                delivery.src = "./img/";
-            </script>
+        <div id="delivery">
+            
         </div>
-        <div id="design"><img id="design_" src="./img/main1_design.png" alt="">
-            <script type='text/javascript'>
-                var design = document.getElementById("design_");
-                design.src = "b.jpg";
-            </script>
+        <div id="design">
         </div>
-        <div id="structure"><img id="structure_" src="./img/main1_struct.png" alt="">
-            <script type='text/javascript'>
-                var structure = document.getElementById("structure_");
-                structure.src = "b.jpg";
-            </script>
+        <div id="structure">
         </div>
 
     </article>

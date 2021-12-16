@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact us</title>
+    <title>portfolio</title>
     <link rel="stylesheet" href="./portfolio.css">
     
     
@@ -15,18 +15,18 @@
         <div id="mg"></div>
     <div id="header">
 
-        <a href="qptrs.html" id="logo"><img src="./img/header_logo-top.png" alt=""></a>
+        <a href="qptrs.php" id="logo"><img src="./img/header_logo-top.png" alt=""></a>
         <div class="banner">
-            <a href="about.html">about us</a>
+            <a href="about.php">about us</a>
         </div>
         <div class="banner">
-            <a href="ourwork.html">our work</a>
+            <a href="ourwork.php">our work</a>
         </div>
         <div class="banner">
-            <a href="portfolio.html">portfolio</a>
+            <a href="portfolio.php">portfolio</a>
         </div>
         <div class="banner">
-            <a href="contact us.html">contact us</a>
+            <a href="contact us.php">contact us</a>
         </div>
         <div id="headertel"><img src="./img/header_tel.png" alt=""></div>
         <div id="headergb"><img src="./img/header_goodbox.png" alt=""></div>
@@ -46,74 +46,92 @@
     // 변수들
     $cntr=1;
     $i=1;
-    $page=1;
-    $row_per_page=12;
-    $head="SELECT _id, _head FROM board WHERE _id=$i";
-    $heads="SELECT _id, _head FROM board";
-    $sql="SELECT paragraph FROM board WHERE _id=$i";
-    $h_result=mysqli_query($conn, $head);$h_results=mysqli_query($conn, $heads);
-    $p_result=mysqli_query($conn,$sql);
-    $total_rows=mysqli_num_rows($h_results);
-    $total_page=ceil($total_rows/$row_per_page);
-    if($row_per_page>$total_rows)$total_page=1;
-
+      if(isset($_GET['page'])){
+    $page = $_GET['page'];
+    }else{
+    $page = 1;
+    }
+        if(isset($_GET['page'])){
+    $page = $_GET['page'];
+    }else{
+    $page = 1;
+    }
+    $sql = mysqli_query($conn,"select * from board");
+    $row_num = mysqli_num_rows($sql); //게시판 총 레코드 수
+    $list = 9; //한 페이지에 보여줄 개수
+    $block_ct = 5; //블록당 보여줄 페이지 개수
+    $block_num = ceil($page/$block_ct); // 현재 페이지 블록 구하기
+    $block_start = (($block_num - 1) * $block_ct) + 1; // 블록의 시작번호
+    $block_end = $block_start + $block_ct - 1; //블록 마지막 번호
+    $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
+    if($block_end > $total_page) $block_end = $total_page; //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
+    $total_block = ceil($total_page/$block_ct); //블럭 총 개수
+    $start_num = ($page-1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
+    $mq="SELECT * FROM board ORDER BY _id DESC LIMIT $start_num, $list";
+    $sql2=mysqli_query($conn,$mq);
+    $i=1;
     // 게시판 글 목록
     echo'<div>';
-    
-    
-        while($i<=$total_rows){
-            if($i==$total_rows+1)break;
-            echo"<table id=t_$page class=tb>";
-            while($cntr<=$row_per_page){
-                if($i==$total_rows+1)break;
-                $head="SELECT * FROM board WHERE _id=$i";
-                $h_result=mysqli_query($conn, $head); //매 주기마다 새로 선언
-                $row=mysqli_fetch_array($h_result);
-                
-                echo '<td   class=_head>',
-                "<a href='./board_page.php?_id=$i'>", 
-                '<img src="',
-                './upload/',
-                $row['img_path'],
-                '" alt="사진">',"</a>",//사진형식 통일 시켜야함
-                "</td>"; //한주기당 한 tr사용
-                if($i%3==0)
-                    echo "</tr>";
-                $cntr++;
-                $i++;
-                // echo"$row[img_path]";
-            }
-            echo"</table>";
-            $page++;
-            $cntr=1;
+    echo'<table>';
+    while($board=$sql2->fetch_array()){
+        if($i%3==1){echo'<tr>';}
+        if($board["img_path"]==null){
+            $src2=$board["_id"];
+            $title=$board["_head"];
+            echo "<td><a href='board_page.php?_id=$src2';><img src=img/noimg.png></a></td>";
+                    } else {
+                        $src = $board["img_path"];
+                        $src2 = $board["_id"];
+                        echo "<td><a href='board_page.php?_id=$src2';><img src=upload/$src></a></td>"; 
+                    }
+                    if($i%3==0){echo'</tr>';}
+                    $i++;
         }
-
+        echo'</table>';
+        echo '<div class="page_b">';
+        echo "<ul>";
+         if($page <= 1)
+                    { //만약 page가 1보다 크거나 같다면
+                        echo "<li class='fo_re'>처음</li>"; //처음이라는 글자에 빨간색 표시 
+                    }else{
+                        echo "<li><a href='?page=1'>처음</a></li>"; //알니라면 처음글자에 1번페이지로 갈 수있게 링크
+                    }
+                    if($page <= 1)
+                    { //만약 page가 1보다 크거나 같다면 빈값
+                        
+                    }else{
+                        $pre = $page-1; //pre변수에 page-1을 해준다 만약 현재 페이지가 3인데 이전버튼을 누르면 2번페이지로 갈 수 있게 함
+                        echo "<li><a href='?page=$pre'>이전</a></li>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
+                    }
+                    for($i=$block_start; $i<=$block_end; $i++){ 
+                        //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
+                        if($page == $i){ //만약 page가 $i와 같다면 
+                        echo "<li class='fo_re'>[$i]</li>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
+                        }else{
+                        echo "<li><a href='?page=$i'>[$i]</a></li>"; //아니라면 $i
+                        }
+                    }
+                    if($block_num >= $total_block){ //만약 현재 블록이 블록 총개수보다 크거나 같다면 빈 값
+                        
+                         
+                         
+                    }else{
+                        $next = $page + 1;//next변수에 page + 1을 해준다.
+                        echo "<li><a href='?page=$next'>다음</a></li>";//다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
+                        // echo "<li><a href='?page=$next'></a></li>";
+                        
+                    }
+                    if($page >= $total_page){ //만약 page가 페이지수보다 크거나 같다면
+                        echo "<li class='fo_re'>마지막</li>"; //마지막 글자에 긁은 빨간색을 적용한다.
+                    }else{
+                        echo "<li><a href='?page=$total_page'>마지막</a></li>"; //아니라면 마지막글자에 total_page를 링크한다.
+                    }
+             echo "</ul>";
+             echo"</div>";
+          
     echo'</div>';
     // 페이지 버튼
-    echo "<div class=button>";
-        
-        //  <!-- 버튼이벤트 -->
-        $i=1;
-        while($i<=$total_page){
-            echo "<button type='button' class=tb$i onclick='test$i()'>$i</button>"; 
-            echo (
-            "<script language=javascript> 
-            function test$i() 
-            {
-                var matches = document.getElementsByClassName('tb');
-                    for (var i=0; i<matches.length; i++){
-                        matches[i].style.display='none';
-                    }
-                matches[$i-1].style.display='table';
-            }
-            </script>");
-            $i++; 
-        
-        }
-        //  <!-- 버튼이벤트 -->
-        
-        
-        echo "</div>";
+
 ?>
 <!-- 파일 업로드 버튼 -->
 <button><a href="imgboard.php">이미지 추가</a></button>

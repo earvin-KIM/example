@@ -1,11 +1,7 @@
 * {
   margin: 0;
 }
-#mg {
-  width: 1920px;
-  height: 150px;
-  background: yellow;
-}
+
 #header {
   width: 100vw;
   height: 150px;
@@ -95,7 +91,7 @@ article {
   height: 460px;
   overflow: hidden;
 }
-/* #plan {
+#plan {
   background: url(./img/main1_plan.png);
   background-position: center;
 }
@@ -110,7 +106,7 @@ article {
 #structure {
   background: url(./img/main1_struct.png);
   background-position: center;
-} */
+}
 #plan:hover {
   background: url(./img/main1_plan_over.png);
   background-size: 110%;

@@ -15,6 +15,9 @@
   text-transform: uppercase;
   background: white;
 }
+.banner:hover {
+  font-weight: bold;
+}
 #headertel,
 #headergb,
 #headerb {

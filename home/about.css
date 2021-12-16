@@ -2,6 +2,9 @@
   /* ddd */
   margin: 0;
 }
+.banner:hover {
+  font-weight: bold;
+}
 #mg {
   width: 100vw;
   height: 150px;
