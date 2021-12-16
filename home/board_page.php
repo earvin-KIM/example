@@ -24,6 +24,8 @@
     <h1><?php $pa=mysqli_fetch_array($p_result);
         echo ($pa["paragraph"]);
     ?></h1>
+    <button><a href="imgdel.php">이미지 제거</a></button>
+    <button><a href="imgre.php">이미지 수정</a></button>
     </div>
 </body>
 </html>
