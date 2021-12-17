@@ -6,9 +6,9 @@
     $sql2=mq("SELECT * FROM board WHERE _id=$_id");
 	$board = $sql2->fetch_array();
     unlink("./upload/".$board['img_path']);
-    $sql=mq("DELETE FROM board WHERE _id='$_id';");
-    
-    
- ?>
- <script type="text/javascript">alert("삭제되었습니다.");</script>
+    $sql=mq("DELETE FROM board WHERE _id='$_id';");    
+?>
+<script type="text/javascript">
+alert("삭제되었습니다.");
+</script>
 <meta http-equiv="refresh" content="0 url=portfolio.php" />
