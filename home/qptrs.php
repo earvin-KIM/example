@@ -10,7 +10,9 @@
     link
     <link rel="stylesheet" href="./qptrs.css">
     <script src="./js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/home/db.php'; ?>
 </head>
 
 <body>
@@ -42,15 +44,15 @@
         <div id="slideshow">
 
             <div id="slide1" class="slide">
-                <span class="slidecontent"></span>
+                <span class="slidecontent"><img src=<?php echo './img/banner11.png'; ?> alt=""></span>
             </div>
 
             <div id="slide2" class="slide">
-                <span class="slidecontent"></span>
+                <span class="slidecontent"><img src=<?php echo './img/banner12.png'; ?> alt=""></span>
             </div>
 
             <div id="slide3" class="slide">
-                <span class="slidecontent"></span>
+                <span class="slidecontent"><img src=<?php echo './img/banner13.png'; ?> alt=""></span>
             </div>
 
         </div>
@@ -61,7 +63,7 @@
         <div id="plan">
         </div>
         <div id="delivery">
-            
+
         </div>
         <div id="design">
         </div>

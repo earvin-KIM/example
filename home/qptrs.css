@@ -38,7 +38,7 @@ a {
 article {
   text-align: center;
 }
-#slide1 {
+/* #slide1 {
   background-image: url(./img/banner11.png);
 }
 
@@ -48,7 +48,7 @@ article {
 
 #slide3 {
   background-image: url(./img/banner13.png);
-}
+} */
 
 #slideshow {
   position: relative;
