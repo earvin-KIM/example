@@ -30,8 +30,8 @@
     <!-- summernote -->
     <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/summernote/summernote-bs4.min.css">
     <?php
-    include "inc_head.php";
-    include $_SERVER['DOCUMENT_ROOT']."/adminpage/admin_db.php";
+    include 'inc_head.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_db.php';
     ?>
 
 </head>
@@ -50,9 +50,7 @@
             </li>
         </ul>
     </nav>
-    <?php 
-    if($jb_login==TRUE){
-        ?>
+    <?php if ($jb_login == true) { ?>
     <section class="content">
         <div class="container-fluid">
             <div class="small-box bg-info">
@@ -74,18 +72,18 @@
             </div>
 
             <div class="small-box bg-danger">
-                <div class="inner">
-
+                <div class="inner" style="text-align:center;">
                     <a href="boardadmin.php">
-                        <h1>게시물 일괄관리</h1>
+                        <h1 style="color:white;">게시물 일괄관리</h1>
                     </a>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <?php
-    }
-    else{?>
+    <?php } else { ?>
     <meta http-equiv="refresh" content="0 url=admin_login.php" />
     <?php } ?>
 </body>
