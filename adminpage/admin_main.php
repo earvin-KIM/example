@@ -57,7 +57,7 @@
                 <div class="icon"><i class="ion ion-pie-graph"></i></div>
                 <div class="inner" style="text-align:center;">
                     <h1>슬라이드 이미지 변경</h1>
-                    <form action="admin_slideimgchange.php" method="post">
+                    <form action="admin_slideimgchange.php" enctype="multipart/form-data" method="post">
                         <p>1번 슬라이드 &nbsp <label for="f1">업로드</label><input id="f1" type="file" name="s_1"
                                 style="display:none;">
                         </p>
@@ -67,6 +67,7 @@
                         <p>3번 슬라이드 &nbsp<label for="f3">업로드</label><input id="f3" type="file" name="s_3"
                                 style="display:none;">
                         </p>
+                        <p><button type="submit">저장</button></p>
                     </form>
                 </div>
             </div>

@@ -1,31 +1,24 @@
 <?php
-    include "inc_head.php";
-    include $_SERVER['DOCUMENT_ROOT']."/adminpage/admin_db.php";
+include 'inc_head.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_db.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <?php 
-    if($jb_login){
-        $ic1=$_FILES["s_1"]["name"];
-        $ic2=$_FILES["s_2"]["name"];
-        $ic3=$_FILES["s_3"]["name"];
-        $folder1="../upload".$ic1;
-        $folder2="../upload".$ic2;
-        $folder3="../upload".$ic3;
-        move_uploaded_file($_FILES[''])
+<?php if ($jb_login) {
+  for ($i = 1; $i <= 3; $i++) {
+    $filename = $_FILES["s_$i"]['name'];
+    $randfile = rand() . $filename; //파일명 string에 난수 합침
+    $folder = './bannerimg/' . $randfile;
+    //저장할 경로를 난수로 겹치지 않게 지정해줌
+    if ($filename != null) {
+      move_uploaded_file($_FILES["s_$i"]['tmp_name'], $folder); //폴더에 서버 임시 이미지 파일 저장
+      $sqld = mqd("update board_front set img_path='$randfile' where id='$i' ");
     }
-    else{?>
-    <meta http-equiv="refresh" content="0 url=admin_login.php" />
-    <?php } ?>
-</body>
-
-</html>
+    echo "<script>  	
+    alert('글쓰기 완료되었습니다.'); 
+    location.href='admin_main.php';</script>";
+  }
+} else {
+   ?>
+<meta http-equiv="refresh" content="0 url=admin_login.php" />
+<?php
+} ?>

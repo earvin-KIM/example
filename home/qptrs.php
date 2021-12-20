@@ -12,7 +12,13 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/home/db.php'; ?>
+    <?php
+    include $_SERVER['DOCUMENT_ROOT'] . '/home/db.php';
+    $i = 1;
+    $sql = mq('SELECT * FROM board_front ');
+
+//id에 따라 데이터 가져옴.
+?>
 </head>
 
 <body>
@@ -42,18 +48,20 @@
         <div class="intro" id="bgtwo"><img src="./img/banner12.png" alt=""></div>
         <div class="intro" id="bgthree"><img src="./img/banner13.png" alt=""></div> -->
         <div id="slideshow">
-
-            <div id="slide1" class="slide">
-                <span class="slidecontent"><img src=<?php echo './img/banner11.png'; ?> alt=""></span>
+            <?php while ($path = $sql->fetch_array()) {
+              $img_path = $path['img_path']; ?>
+            <div id="slide<?php echo $path['id']; ?>" class="slide">
+                <span class="slidecontent"><?php echo "<img src=\"/adminpage/bannerimg/$img_path\">"; ?> </span>
             </div>
-
-            <div id="slide2" class="slide">
-                <span class="slidecontent"><img src=<?php echo './img/banner12.png'; ?> alt=""></span>
+            <?php
+            } ?>
+            <!-- <div id="slide2" class="slide">
+                <span class="slidecontent"><img src= alt=""></span>
             </div>
 
             <div id="slide3" class="slide">
-                <span class="slidecontent"><img src=<?php echo './img/banner13.png'; ?> alt=""></span>
-            </div>
+                <span class="slidecontent"><img src= alt=""></span>
+            </div> -->
 
         </div>
         <script src="jquery.js"></script>
