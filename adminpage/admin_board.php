@@ -14,6 +14,29 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>게시물관리</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet"
+        href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet"
+        href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/summernote/summernote-bs4.min.css">
 </head>
 
 <body>
@@ -53,7 +76,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
     $i = 1;
     // 게시판 글 목록
     echo '<div>';
-    echo '<table>';
+    echo '<table class="table table-sm">';
     ?>
     <form method="post" action="imgsdel.php">
 
@@ -88,19 +111,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
     <?php
     echo '</table>';
     echo '<div class="page_b">';
-    echo '<ul>';
+    echo '<ul class="navbar-nav me-auto mb-2 mb-lg-0">';
     if ($page <= 1) {
       //만약 page가 1보다 크거나 같다면
-      echo "<li class='fo_re'>처음</li>"; //처음이라는 글자에 빨간색 표시
+      echo "<li class='nav-item'>처음</li>"; //처음이라는 글자에 빨간색 표시
     } else {
-      echo "<li><a href='?page=1'>처음</a></li>";
+      echo "<li class='nav-item'><a href='?page=1'>처음</a></li>";
       //알니라면 처음글자에 1번페이지로 갈 수있게 링크
     }
     if ($page <= 1) {
       //만약 page가 1보다 크거나 같다면 빈값
     } else {
       $pre = $page - 1; //pre변수에 page-1을 해준다 만약 현재 페이지가 3인데 이전버튼을 누르면 2번페이지로 갈 수 있게 함
-      echo "<li><a href='?page=$pre'>이전</a></li>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
+      echo "<li class='nav-item'><a href='?page=$pre'>이전</a></li>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
     }
     for ($i = $block_start; $i <= $block_end; $i++) {
       //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
