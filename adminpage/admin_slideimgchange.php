@@ -14,7 +14,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
       $sqld = mqd("update board_front set img_path='$randfile' where id='$i' ");
     }
     echo "<script>  	
-    alert('글쓰기 완료되었습니다.'); 
+    alert('배너 이미지 수정이 완료되었습니다.'); 
     location.href='admin_main.php';</script>";
   }
 } else {

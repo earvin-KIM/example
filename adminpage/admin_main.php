@@ -74,7 +74,7 @@
 
             <div class="small-box bg-danger">
                 <div class="inner" style="text-align:center;">
-                    <a href="boardadmin.php">
+                    <a href="admin_board.php">
                         <h1 style="color:white;">게시물 일괄관리</h1>
                     </a>
                     <div class="icon">
