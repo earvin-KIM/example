@@ -42,13 +42,15 @@
     $mq2 = 'SELECT * FROM board ORDER BY _id';
     $sql3 = mysqli_query($conn, $mq2);
     $array = $_POST['chart'];
-    print_r($array);
+
     $i = 0;
     $change;
     while ($board = $sql3->fetch_array()) {
-        if(array[$i]!=NULL){
-    
-        }
+      if ($array[$i] != 'NULL') {
+        print_r($array);
+      } else {
+      }
+      $i++;
     }
     ?>
 
@@ -58,4 +60,6 @@
 <?php } else { ?>
 <meta http-equiv="refresh" content="0 url=admin_login.php" />
 <?php }
-     ?>
+
+
+?>

@@ -158,12 +158,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
                               } else {
                                 $src = $board['img_path'];
                                 $src2 = $board['_id']; // echo "<input type='checkbox' name='_id$src2'";
-                                echo "<li class='list-group-item'><div class='btn-group' style=\"margin-right:10px;\"><select name='chart[]' class='form-control'>";
+                                echo "<li class='list-group-item'><div class='btn-group' style=\"margin-right:10px;\"><select name='chart[]' class='form-control'><option value=NULL>==선택==</option>";
                                 while ($i <= $row_num) {
                                   echo "<option value=\"$i\"";
-                                  if ($i == $cunt) {
-                                    echo 'selected';
-                                  }
                                   echo ">$i</option>";
                                   $i++;
                                 }
