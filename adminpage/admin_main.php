@@ -45,9 +45,7 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
+
 
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -80,7 +78,7 @@
         <!-- /.sidebar -->
         <!-- </aside> -->
         <?php if ($jb_login == true) { ?>
-        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="margin-right:10px;">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="margin-right:10px;min-height:100vh;">
             <!-- Brand Logo -->
             <a href="../../index3.html" class="brand-link">
                 <img src="..\home\img\header_logo-top.png" alt="AdminLTE Logo"
