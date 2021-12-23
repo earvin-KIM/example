@@ -120,7 +120,8 @@
                             <p>3번 슬라이드 &nbsp<label for="f3">업로드</label><input id="f3" type="file" name="s_3"
                                     style="display:none;">
                             </p>
-                            <p><label for="f3">저장</label><button style="display:none;" type="submit">저장</button></p>
+                            <p><label for="f4">저장</label><input id="f4" type="submit" style="display:none;">
+                            </p>
                         </form>
                     </div>
                 </div>

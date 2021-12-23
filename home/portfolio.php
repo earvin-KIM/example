@@ -91,7 +91,7 @@
         } //만약 블록의 마지박 번호가 페이지수보다 많다면 마지박번호는 페이지 수
         $total_block = ceil($total_page / $block_ct); //블럭 총 개수
         $start_num = ($page - 1) * $list; //시작번호 (page-1)에서 $list를 곱한다.
-        $mq = "SELECT * FROM board ORDER BY _id DESC LIMIT $start_num, $list";
+        $mq = "SELECT * FROM board ORDER BY rownum DESC LIMIT $start_num, $list";
         $sql2 = mysqli_query($conn, $mq);
         $i = 1;
         // 게시판 글 목록

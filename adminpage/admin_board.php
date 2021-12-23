@@ -135,8 +135,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
                         //블럭 총 개수
                         $start_num = ($page - 1) * $list;
                         //시작번호 (page-1)에서 $list를 곱한다.
-                        $mq = "SELECT * FROM board ORDER BY _id DESC LIMIT $start_num, $list";
-                        $mq2 = 'SELECT * FROM board ORDER BY _id';
+                        $mq = "SELECT * FROM board ORDER BY rownum DESC LIMIT $start_num, $list";
+                        $mq2 = 'SELECT * FROM board ORDER BY rownum desc';
                         $sql2 = mysqli_query($conn, $mq);
                         $sql3 = mysqli_query($conn, $mq2);
                         $i = 1;
@@ -218,7 +218,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
         $total_block = ceil($total_page / $block_ct); //블럭 총 개수
         $start_num = ($page - 1) * $list;
         //시작번호 (page-1)에서 $list를 곱한다.
-        $mq = "SELECT * FROM board ORDER BY _id DESC LIMIT $start_num, $list";
+        $mq = "SELECT * FROM board ORDER BY rownum DESC LIMIT $start_num, $list";
         $sql2 = mysqli_query($conn, $mq);
         $i = 1; // 게시판 글 목록
         echo '<div>';
