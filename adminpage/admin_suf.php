@@ -47,7 +47,6 @@
     $row_num = mysqli_num_rows($sql);
 
     $i = 0;
-    $change;
     while ($board = $sql3->fetch_array()) {
       if ($array[$i] != 'NULL') {
         $where = $row_num - $array[$i] + 1; //desc로 정렬되어 있음, array[i]: 원하는 순서 where : 순서대로 표기되기 위해 실제 입력될 rownum

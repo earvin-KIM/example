@@ -6,10 +6,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
 
 <?php if ($jb_login) {
   foreach ($_POST['dels'] as $path) {
-    $sqld2 = mqd("SELECT * FROM board WHERE img_path='$path';");
+    $sqld2 = mqd("SELECT * FROM board WHERE _id=$path;");
     $board = $sqld2->fetch_array();
+    $mq = "UPDATE board SET rownum = rownum - 1 WHERE rownum>{$board['rownum']};";
     unlink('../home/upload/' . $board['img_path']);
-    $sqld = mqd("DELETE FROM board WHERE img_path='$path';");
+    $sqld = mqd("DELETE FROM board WHERE _id='$path';");
+    $sql3 = mqd($mq);
   } ?>
 <script type="text/javascript">
 alert("삭제되었습니다.");
