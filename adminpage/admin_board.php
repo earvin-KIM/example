@@ -25,6 +25,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
     <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/toastr/toastr.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/dist/css/adminlte.min.css">
+    <!-- jQuery -->
+    <script src="AdminLTE-3.2.0-rc/AdminLTE-3.2.0-rc/plugins/jquery/jquery.min.js"></script>
 
     <!-- <link rel="stylesheet" href="/bootstrap-3.3.2-dist/bootstrap-3.3.2-dist/css/bootstrap.css">
     <script src="/bootstrap-3.3.2-dist/bootstrap-3.3.2-dist/js/bootstrap.js"></script> //위로 3개가 원래 모달창 작동 시켰음-->
@@ -113,7 +115,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/adminpage/admin_changedb.php';
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="admin_contact.php" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>문의사항 접수</p>
                                     </a>
