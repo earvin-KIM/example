@@ -1,0 +1,317 @@
+:root {
+  --stratos: rgba(2, 5, 71, 1);
+  --chicago: rgba(95, 95, 95, 1);
+  --mountain-mist: rgba(150, 150, 150, 1);
+  --mountain-mist-2: rgba(151, 151, 151, 1);
+  --celeste: rgba(205, 205, 205, 1);
+  --iron: rgba(215, 215, 215, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-xs: 20px;
+  --font-size-s: 25px;
+  --font-size-m: 30px;
+  --font-size-l: 60px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 120px;
+
+  --font-family-applesdgothicneo-light: 'AppleSDGothicNeo-Light';
+  --font-family-applesdgothicneo-regular: 'AppleSDGothicNeo-Regular';
+  --font-family-helvetica: 'Helvetica';
+  --font-family-noto_sans_kr: 'Noto Sans KR';
+  --font-family-sdcompsans-bul: 'SDCompSans-bUl';
+  --font-family-sdcompsans-clt: 'SDCompSans-cLt';
+  --font-family-sdcompsans-emd: 'SDCompSans-eMd';
+}
+.abicsdcompsans-emd-normal-chicago-60px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicsdcompsans-clt-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicsdcompsans-emd-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicnotosanskr-bold-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  font-style: normal;
+}
+.abicnotosanskr-medium-mountain-mist-25px {
+  color: var(--mountain-mist-2);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  font-style: normal;
+}
+.abicnotosanskr-medium-celeste-30px {
+  color: var(--celeste);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.abicnotosanskr-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicborder-1px-mountain-mist {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--mountain-mist);
+}
+.abicnotosanskr-light-chicago-20px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  font-style: normal;
+}
+.abicnotosanskr-medium-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.abicnotosanskr-normal-white-80px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicsdcompsans-clt-normal-chicago-120px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  font-style: normal;
+}
+.abicapplesdgothicneo-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-applesdgothicneo-light);
+  font-size: var(--font-size-m);
+}
+.abicnotosanskr-medium-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.abicabic {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1658px;
+  width: 1920px;
+}
+
+.abicoverlap-group1 {
+  height: 181px;
+  position: relative;
+  width: 1920px;
+}
+
+.abicgroup-container {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 181px;
+  left: 0;
+  min-width: 1920px;
+  padding: 0 255px;
+  position: absolute;
+  top: 0;
+}
+
+.abicgroup-6 {
+  background-size: 100% 100%;
+  height: 55px;
+  width: 55px;
+}
+
+.abicgroup-9 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 41px;
+}
+
+.abicgroup-12 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 9px;
+}
+
+.abicgroup-3 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 5px;
+  width: 47px;
+}
+
+.abicabout-us {
+  left: 1372px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 75px;
+}
+
+.abiccontact-us {
+  left: 1538px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 75px;
+}
+
+.abictext_label-1 {
+  left: 1191px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 72px;
+}
+
+.abictext_label-2 {
+  left: 861px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 72px;
+}
+
+.abicintro {
+  left: 747px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 75px;
+}
+
+.abictext_label-3 {
+  align-self: flex-start;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 256px;
+  margin-top: 90px;
+  min-height: 44px;
+}
+
+.abicflex-row {
+  align-items: center;
+  display: flex;
+  height: 203px;
+  margin-right: 206px;
+  margin-top: 6px;
+  min-width: 1202px;
+}
+
+.abicai-based-business-in {
+  color: var(--stratos);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 80px;
+  min-height: 203px;
+  min-width: 611px;
+}
+
+.abicspan1 {
+  font-family: var(--font-family-helvetica);
+  line-height: 96px;
+}
+
+.abicspan2 {
+  font-family: var(--font-family-applesdgothicneo-regular);
+  line-height: 96px;
+}
+
+.abicflex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px;
+  margin-left: 329px;
+  min-height: 162px;
+  width: 262px;
+}
+
+.abictext_label-container {
+  height: 92px;
+  position: relative;
+  width: 262px;
+}
+
+.abictext_label {
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  top: 0;
+}
+
+.abiclearn-more_btn {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 24.5px;
+  display: flex;
+  height: 49px;
+  margin-top: 21px;
+  min-width: 149px;
+  padding: 12px 22px;
+}
+
+.abiclearn-more {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-bul);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0;
+  line-height: 24px;
+  min-height: 24px;
+  white-space: nowrap;
+}
+
+.abicimage_1 {
+  height: 939px;
+  margin-top: 63px;
+  width: 1408px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
+
+.abicscreen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.abiccontainer-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.abiccontainer-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}

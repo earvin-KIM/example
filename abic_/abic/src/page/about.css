@@ -1,0 +1,559 @@
+:root {
+  --stratos: rgba(2, 5, 71, 1);
+  --chicago: rgba(95, 95, 95, 1);
+  --mountain-mist: rgba(150, 150, 150, 1);
+  --mountain-mist-2: rgba(151, 151, 151, 1);
+  --celeste: rgba(205, 205, 205, 1);
+  --iron: rgba(215, 215, 215, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-xs: 20px;
+  --font-size-s: 25px;
+  --font-size-m: 30px;
+  --font-size-l: 60px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 120px;
+
+  --font-family-applesdgothicneo-light: 'AppleSDGothicNeo-Light';
+  --font-family-applesdgothicneo-regular: 'AppleSDGothicNeo-Regular';
+  --font-family-helvetica: 'Helvetica';
+  --font-family-noto_sans_kr: 'Noto Sans KR';
+  --font-family-sdcompsans-bul: 'SDCompSans-bUl';
+  --font-family-sdcompsans-clt: 'SDCompSans-cLt';
+  --font-family-sdcompsans-emd: 'SDCompSans-eMd';
+}
+.aboutsdcompsans-emd-normal-chicago-60px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutsdcompsans-clt-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutsdcompsans-emd-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutnotosanskr-bold-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  font-style: normal;
+}
+.aboutnotosanskr-medium-mountain-mist-25px {
+  color: var(--mountain-mist-2);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  font-style: normal;
+}
+.aboutnotosanskr-medium-celeste-30px {
+  color: var(--celeste);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.aboutnotosanskr-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutborder-1px-mountain-mist {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--mountain-mist);
+}
+.aboutnotosanskr-light-chicago-20px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  font-style: normal;
+}
+.aboutnotosanskr-medium-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.aboutnotosanskr-normal-white-80px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutsdcompsans-clt-normal-chicago-120px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  font-style: normal;
+}
+.aboutapplesdgothicneo-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-applesdgothicneo-light);
+  font-size: var(--font-size-m);
+}
+.aboutnotosanskr-medium-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.aboutaboutus {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 5896px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.aboutflex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: -1.5px;
+  min-height: 1373px;
+  width: 1923px;
+}
+
+.aboutgroup-container {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 181px;
+  margin-left: 1.5px;
+  min-width: 1920px;
+  padding: 0 255px;
+}
+
+.aboutgroup-13 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 165px;
+}
+
+.aboutgroup-6 {
+  background-size: 100% 100%;
+  height: 55px;
+  width: 55px;
+}
+
+.aboutgroup-9 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 41px;
+}
+
+.aboutgroup-12 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 9px;
+}
+
+.aboutgroup-3 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 5px;
+  width: 47px;
+}
+
+.aboutgroup {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  margin-bottom: 1px;
+  margin-left: 327px;
+  min-width: 917px;
+}
+
+.aboutintro {
+  letter-spacing: 0;
+  min-height: 30px;
+  min-width: 56px;
+}
+
+.abouttext_label {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 36px;
+  min-width: 272px;
+}
+
+.abouttext_label-1 {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 36px;
+  min-width: 123px;
+}
+
+.aboutabout-us {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 30px;
+  min-width: 108px;
+}
+
+.aboutcontact-us {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 30px;
+  min-width: 128px;
+}
+
+.abouttitle {
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 257about5px;
+  margin-top: 103px;
+  min-height: 144px;
+}
+
+.aboutline {
+  border: solid black 1px;
+  height: 0px;
+  margin-top: 122px;
+  width: 1923px;
+}
+
+.aboutflex-col-item {
+  letter-spacing: 0;
+  margin-left: 257.5px;
+  margin-top: 160px;
+  min-height: 72px;
+}
+
+.aboutflex-col-1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 62px;
+  min-height: 296px;
+  width: 1923px;
+}
+
+.aboutim-a-paragraph-cli {
+  letter-spacing: 0;
+  margin-right: 77px;
+  min-height: 144px;
+  width: 1309px;
+}
+
+.aboutline-1 {
+  height: 0px;
+  margin-top: 150px;
+  width: 1923px;
+  border: solid black 1px;
+}
+
+.aboutflex-row {
+  align-items: flex-end;
+  align-self: center;
+  display: flex;
+  height: 1004px;
+  margin-right: 10px;
+  margin-top: 61px;
+  min-width: 1398px;
+}
+
+.aboutflex-col-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 1004px;
+  width: 448px;
+}
+
+.abouttext_label-2 {
+  font-weight: 500;
+  letter-spacing: 0;
+  min-height: 44px;
+}
+
+.aboutim-a-paragraph-cli-1 {
+  letter-spacing: 0;
+  margin-top: 564px;
+  min-height: 396px;
+  width: 448px;
+}
+
+.aboutgroup-1 {
+  align-items: flex-end;
+  background-color: var(--iron);
+  display: flex;
+  height: 1000px;
+  justify-content: flex-end;
+  margin-left: 272px;
+  min-width: 678px;
+}
+
+.aboutbitmap {
+  height: 1000px;
+  /* width: 471px; */
+}
+
+.aboutoverlap-group2 {
+  height: 1162px;
+  margin-top: 150px;
+  position: relative;
+  width: 1920px;
+}
+
+.aboutoverlap-group {
+  background-size: 100% 100%;
+  height: 1162px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  overflow: hidden;
+}
+
+.aboutline-2 {
+  left: 462px;
+  position: absolute;
+  top: 290px;
+}
+
+.aboutoval {
+  height: 36px;
+  left: 446px;
+  position: absolute;
+  top: 297px;
+  width: 36px;
+}
+
+.aboutoval-1 {
+  height: 20px;
+  left: 454px;
+  position: absolute;
+  top: 433px;
+  width: 20px;
+}
+
+.aboutoval-2 {
+  height: 20px;
+  left: 454px;
+  position: absolute;
+  top: 553px;
+  width: 20px;
+}
+
+.aboutoval-3 {
+  height: 20px;
+  left: 454px;
+  position: absolute;
+  top: 673px;
+  width: 20px;
+}
+
+.aboutoval-4 {
+  height: 20px;
+  left: 454px;
+  position: absolute;
+  top: 793px;
+  width: 20px;
+}
+
+.aboutoval-5 {
+  height: 20px;
+  left: 454px;
+  position: absolute;
+  top: 913px;
+  width: 20px;
+}
+
+.abouttext_label-3 {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  left: 256px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 150px;
+}
+
+.aboutnumber {
+  font-weight: 700;
+  left: 356px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 293px;
+}
+
+.aboutphone {
+  font-weight: 500;
+  left: 584px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 293px;
+}
+
+.aboutabic {
+  font-weight: 500;
+  left: 584px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 347px;
+}
+
+.aboutabic-1 {
+  font-weight: 500;
+  left: 584px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 473px;
+}
+
+.aboutphone-1 {
+  font-weight: 500;
+  left: 584px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 419px;
+}
+
+.aboutnumber-1 {
+  font-weight: 700;
+  left: 356px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 419px;
+}
+
+.aboutauthorized-certifica {
+  letter-spacing: 0;
+  margin-left: 256px;
+  margin-top: 160px;
+  min-height: 72px;
+}
+
+.aboutflex-col-3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: -1about5px;
+  margin-top: 62px;
+  min-height: 888px;
+  width: 1923px;
+}
+
+.aboutflex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 100px;
+  min-width: 1411px;
+}
+
+.aboutrectangle-1 {
+  background-color: var(--iron);
+  height: 483px;
+  width: 361px;
+}
+
+.aboutrectangle {
+  background-color: var(--iron);
+  height: 483px;
+  margin-left: 164px;
+  width: 361px;
+}
+
+.aboutline-3 {
+  height: 2px;
+  margin-top: 160px;
+  width: 1923px;
+}
+
+.aboutpartner {
+  letter-spacing: 0;
+  margin-left: 256px;
+  margin-top: 100px;
+  min-height: 72px;
+}
+
+.aboutflex-col-4 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1px;
+  margin-top: 62px;
+  min-height: 566px;
+  width: 1409px;
+}
+
+.aboutim-a-paragraph-cli-2 {
+  letter-spacing: 0;
+  margin-left: 12px;
+  min-height: 144px;
+  width: 1309px;
+}
+
+.aboutflex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 62px;
+  min-width: 1409px;
+}
+
+.aboutrectangle-2 {
+  background-color: var(--iron);
+  height: 360px;
+  width: 360px;
+}
+
+.aboutrectangle-3 {
+  background-color: var(--iron);
+  height: 360px;
+  margin-left: 165px;
+  width: 360px;
+}
+
+.aboutrectangle-4 {
+  background-color: var(--iron);
+  height: 360px;
+  margin-left: 164px;
+  width: 360px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
+
+.aboutscreen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.aboutcontainer-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.aboutcontainer-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}

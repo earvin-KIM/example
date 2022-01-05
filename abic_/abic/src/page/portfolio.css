@@ -1,0 +1,249 @@
+:root {
+  --stratos: rgba(2, 5, 71, 1);
+  --chicago: rgba(95, 95, 95, 1);
+  --mountain-mist: rgba(150, 150, 150, 1);
+  --mountain-mist-2: rgba(151, 151, 151, 1);
+  --celeste: rgba(205, 205, 205, 1);
+  --iron: rgba(215, 215, 215, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --font-size-xs: 20px;
+  --font-size-s: 25px;
+  --font-size-m: 30px;
+  --font-size-l: 60px;
+  --font-size-xl: 80px;
+  --font-size-xxl: 120px;
+
+  --font-family-applesdgothicneo-light: 'AppleSDGothicNeo-Light';
+  --font-family-applesdgothicneo-regular: 'AppleSDGothicNeo-Regular';
+  --font-family-helvetica: 'Helvetica';
+  --font-family-noto_sans_kr: 'Noto Sans KR';
+  --font-family-sdcompsans-bul: 'SDCompSans-bUl';
+  --font-family-sdcompsans-clt: 'SDCompSans-cLt';
+  --font-family-sdcompsans-emd: 'SDCompSans-eMd';
+}
+.portfoliosdcompsans-emd-normal-chicago-60px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfoliosdcompsans-clt-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfoliosdcompsans-emd-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-emd);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfolionotosanskr-bold-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  font-style: normal;
+}
+.portfolionotosanskr-medium-mountain-mist-25px {
+  color: var(--mountain-mist-2);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  font-style: normal;
+}
+.portfolionotosanskr-medium-celeste-30px {
+  color: var(--celeste);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.portfolionotosanskr-normal-chicago-25px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfolioborder-1px-mountain-mist {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--mountain-mist);
+}
+.portfolionotosanskr-light-chicago-20px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  font-style: normal;
+}
+.portfolionotosanskr-medium-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.portfolionotosanskr-normal-white-80px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfoliosdcompsans-clt-normal-chicago-120px {
+  color: var(--chicago);
+  font-family: var(--font-family-sdcompsans-clt);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  font-style: normal;
+}
+.portfolioapplesdgothicneo-normal-chicago-30px {
+  color: var(--chicago);
+  font-family: var(--font-family-applesdgothicneo-light);
+  font-size: var(--font-size-m);
+}
+.portfolionotosanskr-medium-white-30px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  font-style: normal;
+}
+.portfolioporfolio {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1658px;
+  width: 1920px;
+}
+
+.portfoliogroup-container {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 181px;
+  min-width: 1920px;
+  padding: 0 255px;
+}
+
+.portfoliogroup-13 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 165px;
+}
+
+.portfoliogroup-6 {
+  background-size: 100% 100%;
+  height: 55px;
+  width: 55px;
+}
+
+.portfoliogroup-9 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 41px;
+}
+
+.portfoliogroup-12 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 4px;
+  width: 9px;
+}
+
+.portfoliogroup-3 {
+  background-size: 100% 100%;
+  height: 55px;
+  margin-left: 5px;
+  width: 47px;
+}
+
+.portfoliogroup {
+  align-items: center;
+  display: flex;
+  height: 36px;
+  margin-bottom: 1px;
+  margin-left: 327px;
+  min-width: 917px;
+}
+
+.portfoliointro {
+  letter-spacing: 0;
+  min-height: 30px;
+  min-width: 56px;
+}
+
+.portfoliotext_label {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 36px;
+  min-width: 272px;
+}
+
+.portfoliotext_label-1 {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 36px;
+  min-width: 123px;
+}
+
+.portfolioabout-us {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 30px;
+  min-width: 108px;
+}
+
+.portfoliocontact-us {
+  letter-spacing: 0;
+  margin-left: 58px;
+  min-height: 30px;
+  min-width: 128px;
+}
+
+.portfoliooverlap-group1 {
+  align-items: flex-end;
+  background-size: 100% 100%;
+  /* display: flex; */
+  /* height: 633px; */
+  justify-content: flex-end;
+  text-align: center;
+  /* min-width: 1920px; */
+  padding: 258px 765px;
+}
+
+.portfoliotext_label-2 {
+  font-weight: 400;
+  letter-spacing: 0;
+  min-height: 116px;
+  min-width: 388px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
+
+.portfolioscreen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.portfoliocontainer-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.portfoliocontainer-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
