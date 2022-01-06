@@ -1,0 +1,303 @@
+.bg {
+  width: 1920px;
+  height: 5896px;
+  padding: 0 0 164px;
+  background-color: #fff;
+}
+.About-Us {
+  width: 506px;
+  height: 144px;
+  margin: 103px 18px 123px 256px;
+  font-family: SDCompSans-cLt;
+  font-size: 120px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Line {
+  width: 1920px;
+  height: 1px;
+  margin: 123px 0 160px;
+  border: solid 1px var(--neutral-70);
+}
+.Vision-Mission {
+  width: 452px;
+  height: 72px;
+  margin: 160px 72px 62px 256px;
+  font-family: SDCompSans-eMd;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Im-a-paragraph-Cli {
+  width: 1309px;
+  height: 144px;
+  margin: 62px 344px 150px 267px;
+  font-family: SDCompSans-eMd;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Line {
+  width: 1920px;
+  height: 1px;
+  margin: 150px 0 160px;
+  border: solid 1px var(--neutral-70);
+}
+.CEO {
+  width: 122px;
+  height: 72px;
+  margin: 160px 402px 61px 256px;
+  font-family: SDCompSans-eMd;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.\- {
+  width: 90px;
+  height: 44px;
+  margin: 61px 434px 564px 256px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+img.profile_ceo {
+  width: 678px;
+  height: 1000px;
+  margin: 65px 266px 150px 60px;
+  object-fit: contain;
+}
+.Im-a-paragraph-Cli {
+  width: 448px;
+  height: 396px;
+  margin: 564px 76px 150px 256px;
+  font-family: SDCompSans-eMd;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+
+img.bg_history {
+  width: 1920px;
+  height: 1162px;
+  margin: 150px 0 160px;
+  padding: 158px 1206px 150px 256px;
+  object-fit: contain;
+  background-image: linear-gradient(to left, #d6d6d6 100%, #939aaf);
+}
+
+.History {
+  width: 204px;
+  height: 72px;
+  margin: 0 124px 63px 0;
+  font-family: SDCompSans-eMd;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+span {
+  width: 71px;
+  height: 44px;
+  margin: 63px 19px 10px 100px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+span {
+  width: 71px;
+  height: 44px;
+  margin: 28px 19px 10px 100px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+img.line {
+  width: 36px;
+  height: 715px;
+  margin: 67px 102px 0 19px;
+  object-fit: contain;
+}
+span {
+  width: 112px;
+  height: 44px;
+  margin: 63px 18px 10px 102px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-30);
+}
+.ABIC- {
+  width: 130px;
+  height: 44px;
+  margin: 10px 0 28px 102px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+span {
+  width: 112px;
+  height: 44px;
+  margin: 28px 18px 10px 102px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-30);
+}
+.ABIC- {
+  width: 130px;
+  height: 44px;
+  margin: 10px 0 495px 102px;
+  font-family: NotoSansKR;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+.Authorized-certifica {
+  width: 660px;
+  height: 72px;
+  margin: 160px 60px 62px 256px;
+  font-family: SDCompSans-eMd;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Im-a-paragraph-Cli {
+  width: 1309px;
+  height: 144px;
+  margin: 62px 344px 100px 267px;
+  font-family: SDCompSans-eMd;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Rectangle {
+  width: 361px;
+  height: 483px;
+  margin: 100px 164px 160px 255px;
+  background-color: #d8d8d8;
+}
+.Rectangle {
+  width: 361px;
+  height: 483px;
+  margin: 100px 163px 160px 18px;
+  background-color: #d8d8d8;
+}
+.bg {
+  width: 1920px;
+  height: 5896px;
+  padding: 0 0 164px;
+  background-color: #fff;
+}
+.Line {
+  width: 1920px;
+  height: 1px;
+  margin: 160px 0 100px;
+  border: solid 1px var(--neutral-70);
+}
+.Partner {
+  width: 214px;
+  height: 72px;
+  margin: 100px 310px 62px 256px;
+  font-family: SDCompSans-eMd;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Im-a-paragraph-Cli {
+  width: 1309px;
+  height: 144px;
+  margin: 62px 344px 62px 267px;
+  font-family: SDCompSans-eMd;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.Rectangle {
+  width: 360px;
+  height: 360px;
+  margin: 62px 165px 0 255px;
+  background-color: #d8d8d8;
+}
+.Rectangle {
+  width: 360px;
+  height: 360px;
+  margin: 62px 164px 0 18px;
+  background-color: #d8d8d8;
+}
+.Rectangle {
+  width: 360px;
+  height: 360px;
+  margin: 62px 256px 0 163px;
+  background-color: #d8d8d8;
+}

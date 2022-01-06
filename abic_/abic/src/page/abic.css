@@ -122,13 +122,13 @@
   display: flex;
   flex-direction: column;
   height: 1658px;
-  width: 1920px;
+  /* width: 100vw; */
 }
 
 .abicoverlap-group1 {
   height: 181px;
   position: relative;
-  width: 1920px;
+  width: 100vw;
 }
 
 .abicgroup-container {
@@ -137,8 +137,8 @@
   display: flex;
   height: 181px;
   left: 0;
-  min-width: 1920px;
-  padding: 0 255px;
+  /* min-width: 100vw; */
+  padding: 0 13vw;
   position: absolute;
   top: 0;
 }
@@ -146,28 +146,28 @@
 .abicgroup-6 {
   background-size: 100% 100%;
   height: 55px;
-  width: 55px;
+  width: 3vw;
 }
 
 .abicgroup-9 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 41px;
+  margin-left: 0.002vw;
+  width: 2vw;
 }
 
 .abicgroup-12 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 9px;
+  margin-left: 0.002vw;
+  width: 0.5vw;
 }
 
 .abicgroup-3 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 5px;
-  width: 47px;
+  margin-left: 0.3vw;
+  width: 3vw;
 }
 
 .abicabout-us {
@@ -178,28 +178,28 @@
 }
 
 .abiccontact-us {
-  left: 1538px;
+  left: 71vw;
   letter-spacing: 0;
   position: absolute;
   top: 75px;
 }
 
 .abictext_label-1 {
-  left: 1191px;
+  left: 62vw;
   letter-spacing: 0;
   position: absolute;
   top: 72px;
 }
 
 .abictext_label-2 {
-  left: 861px;
+  left: 45vw;
   letter-spacing: 0;
   position: absolute;
   top: 72px;
 }
 
 .abicintro {
-  left: 747px;
+  left: 39vw;
   letter-spacing: 0;
   position: absolute;
   top: 75px;
@@ -209,7 +209,7 @@
   align-self: flex-start;
   font-weight: 500;
   letter-spacing: 0;
-  margin-left: 256px;
+  margin-left: 13vw;
   margin-top: 90px;
   min-height: 44px;
 }
@@ -218,9 +218,9 @@
   align-items: center;
   display: flex;
   height: 203px;
-  margin-right: 206px;
+  margin-right: 11vw;
   margin-top: 6px;
-  min-width: 1202px;
+  min-width: 63vw;
 }
 
 .abicai-based-business-in {
@@ -231,7 +231,7 @@
   letter-spacing: 0;
   line-height: 80px;
   min-height: 203px;
-  min-width: 611px;
+  min-width: 32vw;
 }
 
 .abicspan1 {
@@ -249,15 +249,15 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 7px;
-  margin-left: 329px;
+  margin-left: 17vw;
   min-height: 162px;
-  width: 262px;
+  width: 14vw;
 }
 
 .abictext_label-container {
   height: 92px;
   position: relative;
-  width: 262px;
+  width: 14vw;
 }
 
 .abictext_label {
@@ -276,8 +276,8 @@
   display: flex;
   height: 49px;
   margin-top: 21px;
-  min-width: 149px;
-  padding: 12px 22px;
+  /* min-width: 8vw; */
+  /* padding: 12px 1vw; */
 }
 
 .abiclearn-more {
@@ -291,9 +291,9 @@
 }
 
 .abicimage_1 {
-  height: 939px;
+  height: 49vw;
   margin-top: 63px;
-  width: 1408px;
+  width: 73vw;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
@@ -308,7 +308,7 @@
   flex-direction: row;
   justify-content: center;
   pointer-events: none;
-  width: 100%;
+  /* width: 100vw; */
 }
 
 .abiccontainer-center-horizontal > * {

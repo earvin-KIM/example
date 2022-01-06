@@ -1,0 +1,75 @@
+.Header_bg {
+  width: 1920px;
+  height: 181px;
+  padding: 63px 256px 63px 255px;
+  background-color: #fff;
+}
+
+.Intro {
+  width: 54px;
+  height: 30px;
+  margin: 12px 60px 13px 327px;
+  font-family: SDCompSans-cLt;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+
+.\- {
+  width: 270px;
+  height: 36px;
+  margin: 9px 60px 10px;
+  font-family: NotoSansKR;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+
+.\= {
+  width: 121px;
+  height: 36px;
+  margin: 9px 60px 10px;
+  font-family: NotoSansKR;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+.About-Us {
+  width: 106px;
+  height: 30px;
+  margin: 12px 60px 13px;
+  font-family: SDCompSans-cLt;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}
+
+.Contact-Us {
+  width: 126px;
+  height: 30px;
+  margin: 12px 0 13px 60px;
+  font-family: SDCompSans-cLt;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--neutral-70);
+}

@@ -217,8 +217,9 @@
   /* height: 633px; */
   justify-content: flex-end;
   text-align: center;
+  width: 100vw;
   /* min-width: 1920px; */
-  padding: 258px 765px;
+  padding: 258px 0;
 }
 
 .portfoliotext_label-2 {

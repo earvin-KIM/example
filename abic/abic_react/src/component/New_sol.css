@@ -1,0 +1,38 @@
+.bg {
+  width: 1920px;
+  height: 1658px;
+  padding: 0 0 844px;
+  background-color: #fff;
+}
+img.bg_sol_1 {
+  width: 1920px;
+  height: 633px;
+  margin: 181px 0 0;
+  padding: 259px 528px 258px;
+  object-fit: contain;
+  background-image: linear-gradient(to left, rgba(28, 43, 85, 0.48), rgba(153, 164, 197, 0.73) 52%, #d8d8d8);
+}
+.\- {
+  width: 864px;
+  height: 116px;
+  font-family: NotoSansKR;
+  font-size: 80px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}
+.\- {
+  width: 386px;
+  height: 116px;
+  font-family: NotoSansKR;
+  font-size: 80px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+}

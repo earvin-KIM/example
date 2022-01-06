@@ -17,12 +17,8 @@ function Porfolio(props) {
   } = props;
 
   return (
-    <div className="portfoliocontainer-center-horizontal">
-      <div className="portfolioporfolio portfolioscreen">
-        <div className="portfoliooverlap-group1" style={{ backgroundImage: `url(${overlapGroup1})` }}>
-          <h1 className="portfoliotext_label-2 portfolionotosanskr-normal-white-80px">주요 솔루션</h1>
-        </div>
-      </div>
+    <div className="portfoliooverlap-group1" style={{ backgroundImage: `url(${overlapGroup1})` }}>
+      <h1 className="portfoliotext_label-2 portfolionotosanskr-normal-white-80px">주요 솔루션</h1>
     </div>
   );
 }

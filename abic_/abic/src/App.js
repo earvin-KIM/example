@@ -7,24 +7,22 @@ import ContactUs from './page/contact';
 import Porfolio from './page/portfolio';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Header1></Header1>
-      </div>
-      <div>
-        <Routes>
-          <Route path="/" exact element={<ABIC />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/ourwork" element={<OurWork />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/portfolio" element={<Porfolio />} />
-        </Routes>
-      </div>
+      <Header1></Header1>
+
+      <Routes>
+        <Route path="/" exact element={<ABIC />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/ourwork" element={<OurWork />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/portfolio" element={<Porfolio />} />
+      </Routes>
+
       <Footer></Footer>
     </BrowserRouter>
   );

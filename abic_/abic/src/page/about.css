@@ -123,7 +123,7 @@
   flex-direction: column;
   height: 5896px;
   overflow: hidden;
-  width: 1920px;
+  width: 100vw;
 }
 
 .aboutflex-col {
@@ -132,7 +132,7 @@
   flex-direction: column;
   margin-left: -1.5px;
   min-height: 1373px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .aboutgroup-container {
@@ -141,41 +141,41 @@
   display: flex;
   height: 181px;
   margin-left: 1.5px;
-  min-width: 1920px;
-  padding: 0 255px;
+  min-width: 100vw;
+  padding: 0 13vw;
 }
 
 .aboutgroup-13 {
   align-items: flex-start;
   display: flex;
-  min-width: 165px;
+  min-width: 9vw;
 }
 
 .aboutgroup-6 {
   background-size: 100% 100%;
   height: 55px;
-  width: 55px;
+  width: 2vw;
 }
 
 .aboutgroup-9 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 41px;
+  margin-left: 0.2vw;
+  width: 2vw;
 }
 
 .aboutgroup-12 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 9px;
+  margin-left: 0.2vw;
+  width: 0.4vw;
 }
 
 .aboutgroup-3 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 5px;
-  width: 47px;
+  margin-left: 0.2vw;
+  width: 2vw;
 }
 
 .aboutgroup {
@@ -183,62 +183,62 @@
   display: flex;
   height: 36px;
   margin-bottom: 1px;
-  margin-left: 327px;
-  min-width: 917px;
+  margin-left: 17vw;
+  min-width: 47vw;
 }
 
 .aboutintro {
   letter-spacing: 0;
   min-height: 30px;
-  min-width: 56px;
+  min-width: 3vw;
 }
 
 .abouttext_label {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 36px;
-  min-width: 272px;
+  min-width: 14vw;
 }
 
 .abouttext_label-1 {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 36px;
-  min-width: 123px;
+  min-width: 6vw;
 }
 
 .aboutabout-us {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 30px;
-  min-width: 108px;
+  min-width: 6vw;
 }
 
 .aboutcontact-us {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 30px;
-  min-width: 128px;
+  min-width: 7vw;
 }
 
 .abouttitle {
   font-weight: 400;
   letter-spacing: 0;
-  margin-left: 257about5px;
+  margin-left: 13vw;
   margin-top: 103px;
-  min-height: 144px;
+  min-height: 8vw;
 }
 
 .aboutline {
   border: solid black 1px;
   height: 0px;
   margin-top: 122px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .aboutflex-col-item {
   letter-spacing: 0;
-  margin-left: 257.5px;
+  margin-left: 13vw;
   margin-top: 160px;
   min-height: 72px;
 }
@@ -249,20 +249,20 @@
   flex-direction: column;
   margin-top: 62px;
   min-height: 296px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .aboutim-a-paragraph-cli {
   letter-spacing: 0;
-  margin-right: 77px;
+  margin-right: 4vw;
   min-height: 144px;
-  width: 1309px;
+  width: 68vw;
 }
 
 .aboutline-1 {
   height: 0px;
   margin-top: 150px;
-  width: 1923px;
+  width: 100vw;
   border: solid black 1px;
 }
 
@@ -270,18 +270,18 @@
   align-items: flex-end;
   align-self: center;
   display: flex;
-  height: 1004px;
-  margin-right: 10px;
+  /* height: 1004px; */
+  margin-right: 0.5vw;
   margin-top: 61px;
-  min-width: 1398px;
+  min-width: 73vw;
 }
 
 .aboutflex-col-2 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  min-height: 1004px;
-  width: 448px;
+  /* min-height: 1004px; */
+  width: 23vw;
 }
 
 .abouttext_label-2 {
@@ -294,21 +294,21 @@
   letter-spacing: 0;
   margin-top: 564px;
   min-height: 396px;
-  width: 448px;
+  width: 23vw;
 }
 
 .aboutgroup-1 {
   align-items: flex-end;
   background-color: var(--iron);
   display: flex;
-  height: 1000px;
+  /* height: 1000px; */
   justify-content: flex-end;
-  margin-left: 272px;
-  min-width: 678px;
+  margin-left: 14vw;
+  min-width: 35vw;
 }
 
 .aboutbitmap {
-  height: 1000px;
+  height: 52vw;
   /* width: 471px; */
 }
 
@@ -316,7 +316,7 @@
   height: 1162px;
   margin-top: 150px;
   position: relative;
-  width: 1920px;
+  width: 100vw;
 }
 
 .aboutoverlap-group {
@@ -325,7 +325,7 @@
   left: 0;
   position: absolute;
   top: 0;
-  width: 1920px;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -337,7 +337,7 @@
 
 .aboutoval {
   height: 36px;
-  left: 446px;
+  left: 24vw;
   position: absolute;
   top: 297px;
   width: 36px;
@@ -444,7 +444,7 @@
 
 .aboutauthorized-certifica {
   letter-spacing: 0;
-  margin-left: 256px;
+  margin-left: 12vw;
   margin-top: 160px;
   min-height: 72px;
 }
@@ -453,10 +453,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-left: -1about5px;
+  margin-left: -1.5px;
   margin-top: 62px;
   min-height: 888px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .aboutflex-row-1 {
@@ -464,31 +464,31 @@
   display: flex;
   margin-left: 1px;
   margin-top: 100px;
-  min-width: 1411px;
+  min-width: 73vw;
 }
 
 .aboutrectangle-1 {
   background-color: var(--iron);
   height: 483px;
-  width: 361px;
+  width: 19vw;
 }
 
 .aboutrectangle {
   background-color: var(--iron);
   height: 483px;
-  margin-left: 164px;
-  width: 361px;
+  margin-left: 9vw;
+  width: 19vw;
 }
 
 .aboutline-3 {
   height: 2px;
   margin-top: 160px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .aboutpartner {
   letter-spacing: 0;
-  margin-left: 256px;
+  margin-left: 13vw;
   margin-top: 100px;
   min-height: 72px;
 }
@@ -501,41 +501,41 @@
   margin-right: 1px;
   margin-top: 62px;
   min-height: 566px;
-  width: 1409px;
+  width: 73vw;
 }
 
 .aboutim-a-paragraph-cli-2 {
   letter-spacing: 0;
-  margin-left: 12px;
+  margin-left: 0.6vw;
   min-height: 144px;
-  width: 1309px;
+  width: 68vw;
 }
 
 .aboutflex-row-2 {
   align-items: flex-start;
   display: flex;
   margin-top: 62px;
-  min-width: 1409px;
+  min-width: 73vw;
 }
 
 .aboutrectangle-2 {
   background-color: var(--iron);
   height: 360px;
-  width: 360px;
+  width: 19vw;
 }
 
 .aboutrectangle-3 {
   background-color: var(--iron);
   height: 360px;
-  margin-left: 165px;
-  width: 360px;
+  margin-left: 9vw;
+  width: 19vw;
 }
 
 .aboutrectangle-4 {
   background-color: var(--iron);
   height: 360px;
-  margin-left: 164px;
-  width: 360px;
+  margin-left: 9vw;
+  width: 19vw;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
@@ -550,7 +550,7 @@
   flex-direction: row;
   justify-content: center;
   pointer-events: none;
-  width: 100%;
+  width: 100vw;
 }
 
 .aboutcontainer-center-horizontal > * {

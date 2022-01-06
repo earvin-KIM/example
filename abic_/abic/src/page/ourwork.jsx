@@ -5,12 +5,8 @@ function OurWork(props) {
   const { text_Label3 = '신사업 경영 컨설팅 솔루션' } = props;
 
   return (
-    <div className="ourworkcontainer-center-horizontal">
-      <div className="ourworkourwork ourworkscreen">
-        <div className="ourworkoverlap-group1" style={{ backgroundImage: `url(${overlapGroup1})` }}>
-          <h1 className="ourworktext_label-2 ourworknotosanskr-normal-white-80px">{text_Label3}</h1>
-        </div>
-      </div>
+    <div className="ourworkoverlap-group1" style={{ backgroundImage: `url(${overlapGroup1})` }}>
+      <h1 className="ourworktext_label-2 ourworknotosanskr-normal-white-80px">{text_Label3}</h1>
     </div>
   );
 }

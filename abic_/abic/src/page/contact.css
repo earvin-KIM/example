@@ -75,6 +75,7 @@
   border-width: 1px;
   border-style: solid;
   border-color: var(--mountain-mist);
+  text-align: center;
 }
 .contactnotosanskr-light-chicago-20px {
   color: var(--chicago);
@@ -123,7 +124,7 @@
   flex-direction: column;
   height: 3150px;
   overflow: hidden;
-  width: 1920px;
+  width: 99vw;
 }
 
 .contactflex-col {
@@ -131,7 +132,7 @@
   display: flex;
   flex-direction: column;
   min-height: 552px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .contactgroup-container {
@@ -140,41 +141,41 @@
   display: flex;
   height: 181px;
   margin-left: 1.5px;
-  min-width: 1920px;
-  padding: 0 255px;
+  min-width: 99vw;
+  padding: 0 13vw;
 }
 
 .contactgroup-13 {
   align-items: flex-start;
   display: flex;
-  min-width: 165px;
+  min-width: 9vw;
 }
 
 .contactgroup-6 {
   background-size: 100% 100%;
   height: 55px;
-  width: 55px;
+  width: 3vw;
 }
 
 .contactgroup-9 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 41px;
+  margin-left: 0.2vw;
+  width: 2vw;
 }
 
 .contactgroup-12 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 4px;
-  width: 9px;
+  margin-left: 0.2vw;
+  width: 0.5vw;
 }
 
 .contactgroup-3 {
   background-size: 100% 100%;
   height: 55px;
-  margin-left: 5px;
-  width: 47px;
+  margin-left: 0.2vw;
+  width: 2vw;
 }
 
 .contactgroup {
@@ -182,48 +183,48 @@
   display: flex;
   height: 36px;
   margin-bottom: 1px;
-  margin-left: 327px;
-  min-width: 917px;
+  margin-left: 17vw;
+  min-width: 48vw;
 }
 
 .contactintro {
   letter-spacing: 0;
   min-height: 30px;
-  min-width: 56px;
+  min-width: 3vw;
 }
 
 .contacttext_label-1 {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 36px;
-  min-width: 272px;
+  min-width: 14vw;
 }
 
 .contacttext_label-2 {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 36px;
-  min-width: 123px;
+  min-width: 6vw;
 }
 
 .contactabout-us {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 30px;
-  min-width: 108px;
+  min-width: 6vw;
 }
 
 .contactcontact-us {
   letter-spacing: 0;
-  margin-left: 58px;
+  margin-left: 3vw;
   min-height: 30px;
-  min-width: 128px;
+  min-width: 7vw;
 }
 
 .contacttitle {
   font-weight: 400;
   letter-spacing: 0;
-  margin-left: 257.5px;
+  margin-left: 13vw;
   margin-top: 103px;
   min-height: 144px;
 }
@@ -231,7 +232,7 @@
 .contactline {
   height: 0px;
   margin-top: 150px;
-  width: 1923px;
+  width: 100vw;
   border: solid black 1px;
 }
 
@@ -239,7 +240,7 @@
   align-items: flex-end;
   display: flex;
   margin-top: 126px;
-  min-width: 1408px;
+  min-width: 73vw;
 }
 
 .contactflex-col-1 {
@@ -248,7 +249,7 @@
   flex-direction: column;
   margin-bottom: 1px;
   min-height: 991px;
-  width: 632px;
+  width: 32vw;
 }
 
 .contactcontact-us-1 {
@@ -261,7 +262,7 @@
   display: flex;
   height: 40px;
   margin-top: 106px;
-  min-width: 414px;
+  min-width: 22vw;
 }
 
 .contacttext_label-3 {
@@ -269,7 +270,7 @@
   letter-spacing: 0;
   line-height: 36px;
   min-height: 36px;
-  min-width: 54px;
+  min-width: 3vw;
   white-space: nowrap;
 }
 
@@ -278,9 +279,9 @@
   font-weight: 300;
   letter-spacing: 0;
   line-height: 36px;
-  margin-left: 306px;
+  margin-left: 16vw;
   min-height: 36px;
-  min-width: 54px;
+  min-width: 3vw;
   white-space: nowrap;
 }
 
@@ -288,22 +289,22 @@
   align-items: flex-start;
   display: flex;
   margin-top: 20px;
-  min-width: 631px;
+  min-width: 33vw;
 }
 
 .contactrectangle {
   background-color: var(--white);
   border-radius: 24.5px;
   height: 49px;
-  width: 271px;
+  width: 14vw;
 }
 
 .contactrectangle-1 {
   background-color: var(--white);
   border-radius: 24.5px;
   height: 49px;
-  margin-left: 89px;
-  width: 271px;
+  margin-left: 5vw;
+  width: 14vw;
 }
 
 .contacttext_label {
@@ -320,7 +321,7 @@
   border-radius: 24.5px;
   height: 49px;
   margin-top: 24px;
-  width: 360px;
+  width: 19vw;
 }
 
 .contactflex-col-2 {
@@ -329,14 +330,14 @@
   flex-direction: column;
   margin-top: 24px;
   min-height: 445px;
-  width: 632px;
+  width: 33vw;
 }
 
 .contactrectangle-3 {
   background-color: var(--white);
   border-radius: 24.5px;
   height: 343px;
-  width: 632px;
+  width: 33vw;
 }
 
 .contactgroup-1 {
@@ -346,10 +347,10 @@
   /* display: flex; */
   text-align: center;
   height: 49px;
-  margin-left: 88px;
+  margin-left: 5vw;
   margin-top: 53px;
-  min-width: 276px;
-  padding: 6px 85px;
+  min-width: 14vw;
+  padding: 6px 4vw;
 }
 
 .contacttext_label-5 {
@@ -363,7 +364,7 @@
 .contactmia-baker-jjhvyxm34n-y-unsplash {
   height: 1032px;
   margin-left: 88px;
-  width: 688px;
+  width: 36vw;
 }
 
 .contactflex-col-3 {
@@ -372,22 +373,22 @@
   flex-direction: column;
   margin-top: 154px;
   min-height: 1188px;
-  width: 1923px;
+  width: 100vw;
 }
 
 .contactline-1 {
   height: 0px;
   margin-top: 150px;
-  width: 1923px;
+  width: 100vw;
   border: solid black 1px;
 }
 
 .contactlocation {
   letter-spacing: 0;
-  margin-left: 3px;
+  margin-left: 0.1vw;
   margin-top: 154px;
   min-height: 72px;
-  min-width: 245px;
+  min-width: 13vw;
 }
 
 .contactx {
@@ -396,44 +397,44 @@
   font-size: var(--font-size-s);
   font-weight: 300;
   letter-spacing: 0;
-  margin-left: 2px;
+  margin-left: 0.1vw;
   margin-top: 16px;
   min-height: 36px;
-  min-width: 738px;
+  min-width: 38vw;
 }
 
 .contactoverlap-group {
   background-size: 100% 100%;
-  height: 833px;
+  height: 46vw;
   margin-top: 76px;
   position: relative;
-  width: 1920px;
+  width: 99vw;
 }
 
 .contactoval {
   height: 40px;
-  left: 1218px;
+  left: 63vw;
   position: absolute;
   top: 517px;
-  width: 29px;
+  width: 2vw;
 }
 
 .contactoval-1 {
   height: 13px;
-  left: 1224px;
+  left: 64vw;
   position: absolute;
   top: 548px;
   transform: rotate(32deg);
-  width: 22px;
+  width: 2vw;
 }
 
 .contactgroup-3-1 {
   background-size: 100% 100%;
-  height: 43px;
-  left: 1219px;
+  height: 3vw;
+  left: 64%;
   position: absolute;
-  top: 513px;
-  width: 31px;
+  top: 59%;
+  width: 2vw;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
@@ -448,10 +449,25 @@
   flex-direction: row;
   justify-content: center;
   pointer-events: none;
-  width: 100%;
+  width: 100vw;
 }
 
 .contactcontainer-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
+}
+input {
+  outline: none;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  font-size: larger;
+  text-align: center;
+}
+textarea {
+  margin-top: 5%;
+  padding: 0 5%;
+  outline: none;
+  width: -webkit-fill-available;
+  font-size: x-large;
+  height: 80%;
 }

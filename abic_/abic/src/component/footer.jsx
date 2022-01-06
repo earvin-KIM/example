@@ -96,14 +96,7 @@ function BtnInsta(props) {
 
   return (
     <div className="btn_insta">
-      <div className="group-4" style={{ backgroundImage: `url(${group4})` }}>
-        <div className="group-8" style={{ backgroundImage: `url(${group8})` }}>
-          <div className="fill-container">
-            <img className="fill-4" src={fill4} />
-            <img className="fill-6" src={fill6} />
-          </div>
-        </div>
-      </div>
+      <div className="group-4" style={{ backgroundImage: `url(${group4})` }}></div>
     </div>
   );
 }
@@ -113,16 +106,7 @@ function BtnBlog(props) {
 
   return (
     <div className="btn_blog">
-      <div className="btn_blog-1" style={{ backgroundImage: `url(${btn_Blog})` }}>
-        <div className="group-14" style={{ backgroundImage: `url(${group14})` }}>
-          <div className="fill-container-1" style={{ backgroundImage: `url(${fillContainer})` }}>
-            <img className="fill-6-1" src={fill6} />
-            <img className="fill-8" src={fill8} />
-            <img className="fill-10" src={fill10} />
-            <img className="fill-12" src={fill12} />
-          </div>
-        </div>
-      </div>
+      <div className="btn_blog-1" style={{ backgroundImage: `url(${btn_Blog})` }}></div>
     </div>
   );
 }
