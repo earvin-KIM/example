@@ -363,8 +363,8 @@
 
 .contactmia-baker-jjhvyxm34n-y-unsplash {
   height: 1032px;
-  margin-left: 88px;
-  width: 36vw;
+  margin-left: 15vw;
+  max-width: 36vw;
 }
 
 .contactflex-col-3 {
@@ -476,7 +476,13 @@ textarea {
 .form-control1 {
   border-radius: 24.5px !important;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
+  .contactmia-baker-jjhvyxm34n-y-unsplash {
+    height: 50vw;
+  }
+  .contactflex-row {
+    align-items: center;
+  }
 }
 @media only screen and (max-width: 992px) {
   .contactsdcompsans-clt-normal-chicago-120px {
