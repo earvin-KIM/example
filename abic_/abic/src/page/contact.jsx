@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
+import emailjs from 'emailjs-com';
 import overlapGroup from '../map.png';
 import group32 from '../ic_location.png';
 import miaBakerJjhvyxm34NyUnsplash from '../image_contact.png';
 
 function ContactUs(props) {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // console.log('1');
+    emailjs.sendForm('abic_test', 'template_vivy82z', form.current, 'user_sxVbzxln0UM3Drm3yxXEa').then(
+      (result) => {
+        console.log(result.text);
+        alert('문의를 보냈습니다.');
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
   const {
     contactUs2 = 'Contact Us',
     line = '../line.png',
@@ -23,7 +39,7 @@ function ContactUs(props) {
 
   return (
     <div className="contactcontainer-center-horizontal">
-      <form>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="contactcontactus contactscreen">
           <div className="contactflex-col">
             <h1 className="contacttitle contactsdcompsans-clt-normal-chicago-120px">{contactUs2}</h1>
@@ -38,24 +54,39 @@ function ContactUs(props) {
               </div>
               <div className="contactflex-row-1">
                 <div className="contactrectangle contactborder-1px-mountain-mist">
-                  <input style={{ border: 'none' }} placeholder="구분"></input>
+                  <input className="form-control form-control1" style={{}} placeholder="(구분)" name="division"></input>
                 </div>
                 <div className="contactrectangle-1 contactborder-1px-mountain-mist">
-                  <input style={{ border: 'none' }} placeholder="name"></input>
+                  <input
+                    className="form-control form-control1"
+                    style={{}}
+                    placeholder="(name)"
+                    name="from_name"
+                  ></input>
                 </div>
               </div>
               <div className="contacttext_label contactapplesdgothicneo-normal-chicago-30px">{text_Label5}</div>
               <div className="contactrectangle-2 contactborder-1px-mountain-mist">
-                <input type="email" style={{ border: 'none' }} placeholder="email"></input>
+                <input
+                  className="form-control form-control1"
+                  type="email"
+                  style={{ height: '46px' }}
+                  placeholder="email"
+                  name="email"
+                ></input>
               </div>
               <div className="contacttext_label contactapplesdgothicneo-normal-chicago-30px">{text_Label6}</div>
               <div className="contactflex-col-2">
                 <div className="contactrectangle-3 contactborder-1px-mountain-mist">
-                  <textarea style={{ border: 'none', outline: 'none' }}></textarea>
+                  <textarea
+                    className="form-control form-control1"
+                    style={{ outline: 'none' }}
+                    name="message"
+                  ></textarea>
                 </div>
-                <button className="contactgroup-1 contactborder-1px-mountain-mist">
-                  <div className="contacttext_label-5 contactapplesdgothicneo-normal-chicago-30px">{text_Label7}</div>
-                </button>
+                <input type="submit" value="문의하기" className="contactgroup-1 contactborder-1px-mountain-mist">
+                  {/* <div className="contacttext_label-5 contactapplesdgothicneo-normal-chicago-30px">{text_Label7}</div> */}
+                </input>
               </div>
             </div>
             <img className="contactmia-baker-jjhvyxm34n-y-unsplash" src={miaBakerJjhvyxm34NyUnsplash} />

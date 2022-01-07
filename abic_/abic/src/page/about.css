@@ -121,9 +121,9 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 5896px;
+  height: auto;
   overflow: hidden;
-  width: 100vw;
+  width: 85vw;
 }
 
 .aboutflex-col {
@@ -274,6 +274,7 @@
   margin-right: 0.5vw;
   margin-top: 61px;
   min-width: 73vw;
+  position: relative;
 }
 
 .aboutflex-col-2 {
@@ -288,11 +289,13 @@
   font-weight: 500;
   letter-spacing: 0;
   min-height: 44px;
+  position: absolute;
+  top: 0;
 }
 
 .aboutim-a-paragraph-cli-1 {
   letter-spacing: 0;
-  margin-top: 564px;
+  margin-top: 30vh;
   min-height: 396px;
   width: 23vw;
 }
@@ -330,9 +333,10 @@
 }
 
 .aboutline-2 {
-  left: 462px;
+  left: 31vw;
   position: absolute;
-  top: 290px;
+  top: 295px;
+  width: 40px;
 }
 
 .aboutoval {
@@ -388,7 +392,7 @@
   font-family: var(--font-family-noto_sans_kr);
   font-size: var(--font-size-l);
   font-weight: 500;
-  left: 256px;
+  left: 15vw;
   letter-spacing: 0;
   position: absolute;
   top: 150px;
@@ -396,7 +400,7 @@
 
 .aboutnumber {
   font-weight: 700;
-  left: 356px;
+  left: 20vw;
   letter-spacing: 0;
   position: absolute;
   top: 293px;
@@ -404,7 +408,7 @@
 
 .aboutphone {
   font-weight: 500;
-  left: 584px;
+  left: 40vw;
   letter-spacing: 0;
   position: absolute;
   top: 293px;
@@ -412,7 +416,7 @@
 
 .aboutabic {
   font-weight: 500;
-  left: 584px;
+  left: 40vw;
   letter-spacing: 0;
   position: absolute;
   top: 347px;
@@ -420,7 +424,7 @@
 
 .aboutabic-1 {
   font-weight: 500;
-  left: 584px;
+  left: 40vw;
   letter-spacing: 0;
   position: absolute;
   top: 473px;
@@ -428,7 +432,7 @@
 
 .aboutphone-1 {
   font-weight: 500;
-  left: 584px;
+  left: 40vw;
   letter-spacing: 0;
   position: absolute;
   top: 419px;
@@ -436,7 +440,7 @@
 
 .aboutnumber-1 {
   font-weight: 700;
-  left: 356px;
+  left: 20vw;
   letter-spacing: 0;
   position: absolute;
   top: 419px;
@@ -456,7 +460,7 @@
   margin-left: -1.5px;
   margin-top: 62px;
   min-height: 888px;
-  width: 100vw;
+  width: 100%;
 }
 
 .aboutflex-row-1 {
@@ -551,9 +555,53 @@
   justify-content: center;
   pointer-events: none;
   width: 100vw;
+  margin-top: 10vw;
 }
 
 .aboutcontainer-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
+}
+@media only screen and (max-width: 1200px) {
+  .aboutim-a-paragraph-cli-1 {
+    margin-top: 60vw;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .aboutflex-row {
+    align-items: center;
+  }
+  .aboutbitmap {
+    position: absolute;
+    top: 0;
+  }
+  .aboutim-a-paragraph-cli-1 {
+    width: 80vw;
+  }
+  .aboutsdcompsans-emd-normal-chicago-30px {
+    font-size: 20px;
+  }
+  .aboutsdcompsans-clt-normal-chicago-120px {
+    font-size: 70px;
+  }
+  .aboutnotosanskr-bold-white-30px,
+  .aboutnotosanskr-medium-celeste-30px,
+  .aboutnotosanskr-medium-white-30px {
+    font-size: 15px;
+  }
+  .aboutnumber {
+    top: 302px;
+  }
+  .aboutnumber-1 {
+    top: 445px;
+  }
+  .aboutphone {
+    top: 302px;
+  }
+  .aboutphone-1 {
+    top: 445px;
+  }
+  .aboutabic-1 {
+    top: 495px;
+  }
 }

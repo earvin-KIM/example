@@ -32,7 +32,7 @@
 .headersdcompsans-clt-normal-chicago-25px {
   color: var(--chicago);
   font-family: var(--font-family-sdcompsans-clt);
-  font-size: var(--font-size-s);
+  /* font-size: var(--font-size-s); */
   font-weight: 400;
   font-style: normal;
 }
@@ -53,7 +53,7 @@
 .headernotosanskr-medium-mountain-mist-25px {
   color: var(--mountain-mist-2);
   font-family: var(--font-family-noto_sans_kr);
-  font-size: var(--font-size-s);
+  /* font-size: var(--font-size-s); */
   font-weight: 500;
   font-style: normal;
 }
@@ -67,7 +67,7 @@
 .headernotosanskr-normal-chicago-25px {
   color: var(--chicago);
   font-family: var(--font-family-noto_sans_kr);
-  font-size: var(--font-size-s);
+  /* font-size: var(--font-size-s); */
   font-weight: 400;
   font-style: normal;
 }
@@ -179,6 +179,7 @@
   font-weight: 400;
   letter-spacing: 0;
   min-height: 30px;
+  margin-left: 3vw;
   min-width: 3vw;
 }
 
@@ -186,7 +187,7 @@
   letter-spacing: 0;
   margin-left: 3vw;
   min-height: 36px;
-  min-width: 14vw;
+  /* min-width: 14vw; */
 }
 
 .headertext_label-1 {
@@ -229,4 +230,13 @@
 .headercontainer-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
+}
+
+.navbar-collapse {
+  flex-direction: row-reverse;
+}
+@media only screen and (min-width: 1410px) {
+  #fixed {
+    max-width: 85vw;
+  }
 }

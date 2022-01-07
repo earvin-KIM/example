@@ -72,8 +72,8 @@
   font-style: normal;
 }
 .contactborder-1px-mountain-mist {
-  border-width: 1px;
-  border-style: solid;
+  /* border-width: 1px; */
+  /* border-style: solid; */
   border-color: var(--mountain-mist);
   text-align: center;
 }
@@ -122,9 +122,9 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 3150px;
+  /* height: 3150px; */
   overflow: hidden;
-  width: 99vw;
+  width: 85vw;
 }
 
 .contactflex-col {
@@ -347,7 +347,7 @@
   /* display: flex; */
   text-align: center;
   height: 49px;
-  margin-left: 5vw;
+  /* margin-left: 5vw; */
   margin-top: 53px;
   min-width: 14vw;
   padding: 6px 4vw;
@@ -450,6 +450,7 @@
   justify-content: center;
   pointer-events: none;
   width: 100vw;
+  margin-top: 10vh;
 }
 
 .contactcontainer-center-horizontal > * {
@@ -459,15 +460,60 @@
 input {
   outline: none;
   height: -webkit-fill-available;
-  width: -webkit-fill-available;
+  width: 80%;
   font-size: larger;
   text-align: center;
+  /* border-radius: 24.5px; */
 }
 textarea {
   margin-top: 5%;
-  padding: 0 5%;
+  /* padding: 0 5%; */
   outline: none;
-  width: -webkit-fill-available;
+  width: 90%;
   font-size: x-large;
   height: 80%;
+}
+.form-control1 {
+  border-radius: 24.5px !important;
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+  .contactsdcompsans-clt-normal-chicago-120px {
+    font-size: 60px;
+  }
+  .contactmia-baker-jjhvyxm34n-y-unsplash {
+    display: none;
+  }
+  .contactflex-row {
+    align-items: flex-start;
+    display: flex;
+    margin-top: 126px;
+    min-width: 178vw;
+    justify-content: center;
+  }
+  .contactsdcompsans-emd-normal-chicago-60px {
+    font-size: 40px;
+  }
+  .contactflex-col-1 {
+    width: 84vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactrectangle,
+  .contactrectangle-1 {
+    width: 30vw;
+  }
+  .contactrectangle-1 {
+    margin-left: 10vw;
+  }
+  .contactrectangle-2 {
+    width: 70vw;
+  }
+  .contactrectangle-3 {
+    width: 70vw;
+  }
+  .contacttext_label-4 {
+    margin-left: 30vw;
+  }
 }

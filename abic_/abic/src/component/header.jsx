@@ -48,10 +48,10 @@ function Header1(props) {
       <Navbar
         // bg="light"
         expand="lg"
-        className="headergroup-container"
+        className="headergroup-container "
         style={{ position: 'fixed', background: 'white' }}
       >
-        <Container>
+        <Container id="fixed">
           <Navbar.Brand href="/" id="logo">
             <img src={logo} alt="sorry" style={{ width: '10vw' }} />
           </Navbar.Brand>

@@ -209,7 +209,7 @@
   align-self: flex-start;
   font-weight: 500;
   letter-spacing: 0;
-  margin-left: 13vw;
+  /* margin-left: 13vw; */
   margin-top: 90px;
   min-height: 44px;
 }
@@ -218,9 +218,10 @@
   align-items: center;
   display: flex;
   height: 203px;
-  margin-right: 11vw;
+  /* margin-right: 11vw; */
   margin-top: 6px;
   min-width: 63vw;
+  width: 100%;
 }
 
 .abicai-based-business-in {
@@ -252,6 +253,8 @@
   margin-left: 17vw;
   min-height: 162px;
   width: 14vw;
+  position: absolute;
+  right: 10%;
 }
 
 .abictext_label-container {
@@ -291,9 +294,9 @@
 }
 
 .abicimage_1 {
-  height: 49vw;
+  height: 56.7vw;
   margin-top: 63px;
-  width: 73vw;
+  /* width: 100%; */
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
@@ -301,6 +304,7 @@
 .abicscreen a {
   display: contents;
   text-decoration: none;
+  width: 85vw;
 }
 
 .abiccontainer-center-horizontal {
@@ -309,9 +313,37 @@
   justify-content: center;
   pointer-events: none;
   /* width: 100vw; */
+  margin-top: 5vw;
 }
 
 .abiccontainer-center-horizontal > * {
   flex-shrink: 0;
   pointer-events: auto;
+}
+@media only screen and (max-width: 1200px) {
+  .abicnotosanskr-light-chicago-20px {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .abicflex-row {
+    display: block;
+    text-align: center;
+  }
+  .abictext_label-3 {
+    margin-left: 12%;
+  }
+  .abicflex-col {
+    right: 40%;
+    width: unset;
+  }
+  .abictext_label-container {
+    width: 100%;
+  }
+  .abicimage_1 {
+    margin-top: 30vh;
+  }
+  .abicai-based-business-in {
+    font-size: 10vw;
+  }
 }
