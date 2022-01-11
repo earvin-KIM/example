@@ -226,7 +226,7 @@
   font-weight: 400;
   letter-spacing: 0;
   min-height: 116px;
-  min-width: 388px;
+  /* min-width: 388px; */
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');

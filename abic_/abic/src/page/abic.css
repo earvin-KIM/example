@@ -121,7 +121,7 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 1658px;
+  /* height: 1658px; */
   /* width: 100vw; */
 }
 
@@ -320,7 +320,7 @@
   flex-shrink: 0;
   pointer-events: auto;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1210px) {
   .abicnotosanskr-light-chicago-20px {
     font-size: 15px;
   }
@@ -334,16 +334,31 @@
     margin-left: 12%;
   }
   .abicflex-col {
-    right: 40%;
+    right: unset;
+    display: inline-block;
+    margin: unset;
     width: unset;
+    position: relative;
   }
   .abictext_label-container {
     width: 100%;
   }
   .abicimage_1 {
-    margin-top: 30vh;
+    margin-top: 40vh;
   }
   .abicai-based-business-in {
     font-size: 10vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .abicflex-col {
+    right: unset;
+    display: inline-block;
+    margin: unset;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .abictext_label-3 {
+    font-size: 25px;
   }
 }

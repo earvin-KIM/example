@@ -15,6 +15,8 @@ function ContactUs(props) {
       (result) => {
         console.log(result.text);
         alert('문의를 보냈습니다.');
+        // location.replace(location.href);
+        window.location.reload();
       },
       (error) => {
         console.log(error.text);
@@ -54,7 +56,13 @@ function ContactUs(props) {
               </div>
               <div className="contactflex-row-1">
                 <div className="contactrectangle contactborder-1px-mountain-mist">
-                  <input className="form-control form-control1" style={{}} placeholder="(구분)" name="division"></input>
+                  <input
+                    className="form-control form-control1"
+                    style={{}}
+                    placeholder="(구분)"
+                    name="division"
+                    required
+                  ></input>
                 </div>
                 <div className="contactrectangle-1 contactborder-1px-mountain-mist">
                   <input
@@ -62,6 +70,7 @@ function ContactUs(props) {
                     style={{}}
                     placeholder="(name)"
                     name="from_name"
+                    required
                   ></input>
                 </div>
               </div>
@@ -73,6 +82,7 @@ function ContactUs(props) {
                   style={{ height: '46px' }}
                   placeholder="email"
                   name="email"
+                  required
                 ></input>
               </div>
               <div className="contacttext_label contactapplesdgothicneo-normal-chicago-30px">{text_Label6}</div>
@@ -82,6 +92,7 @@ function ContactUs(props) {
                     className="form-control form-control1"
                     style={{ outline: 'none' }}
                     name="message"
+                    required
                   ></textarea>
                 </div>
                 <input type="submit" value="문의하기" className="contactgroup-1 contactborder-1px-mountain-mist">

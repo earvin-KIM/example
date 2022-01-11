@@ -473,13 +473,13 @@
 
 .aboutrectangle-1 {
   background-color: var(--iron);
-  height: 483px;
+  height: 19vw;
   width: 19vw;
 }
 
 .aboutrectangle {
   background-color: var(--iron);
-  height: 483px;
+  height: 19vw;
   margin-left: 9vw;
   width: 19vw;
 }
@@ -504,7 +504,7 @@
   flex-direction: column;
   margin-right: 1px;
   margin-top: 62px;
-  min-height: 566px;
+  /* min-height: 566px; */
   width: 73vw;
 }
 
@@ -524,20 +524,20 @@
 
 .aboutrectangle-2 {
   background-color: var(--iron);
-  height: 360px;
+  height: 19vw;
   width: 19vw;
 }
 
 .aboutrectangle-3 {
   background-color: var(--iron);
-  height: 360px;
+  height: 19vw;
   margin-left: 9vw;
   width: 19vw;
 }
 
 .aboutrectangle-4 {
   background-color: var(--iron);
-  height: 360px;
+  height: 19vw;
   margin-left: 9vw;
   width: 19vw;
 }
@@ -582,7 +582,7 @@
     font-size: 20px;
   }
   .aboutsdcompsans-clt-normal-chicago-120px {
-    font-size: 70px;
+    font-size: 60px;
   }
   .aboutnotosanskr-bold-white-30px,
   .aboutnotosanskr-medium-celeste-30px,
@@ -603,5 +603,33 @@
   }
   .aboutabic-1 {
     top: 495px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .aboutphone {
+    left: 45vw;
+  }
+  .aboutabic {
+    left: 45vw;
+  }
+  .aboutphone-1 {
+    left: 45vw;
+  }
+  .aboutabic-1 {
+    left: 45vw;
+  }
+  .aboutnumber {
+    left: 18vw;
+  }
+  .aboutnumber-1 {
+    left: 18vw;
+  }
+  .aboutauthorized-certifica {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .aboutsdcompsans-clt-normal-chicago-120px {
+    font-size: 50px;
   }
 }

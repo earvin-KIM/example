@@ -523,3 +523,8 @@ textarea {
     margin-left: 30vw;
   }
 }
+@media only screen and (max-width: 992px) {
+  .contactx {
+    width: 80vw;
+  }
+}

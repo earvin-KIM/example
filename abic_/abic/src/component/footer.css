@@ -335,7 +335,7 @@
 }
 
 .container-center-horizontal {
-  margin-top: 1vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -363,5 +363,10 @@
   }
   .wwwabicptrs-copytri {
     font-size: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .overlap-group2 {
+    height: 80vw;
   }
 }

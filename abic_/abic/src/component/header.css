@@ -239,4 +239,7 @@
   #fixed {
     max-width: 85vw;
   }
+  .navbar-nav {
+    font-size: 25px;
+  }
 }
