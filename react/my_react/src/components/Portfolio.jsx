@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import BoardData from '../service/BoardData';
-// import axios from 'axios';
+import axios from 'axios';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import portfolio_intro from './img/portfolio/portfolio_intro_banner.png';
@@ -33,7 +33,9 @@ function Portfolio(props) {
   }));
 
   console.log(products);
-
+  const del = function () {
+    BoardData.add();
+  };
   let i = 0;
   // while (i < boards.length) {
   //   if (i % 3 === 0) {
@@ -52,17 +54,28 @@ function Portfolio(props) {
         <div id="topimg">
           <img src={portfolio_intro} width={'100%'} />
         </div>
-        {/* <div id="port">
+        <p>
+          <input type="file" />
+        </p>
+
+        <div id="port">
           {boards.map((board) => (
             <div key={board.rownum}>
               <div>
-                <img src={require(`../../../../home/upload/${board.img_path}`)} className="currentPage" />
+                <img
+                  src={require(`../../../../home/upload/${board.img_path}`)}
+                  width={'500px'}
+                  height={'500px'}
+                  style={{ display: 'flex' }}
+                  className="currentPage"
+                />
+                <button>삭제</button>
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </section>
-      <BootstrapTable keyField="id" data={products} columns={columns} pagination={paginationFactory()} />
+      {/* <BootstrapTable keyField="id" data={products} columns={columns} pagination={paginationFactory()} /> */}
     </div>
   );
 }

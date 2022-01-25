@@ -224,7 +224,7 @@
 .abouttitle {
   font-weight: 400;
   letter-spacing: 0;
-  margin-left: 13vw;
+  margin-left: 7vw;
   margin-top: 103px;
   min-height: 8vw;
 }
@@ -555,7 +555,7 @@
   justify-content: center;
   pointer-events: none;
   width: 100vw;
-  margin-top: 10vw;
+  margin-top: 10vh;
 }
 
 .aboutcontainer-center-horizontal > * {

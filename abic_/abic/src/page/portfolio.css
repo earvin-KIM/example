@@ -217,7 +217,8 @@
   /* height: 633px; */
   justify-content: flex-end;
   text-align: center;
-  width: 100vw;
+  width: 85vw;
+  margin: auto;
   /* min-width: 1920px; */
   padding: 258px 0;
 }

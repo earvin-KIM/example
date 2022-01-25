@@ -5,15 +5,6 @@ import image_1 from '../image_intro.png';
 
 function ABIC(props) {
   const {
-    group6 = 'group-6.png',
-    group9 = 'our-work-group-9.png',
-    group12 = 'porfolio-group-12.png',
-    group3 = 'contact-us-group-3-1.png',
-    aboutUs = 'About Us',
-    contactUs = 'Contact Us',
-    text_Label = '주요 솔루션',
-    text_Label2 = '신사업 경영 컨설팅 솔루션',
-    intro = 'Intro',
     text_Label3 = '내 손 안의 컨설턴트',
     spanText = 'A',
     spanText2 = (
