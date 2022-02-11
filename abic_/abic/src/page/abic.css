@@ -294,9 +294,13 @@
 }
 
 .abicimage_1 {
-  height: 56.7vw;
+  height: auto;
   margin-top: 63px;
-  /* width: 100%; */
+  width: 85vw;
+}
+.abicimage_2 {
+  height: auto;
+  width: 85vw;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,300,700,500');
@@ -343,9 +347,7 @@
   .abictext_label-container {
     width: 100%;
   }
-  .abicimage_1 {
-    margin-top: 40vh;
-  }
+
   .abicai-based-business-in {
     font-size: 10vw;
   }

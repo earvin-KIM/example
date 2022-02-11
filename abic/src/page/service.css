@@ -1,0 +1,55 @@
+* {
+  text-align: center;
+}
+#serv_first {
+  margin-top: 5rem;
+}
+.ser_img {
+  overflow: hidden;
+  width: 10rem;
+  height: 10rem;
+}
+.ser_btn {
+  width: 100%;
+}
+.service {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+}
+.servimg {
+  width: 60%;
+  /* height: 100%; */
+}
+.servimg_s {
+  width: 30%;
+  margin: auto;
+}
+.servprogress {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.servprogress > p {
+  width: 10rem;
+}
+.pic_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+}
+#servh1 {
+  margin-bottom: none;
+}
+.san {
+  height: 90vh;
+}
+.spliderdiv {
+  text-align: -webkit-center;
+}
+#service_need {
+  margin-top: 20rem;
+}

@@ -1,0 +1,17 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 10;
+  transition: 500ms;
+}
+#logo {
+  height: 2rem;
+}
+.navbar-collapse {
+  flex-direction: row-reverse;
+}
+#navbar:hover {
+  opacity: 1;
+}

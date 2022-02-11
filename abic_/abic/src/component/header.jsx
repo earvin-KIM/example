@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import { Link } from 'react-router-dom';
 import logo from '../logo.png';
@@ -10,11 +10,14 @@ function Header1(props) {
     group12 = 'porfolio-group-12.png',
     group3 = 'contact-us-group-3-1.png',
     intro = 'Intro',
-    text_Label = '신사업 경영 컨설팅 솔루션',
+    text_Label = '신사업 기획 컨설팅 서비스',
     text_Label2 = '주요 솔루션',
     aboutUs = 'About Us',
     contactUs = 'Contact Us',
   } = props;
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // new:
+  const [visible, setVisible] = useState(true);
 
   return (
     <div className="headercontainer-center-horizontal">

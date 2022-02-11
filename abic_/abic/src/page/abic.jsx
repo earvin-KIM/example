@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import './abic.css';
 import learnmore_btn from '../Learn More_btn.png';
-import image_1 from '../image_intro.png';
+import image_1 from '../ir____________________________gd.png';
+import slide1 from '../slide2.JPG';
+import slide2 from '../slide3.JPG';
+import slide3 from '../slide4.JPG';
+import slide4 from '../easy.png';
+import slide5 from '../graph.png';
+import slide0 from '../slide1.JPG';
+import 'aos/dist/aos.css';
 
 function ABIC(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      mirror: true,
+      once: false,
+    });
+  });
   const {
     text_Label3 = '내 손 안의 컨설턴트',
     spanText = 'A',
@@ -34,34 +49,14 @@ function ABIC(props) {
   return (
     <div className="abiccontainer-center-horizontal">
       <div className="abicabic abicscreen">
-        {/* <div className="abicoverlap-group1">
-          <div className="abicgroup-container">
-            <div className="abicgroup-6" style={{ backgroundImage: `url(${group6})` }}></div>
-            <div className="abicgroup-9" style={{ backgroundImage: `url(${group9})` }}></div>
-            <div className="abicgroup-12" style={{ backgroundImage: `url(${group12})` }}></div>
-            <div className="abicgroup-3" style={{ backgroundImage: `url(${group3})` }}></div>
-          </div>
-          <div className="abicabout-us sdcompsans-clt-normal-chicago-25px">{aboutUs}</div>
-          <div className="abiccontact-us sdcompsans-clt-normal-chicago-25px">{contactUs}</div>
-          <div className="abictext_label-1 notosanskr-normal-chicago-25px">{text_Label}</div>
-          <div className="abictext_label-2 notosanskr-normal-chicago-25px">{text_Label2}</div>
-          <div className="abicintro sdcompsans-clt-normal-chicago-25px">{intro}</div>
-        </div> */}
-        <div className="abictext_label-3 abicnotosanskr-medium-chicago-30px">{text_Label3}</div>
-        <div className="abicflex-row">
-          <h1 className="abicai-based-business-in">
-            <span className="abicspan1">{spanText}</span>
-            <span className="abicspan2">{spanText2}</span>
-          </h1>
-          <div className="abicflex-col">
-            <div className="abictext_label-container abicnotosanskr-light-chicago-20px">
-              <div className="abictext_label">{text_Label4}</div>
-              <div className="abictext_label">{text_Label5}</div>
-            </div>
-            <img className="abiclearn-more_btn" src={learnmore_btn} />
-          </div>
-        </div>
-        <img className="abicimage_1" src={image_1} />
+        <img data-aos="fade-up" className="abicimage_1" src={image_1} />
+        <img data-aos="fade-up" className="abicimage_2" src={slide1} data-aos="fade-up" />
+        <img data-aos="fade-up" className="abicimage_2" src={slide2} />
+        <img data-aos="fade-up" className="abicimage_2" src={slide3} />
+        <img data-aos="fade-up" className="abicimage_2" src={slide5} />
+        <img data-aos="fade-up" className="abicimage_2" src={slide4} />
+
+        <img data-aos="fade-up" className="abicimage_2" src={slide0} />
       </div>
     </div>
   );

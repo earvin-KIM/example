@@ -1,0 +1,42 @@
+html {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  height: 100vh;
+}
+.introimg {
+  scroll-snap-align: start;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  overflow: hidden;
+}
+.introimg > img {
+  width: 100%;
+  /* height: 100%; */
+}
+.gotoservice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.one {
+  z-index: 1;
+}
+.two {
+  z-index: 2;
+}
+.three {
+  z-index: 3;
+}
+.four {
+  z-index: 4;
+}
+.five {
+  z-index: 5;
+}
+.six {
+  z-index: 6;
+}
