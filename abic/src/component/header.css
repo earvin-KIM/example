@@ -15,3 +15,23 @@
 #navbar:hover {
   opacity: 1;
 }
+.list-group,
+#navbar-example3 {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  z-index: 10;
+  opacity: 0.7;
+}
+html {
+  /* overflow-y: scroll; */
+  position: relative;
+  /* scroll-snap-type: y mandatory;
+  overflow: scroll; */
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+a.active {
+  color: blue;
+  font-weight: bolder;
+}

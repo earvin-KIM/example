@@ -1,7 +1,7 @@
 * {
   text-align: center;
 }
-#serv_first {
+#list-item-1 {
   margin-top: 5rem;
 }
 .ser_img {
@@ -12,13 +12,16 @@
 .ser_btn {
   width: 100%;
 }
-.service {
+.chapter {
+  scroll-snap-align: start;
+  position: relative;
   width: 100vw;
   max-width: 100%;
   height: 100vh;
   max-height: 100%;
   overflow: hidden;
 }
+
 .servimg {
   width: 60%;
   /* height: 100%; */
@@ -41,15 +44,25 @@
   justify-content: space-evenly;
   height: 80%;
 }
-#servh1 {
-  margin-bottom: none;
-}
 .san {
   height: 90vh;
+  width: auto;
 }
 .spliderdiv {
   text-align: -webkit-center;
 }
 #service_need {
   margin-top: 20rem;
+}
+h1,
+p {
+  max-width: 70vw;
+  margin: auto;
+}
+.service {
+  background-image: url('../img/service_back.jpg');
+  background-position: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
 }
