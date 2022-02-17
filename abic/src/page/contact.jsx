@@ -3,8 +3,13 @@ import React, { useRef, useEffect } from 'react';
 import './contact.css';
 import emailjs from '@emailjs/browser';
 import { Container, Row, Col } from 'react-bootstrap';
+import service_bottom_button from '../img/service/service-bottom-button.png';
 
-import contact_img from '../img/image_contact.png';
+import contactus_local from '../img/contactus/contactus-local.png';
+import contactus_letter from '../img/contactus/contactus-letter.png';
+import contactus_agree from '../img/contactus/contactus-agree.png';
+import contactus_mail from '../img/contactus/contactus-mail.png';
+import contactus_send from '../img/contactus/contactus-send.png';
 
 function ContactUs(props) {
   const form = useRef();
@@ -38,78 +43,75 @@ function ContactUs(props) {
   };
 
   return (
-    <div className="contact_us">
+    <div className="contact_us chapter" id="contact">
       <Container>
         <form ref={form} onSubmit={sendEmail}>
-          <div>
-            <Row>
-              <Col>
-                <div>
-                  <h1>Contact Us</h1>
-                </div>
-              </Col>
-            </Row>
-            <div>
+          <Row>
+            <Col>
               <div>
-                <div>Contact Us</div>
-                <Row>
-                  <Col>
-                    <Row>
-                      <Col>
-                        <div>
-                          <div>Location</div>
-                        </div>
-                        <div>경기도 성남시 수정구 대왕판교로 815, 창업존 기업지원허브 722호</div>
-                      </Col>
-                      <Col>
-                        <div>이름</div>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col></Col>
-                      <Col>
-                        <div>
-                          <input
-                            className="form-control form-control1"
-                            style={{}}
-                            placeholder="(name)"
-                            name="from_name"
-                            required
-                          ></input>
-                        </div>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <div>
-                          <div id="map" style={{ width: '500px', height: '400px' }}></div>
-                        </div>
-                      </Col>
-                      <Col>
-                        <div>이메일</div>
-                        <input
-                          className="form-control form-control1"
-                          type="email"
-                          style={{ height: '46px' }}
-                          placeholder="email"
-                          name="email"
-                          required
-                        ></input>
-                        <div>내용</div>
-                        <div>
-                          <textarea
-                            className="form-control form-control1"
-                            style={{ outline: 'none' }}
-                            name="message"
-                            required
-                          ></textarea>
-                        </div>
-                        <input className="btn btn-primary" type="submit" value="문의하기"></input>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
+                <img id="con1" src={contactus_letter} alt="" />
               </div>
+            </Col>
+          </Row>
+          <div>
+            <div>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col>
+                      <div>
+                        <img id="con2" src={contactus_local} alt="" />
+                        <img id="con3" src={contactus_mail} alt="" />
+                      </div>
+                    </Col>
+                    <Col></Col>
+                  </Row>
+                  <Row>
+                    <Col></Col>
+                    <Col>
+                      <div id="con4">이름</div>
+                      <div>
+                        <input className="form-control form-control1" style={{}} name="from_name" required></input>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <div>
+                        <div id="map" style={{ width: '500px', height: '400px' }}></div>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div id="con5">이메일</div>
+                      <input
+                        className="form-control form-control1"
+                        type="email"
+                        style={{ height: '46px' }}
+                        name="email"
+                        required
+                      ></input>
+                      <div id="con6">내용</div>
+                      <div>
+                        <textarea
+                          className="form-control form-control1"
+                          style={{ outline: 'none' }}
+                          name="message"
+                          required
+                        ></textarea>
+                      </div>
+                      <div>
+                        <input id="checkbox" type="checkbox" />
+                        <img id="con7" src={contactus_agree} alt="" />
+
+                        <input id="con8" type="image" src={contactus_send} />
+                      </div>
+                      <a href="/">
+                        <img id="fixed_goto" src={service_bottom_button} alt="" />
+                      </a>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
             </div>
           </div>
         </form>

@@ -9,36 +9,48 @@ import about4 from '../img/cer2.png';
 import about5 from '../img/cer3.png';
 import about6 from '../img/cer4.png';
 import about7 from '../img/cer5.jpg';
+import scroll from '../img/service/service-scroll.png';
+
 import { Container, Row, Col } from 'react-bootstrap';
 function AboutUs() {
   return (
     <>
+      <nav id="navbar-example3">
+        <a className="nav-link serlink" href="#list-item-1">
+          About Us <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-2">
+          Misson&Vision
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-3">
+          대표 소개
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-4">
+          인증서
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-5">
+          Partner&Team
+          <img className="side_nav" src="" alt="" />
+        </a>
+      </nav>
       <div className="about_us">
-        {/* <Splide
-          options={{
-            direction: 'ttb',
-            height: '100vh',
-            wheel: true,
-            arrows: false,
-          }}
-        > */}
-        {/* <SplideSlide> */}
+        <img id="scroll_img" src={scroll} />
         <div className="about about_intro chapter" id="list-item-1">
-          <h1>About Us</h1>
+          <img id="scroll_img" src={scroll} />
         </div>
-        {/* </SplideSlide> */}
-        {/* <SplideSlide> */}
+
         <div className="about chapter" id="list-item-2">
           <h1>Mission & Vision</h1>
           <img src={about1} alt="미션&비전" />
         </div>
-        {/* </SplideSlide> */}
-        {/* <SplideSlide> */}
+
         <div className="about chapter" id="list-item-3">
           <Container>
             <Row>
               <Col>
-                {' '}
                 <h1>대표 소개</h1>
                 <h3>CEO</h3>
                 <h3>이건호</h3>
@@ -64,8 +76,7 @@ function AboutUs() {
             </Row>
           </Container>
         </div>
-        {/* </SplideSlide> */}
-        {/* <SplideSlide> */}
+
         <div className="about cer chapter" id="list-item-4">
           <h1>
             Authorized Certification <br />
@@ -76,14 +87,11 @@ function AboutUs() {
           <img src={about6} alt="인증서" />
           <img src={about7} alt="인증서" />
         </div>
-        {/* </SplideSlide> */}
-        {/* <SplideSlide> */}
+
         <div className="about chapter" id="list-item-5">
           <h1>Partner</h1>
           <img src="" alt="파트너||팀" />
         </div>
-        {/* </SplideSlide> */}
-        {/* </Splide> */}
       </div>
     </>
   );

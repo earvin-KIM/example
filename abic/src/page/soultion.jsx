@@ -1,16 +1,35 @@
 import React from 'react';
-import sol1 from '../img/solution_intro.png';
-import sol2 from '../img/solution_sol.png';
+import service_bottom_button from '../img/service/service-bottom-button.png';
+import solution_circle from '../img/service/service-l-circle.png';
+import solution_circle1 from '../img/solution/solution-r-circle.png';
+import soultion_letter from '../img/solution/solution-b-letter.png';
+import scroll from '../img/service/service-scroll.png';
 import './solution.css';
 function Soultion() {
   return (
     <>
-      <div className="solution" id="sol_1">
-        <h1>주요 솔루션</h1>
-        <img src="" alt="솔루션 인트로" />
-      </div>
-      <div className="solution" id="sol_2">
-        <img src="" alt="페르미 추정 엔진&크롤링 솔루션" />
+      <div id="list-item-1" className="chapter solution">
+        <div>
+          <div className="solh1">
+            <img src={soultion_letter} alt="" />
+          </div>
+        </div>
+        <div className="pic_nav_sol">
+          <div className="ser_img rounded">
+            <a href="/">
+              <img className="ser_btn" src={solution_circle} alt="서비스소개" />
+            </a>
+          </div>
+          <div className="ser_img rounded">
+            <a href="/">
+              <img className="ser_btn" src={solution_circle1} alt="서비스필요성" />
+            </a>
+          </div>
+        </div>
+        <img id="scroll_img" src={scroll} />
+        <a href="/">
+          <img id="fixed_goto" src={service_bottom_button} alt="" />
+        </a>
       </div>
     </>
   );

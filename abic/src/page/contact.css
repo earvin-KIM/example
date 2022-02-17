@@ -4,6 +4,7 @@ input {
   width: 80%;
   font-size: larger;
   text-align: center;
+  background: transparent !important;
   /* border-radius: 24.5px; */
 }
 textarea {
@@ -13,6 +14,7 @@ textarea {
   width: 90%;
   font-size: x-large;
   height: 80%;
+  background: transparent !important;
 }
 .form-control1 {
   border-radius: 24.5px !important;
@@ -24,4 +26,17 @@ img {
   scroll-snap-align: start;
   width: 100%;
   height: 100vh;
+  background-image: url('../img/contactus/contactus-b-img.png');
+  background-position: center;
+  background-size: cover;
+}
+.contact_us img {
+  width: auto;
+}
+#checkbox {
+  height: 20px;
+}
+
+#con8 {
+  width: 20%;
 }

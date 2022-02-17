@@ -7,18 +7,50 @@
   max-height: 100%;
   overflow: hidden;
 
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .gotoservice {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 20%;
+  left: 10%;
+  width: 10%;
+  /* border-radius: 60rem !important;
+  border: solid !important; */
 }
-.zero {
-  background-image: url('../img/sli1.PNG');
+.zero img {
+  position: absolute;
+}
+#intro_b {
+  height: 100%;
+  width: auto;
+  right: 0;
+}
+#intro_copy1 {
+  height: 3%;
+  width: auto;
+  left: 11%;
+  top: 20%;
+}
+#intro_copy2 {
+  height: 20%;
+  width: auto;
+  left: 10%;
+  top: 25%;
+}
+#intro_logo {
+  height: 15%;
+  width: auto;
+  left: 10%;
+  top: 50%;
+}
+#scroll_img {
+  position: absolute;
+  width: 5%;
+  animation: float 1.5s ease-in-out infinite;
+  bottom: 5%;
 }
 .one {
   z-index: 1;
@@ -55,5 +87,23 @@
 @keyframes blink {
   to {
     opacity: 0;
+  }
+}
+#fixed_goto {
+  position: fixed;
+  width: 50px;
+  bottom: 5%;
+  right: 5%;
+  z-index: 10;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }

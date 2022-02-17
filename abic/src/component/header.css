@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
 #navbar {
   position: fixed;
   top: 0;
@@ -5,6 +7,10 @@
   width: 100%;
   z-index: 10;
   transition: 500ms;
+  border-bottom: solid white 1px;
+}
+#navbar > #contain {
+  align-items: flex-start !important;
 }
 #logo {
   height: 2rem;
@@ -18,10 +24,34 @@
 .list-group,
 #navbar-example3 {
   position: fixed;
-  bottom: 50px;
+  bottom: 50%;
   right: 0;
   z-index: 10;
   opacity: 0.7;
+  transform: translateY(50%);
+  align-items: flex-end !important;
+  flex-direction: column !important;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: 100ms;
+}
+.nav-link {
+  color: white !important;
+}
+.nav-link-intro {
+  color: black !important;
+  display: block;
+  padding: 0.5rem 1rem;
+
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.nav-link-intro.active {
+  color: #020548 !important;
+  font-size: large;
+  font-weight: bolder;
+  transition: 100ms;
 }
 html {
   /* overflow-y: scroll; */
@@ -31,7 +61,19 @@ html {
   height: 100vh;
   scroll-behavior: smooth;
 }
-a.active {
-  color: blue;
+.nav-link.active {
+  color: whitesmoke !important;
+  font-size: large;
   font-weight: bolder;
+  transition: 100ms;
+}
+/* .d-flex .active {
+  color: whitesmoke !important;
+  font-weight: bolder;
+} */
+.side_nav {
+  width: auto;
+}
+.active .side_nav {
+  margin-left: 10px;
 }

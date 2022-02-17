@@ -1,7 +1,8 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
-import serv1 from '../img/business.png';
+import service_letter from '../img/service/service-b-letter.png';
+import serv1 from '../img/business1.png';
 import serv2 from '../img/serv2.png';
 import serv3 from '../img/serv3.png';
 import serv4 from '../img/serv4.jpg';
@@ -13,87 +14,106 @@ import gtm from '../img/gtm.png';
 import san1 from '../img/san1.png';
 import san2 from '../img/san2.png';
 import san3 from '../img/san3.png';
-import dummy from '../img/dummy.png';
+import service_circle from '../img/service/service-l-circle.png';
+import service_circle1 from '../img/service/service-r-circle.png';
+import scroll from '../img/service/service-scroll.png';
+import service_bottom_button from '../img/service/service-bottom-button.png';
+
 import './service.css';
 function Service() {
   return (
     <>
-      <nav id="navbar-example3" className="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link serlink" href="#list-item-1">
-            목차
-          </a>
-          <a className="nav-link serlink" href="#list-item-2">
+      <nav id="navbar-example3">
+        <a className="nav-link serlink" href="#list-item-1">
+          목차
+          <img className="side_nav" src="" alt="" />
+        </a>
+        {/* <a className="nav-link serlink" href="#list-item-2">
             서비스
-          </a>
-          <a className="nav-link serlink" href="#list-item-3">
-            비즈니스 솔루션
-          </a>
-          <a className="nav-link serlink" href="#list-item-4">
-            단계별 서비스
-          </a>
-          <a className="nav-link serlink" href="#list-item-5">
-            단계별 서비스
-          </a>
-          <a className="nav-link serlink" href="#list-item-6">
-            단계별 서비스
-          </a>
-          <a className="nav-link serlink" href="#list-item-7">
-            단계별 서비스
-          </a>{' '}
-          <a className="nav-link serlink" href="#list-item-8">
-            산출물 예시
-          </a>{' '}
-          <a className="nav-link serlink" href="#list-item-9">
-            서비스 필요성
-          </a>{' '}
-          <a className="nav-link serlink" href="#list-item-10">
-            서비스 필요성
-          </a>{' '}
-          <a className="nav-link serlink" href="#list-item-11">
-            정보격차
-          </a>{' '}
-          <a className="nav-link serlink" href="#list-item-12">
-            abic 필요성
-          </a>
-        </nav>
+          </a> */}
+        <a className="nav-link serlink" href="#list-item-3">
+          비즈니스 솔루션
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-4">
+          단계별 서비스
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-5">
+          단계별 서비스
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-6">
+          단계별 서비스
+          <img className="side_nav" src="" alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-7">
+          단계별 서비스
+          <img className="side_nav" src="" alt="" />
+        </a>{' '}
+        <a className="nav-link serlink" href="#list-item-8">
+          산출물 예시
+          <img className="side_nav" src="" alt="" />
+        </a>{' '}
+        <a className="nav-link serlink" href="#list-item-9">
+          서비스 필요성
+          <img className="side_nav" src="" alt="" />
+        </a>{' '}
+        <a className="nav-link serlink" href="#list-item-10">
+          서비스 필요성
+          <img className="side_nav" src="" alt="" />
+        </a>{' '}
+        <a className="nav-link serlink" href="#list-item-11">
+          정보격차
+          <img className="side_nav" src="" alt="" />
+        </a>{' '}
+        <a className="nav-link serlink" href="#list-item-12">
+          abic 필요성
+          <img className="side_nav" src="" alt="" />
+        </a>
       </nav>
-      <div>
+      <div id="service_container">
         <div id="list-item-1" className="chapter service">
           <div>
-            <h1 id="servh1">신사업 기획 컨설팅 서비스</h1>
+            <div className="servh1">
+              <img src={service_letter} alt="" />
+            </div>
           </div>
           <div className="pic_nav">
             <div className="ser_img rounded">
               <a href="#service_info">
-                <img className="ser_btn" src={dummy} alt="서비스소개" />
+                <img className="ser_btn" src={service_circle} alt="서비스소개" />
               </a>
             </div>
             <div className="ser_img rounded">
               <a href="#service_need">
-                <img className="ser_btn" src={dummy} alt="서비스필요성" />
+                <img className="ser_btn" src={service_circle1} alt="서비스필요성" />
               </a>
             </div>
           </div>
+          <img id="scroll_img" src={scroll} />
+          <a href="/">
+            <img id="fixed_goto" src={service_bottom_button} alt="" />
+          </a>
         </div>
         <div id="service_info">
-          <div className="chapter service" id="list-item-2">
+          {/* <div className="chapter service" id="list-item-2">
             <h1>서비스 소개</h1>
-          </div>
+          </div> */}
           <div className="chapter service" id="list-item-3">
-            <img src={serv1} className="servimg" alt="비지니스 인사이트" />
+            <img src={serv1} className="servimg" alt="비지니스 인사이트" style={{ width: '80%', marginTop: '10%' }} />
           </div>
           <div className="chapter service" id="list-item-4">
-            <h1 id="servh1">0단계 : 사업모델 개요/유형 판단</h1>
+            <h1 className="servh1">0단계 : 사업모델 개요/유형 판단</h1>
 
-            <div className="servprogress">
+            <div className="servinner" style={{ top: '15rem' }}>
               <img src={serv2} className="servimg_s" alt="0단계" />
               <img src={serv3} className="servimg_s" alt="0단계-1" />
             </div>
           </div>
           <div className="chapter service" id="list-item-5">
-            <h1 id="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1>
-            <div className="servprogress">
+            <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1>
+            <div className="servinner">
               <p>
                 구상 중인 신사업 아이디어의 TAM/SAM 시장을 정의하고 고객/경쟁 등에 대한 트랜드를 분석합니다. 이를
                 바탕으로 TAM/SAM 시장규모와 성장잠재력을 논리적으로 추정하여 사업아이디어의 타당성을 점검할 수 있도록
@@ -103,8 +123,8 @@ function Service() {
             </div>
           </div>
           <div className="chapter service" id="list-item-6">
-            <h1 id="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1>
-            <div className="servprogress">
+            <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1>
+            <div className="servinner">
               <p>
                 신사업이 초기 1~2년 안에 반드시 공략해야 하는 거점시장(SOM)을 정의하고, 거점시장 목표고객의 특성/니즈,
                 경쟁자들의 전략방향 등에 대해 구체적으로 분석합니다.
@@ -113,8 +133,8 @@ function Service() {
             </div>
           </div>
           <div className="chapter service" id="list-item-7">
-            <h1 id="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
-            <div className="servprogress">
+            <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
+            <div className="servinner">
               <p>
                 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시 초기거점시장(SOM)을 공략하기 위한 GTM 전략방향을
                 Who(목표고객)-What(고객가치)-How(유통/마케팅)의 관점에서 개발하여 제시합니다

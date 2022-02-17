@@ -1,16 +1,20 @@
 * {
   text-align: center;
+  /* color: #020548; */
+  font-family: 'Noto Sans KR', sans-serif;
 }
 #list-item-1 {
   margin-top: 5rem;
 }
 .ser_img {
   overflow: hidden;
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
 }
 .ser_btn {
   width: 100%;
+  /* border-radius: 50%;
+  border: solid navy; */
 }
 .chapter {
   scroll-snap-align: start;
@@ -30,10 +34,11 @@
   width: 30%;
   margin: auto;
 }
-.servprogress {
+.servinner {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: relative;
 }
 .servprogress > p {
   width: 10rem;
@@ -42,7 +47,10 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 80%;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
 }
 .san {
   height: 90vh;
@@ -51,18 +59,26 @@
 .spliderdiv {
   text-align: -webkit-center;
 }
-#service_need {
-  margin-top: 20rem;
-}
 h1,
 p {
   max-width: 70vw;
   margin: auto;
 }
 .service {
-  background-image: url('../img/service_back.jpg');
+  background-image: url('../img/service/service-b-img.png');
   background-position: center;
 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.servh1 {
+  position: absolute;
+  top: 20%;
+  width: 100vw;
+}
+.servh1 > img {
+  width: auto;
+}
+#service_container {
+  color: rgb(206, 206, 206);
 }

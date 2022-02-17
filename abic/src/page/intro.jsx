@@ -7,6 +7,16 @@ import intro5 from '../img/sli5.PNG';
 import intro6 from '../img/sli6.png';
 import head from '../img/head.svg';
 import why from '../img/why.png';
+import intro_b_img from '../img/intro/intro-b-img.png';
+import intro_b_logo from '../img/intro/intro-b-logo.png';
+import intro_button from '../img/intro/intro-button.png';
+import intro_write1 from '../img/intro/intro-write1.png';
+import intro_bottom_button from '../img/intro/intro-bottom-button.png';
+import intro_write2 from '../img/intro/intro-write2.png';
+import scroll from '../img/intro/scroll.png';
+import side_active from '../img/intro/side-bar.png';
+import side_none from '../img/intro/side-circle.png';
+
 import './intro.css';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
@@ -18,37 +28,49 @@ function Intro() {
 
   return (
     <>
-      <nav id="navbar-example3" className="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-        <nav className="nav nav-pills flex-column">
-          <a className="nav-link serlink" href="#list-item-1">
-            ABIC
-          </a>
-          <a className="nav-link serlink" href="#list-item-2">
-            업무
-          </a>
-          <a className="nav-link serlink" href="#list-item-3">
-            등장배경
-          </a>
-          <a className="nav-link serlink" href="#list-item-4">
-            등장배경
-          </a>
-          <a className="nav-link serlink" href="#list-item-5">
-            Why ABIC
-          </a>
-          <a className="nav-link serlink" href="#list-item-6">
-            감정곡선
-          </a>
-          <a className="nav-link serlink" href="#list-item-7">
-            ABIC의 목표
-          </a>
-        </nav>
+      <nav id="navbar-example3">
+        <a className="nav-link serlink" href="#list-item-1">
+          ABIC <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-2">
+          업무
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-3">
+          등장배경
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-4">
+          등장배경
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-5">
+          Why ABIC
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-6">
+          감정곡선
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
+        <a className="nav-link serlink" href="#list-item-7">
+          ABIC의 목표
+          <img className="side_nav" src={side_none} alt="" />
+        </a>
       </nav>
+      <a href="/">
+        <img id="fixed_goto" src={intro_bottom_button} alt="" />
+      </a>
       <div>
         <div id="intro">
           <div id="list-item-1" className="chapter zero">
+            <img id="intro_b" src={intro_b_img} />
+            <img id="intro_copy1" src={intro_write1} />
+            <img id="intro_copy2" src={intro_write2} />
+            <img id="intro_logo" src={intro_b_logo} />
             <a href="#">
-              <button className="gotoservice btn btn-primary">서비스 받기</button>
+              <img src={intro_button} alt="gotoservice" className="gotoservice" />
             </a>
+            <img id="scroll_img" src={scroll} />
           </div>
 
           <div data-aos="fade-in" data-aos-duration="300" className="chapter one " id="list-item-2"></div>
@@ -80,7 +102,7 @@ function Intro() {
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter six" id="list-item-7">
             <a href="#">
-              <button className="gotoservice btn btn-primary">서비스 받기</button>
+              <button className="gotoservice btn btn-light">서비스 받기</button>
             </a>
           </div>
         </div>

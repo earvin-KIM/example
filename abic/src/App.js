@@ -9,7 +9,12 @@ import Soultion from './page/soultion';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import jQuery from 'jquery';
+import side_active from './img/intro/side-bar.png';
+import side_active_about from './img/aboutus/aboutus-side-bar.png';
+import side_none from './img/intro/side-circle.png';
+import side_none_about from './img/aboutus/aboutus-side-circle.png';
 import $ from 'jquery';
+import logoi from './img/intro/intro-s-logo.png';
 import { State } from '@splidejs/splide';
 
 function App() {
@@ -21,14 +26,30 @@ function App() {
     $(window).on('scroll', function () {
       findPosition();
     });
-
+    var side_ = side_active_about,
+      side = side_none_about;
+    if (window.location.pathname == '/') {
+      side_ = side_active;
+      side = side_none;
+      $('.nav-link').addClass('nav-link-intro');
+      $('.nav-link').removeClass('nav-link');
+      $('#logo1').attr('src', logoi);
+      $('#navbar').css('border-bottom', 'solid 1px #020548');
+    }
     function findPosition() {
       $('.chapter').each(function () {
-        if ($(this).offset().top - $(window).scrollTop() < 20) {
+        if (Math.abs($(this).offset().top - $(window).scrollTop()) < 10) {
           // console.log($(this).offset().top);
           // console.log($(window).scrollTop());
+          console.log('find');
+          $('.side_nav').attr('src', side);
           link.removeClass('active');
           $('[href="#' + $(this).attr('id') + '"]').addClass('active');
+          $('[href="#' + $(this).attr('id') + '"] img')
+            // .css('opacity', '0')
+            // .stop()
+            .attr('src', side_);
+          // .animate({ opacity: 1 }, 100);
         }
       });
     }
@@ -106,7 +127,7 @@ function App() {
             scrollEle.scrollTop = targetY;
             setTimeout(function () {
               isMoving = false;
-            }, scrollEndDelay);
+            }, scrollEndDelay + 100);
             console.log('End off.');
           }
         };
@@ -138,20 +159,25 @@ function App() {
     const keypress = (event) => {
       if (maxPageIndex <= 0) return;
       // 스크롤 방지
+      // $('input').on('focus', function () {
+      //   isMoving = true;
+      // });
+      if (isMoving || (event.key != 'ArrowDown' && event.key != 'ArrowUp')) return;
       event.preventDefault();
-      if (isMoving) return;
 
+      console.log(event.key);
       let next;
-      if (event.key == 40) {
+      if (event.key == 'ArrowDown') {
         next = true;
-      } else if (event.key == 38) {
+      } else if (event.key == 'ArrowUp') {
         next = false;
       }
       scorlling(next);
     };
     const scorlling = function (next) {
       if (maxPageIndex <= 0) return;
-      if (isMoving) return;
+
+      if (isMoving || (document.querySelector('#map') != null && $('#map').is(':hover'))) return;
 
       let paging = 0;
       pageIndex = paging_now();
@@ -170,6 +196,7 @@ function App() {
     const main_scroll = document.querySelector('html');
     window.addEventListener('wheel', wheel, { passive: false });
     window.addEventListener('keydown', keypress, { passive: false });
+    // $(input).addEventListener('focus',(event)=>{keypress.preventDefault()})
   });
 
   return (
@@ -177,11 +204,7 @@ function App() {
       <BrowserRouter>
         <div id="top"></div>
         <Header></Header>
-        <a href="#top">
-          <button className="btn btn-primary" style={{ position: 'fixed', bottom: 0, right: 0, zIndex: 10 }}>
-            top
-          </button>
-        </a>
+
         <Routes>
           <Route path="/" exact element={<Intro />} />
           <Route path="/about" element={<AboutUs />} />

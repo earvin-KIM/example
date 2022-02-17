@@ -5,8 +5,13 @@
 }
 .footer_div {
   width: 100%;
-  height: 50%;
-  background-color: cornflowerblue;
+  height: 100%;
+  background-image: url('../img/footer/footer.png');
+  background-position: center;
+  background-size: cover;
   position: absolute;
   bottom: 0;
+}
+.footer_div > img {
+  width: 100%;
 }
