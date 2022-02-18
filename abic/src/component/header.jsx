@@ -37,8 +37,8 @@ function Header() {
               <Nav.Link href="/" id="intro_link">
                 Intro
               </Nav.Link>
-              <Nav.Link href="/service">서비스</Nav.Link>
-              <Nav.Link href="/soultion">솔루션</Nav.Link>
+              <Nav.Link href="/service">Service</Nav.Link>
+              <Nav.Link href="/soultion">Solution</Nav.Link>
               <Nav.Link href="/about">About Us</Nav.Link>
               <Nav.Link href="/contact">Contact Us</Nav.Link>
             </Nav>

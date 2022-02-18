@@ -49,8 +49,9 @@
 #scroll_img {
   position: absolute;
   width: 5%;
-  animation: float 1.5s ease-in-out infinite;
   bottom: 5%;
+  left: 50%;
+  animation: float 1.5s ease-in-out infinite;
 }
 .one {
   z-index: 1;
@@ -98,12 +99,12 @@
 }
 @keyframes float {
   0% {
-    transform: translatey(0px);
+    transform: translate(-50%, 0px);
   }
   50% {
-    transform: translatey(-20px);
+    transform: translate(-50%, -20px);
   }
   100% {
-    transform: translatey(0px);
+    transform: translate(-50%, 0px);
   }
 }

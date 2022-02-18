@@ -1,26 +1,38 @@
 input {
   outline: none;
   height: -webkit-fill-available;
-  width: 80%;
+  width: 45% !important;
   font-size: larger;
   text-align: center;
   background: transparent !important;
   /* border-radius: 24.5px; */
 }
+input::placeholder {
+  color: white !important;
+  text-align: left;
+}
 textarea {
   margin-top: 5%;
   /* padding: 0 5%; */
   outline: none;
-  width: 90%;
+  width: 100% !important;
   font-size: x-large;
-  height: 80%;
+  height: 100%;
   background: transparent !important;
 }
 .form-control1 {
-  border-radius: 24.5px !important;
+  border-radius: 10px !important;
 }
-img {
+/* img {
   width: 100%;
+} */
+#con1 {
+  width: 30%;
+}
+#con2,
+#con3 {
+  margin-bottom: 10px;
+  width: 30%;
 }
 .contact_us {
   scroll-snap-align: start;
@@ -31,12 +43,19 @@ img {
   background-size: cover;
 }
 .contact_us img {
-  width: auto;
+  width: 40%;
 }
 #checkbox {
   height: 20px;
 }
-
-#con8 {
-  width: 20%;
+#con7 {
+  position: relative;
+  right: 10px;
+}
+.d-flex {
+  align-items: center;
+}
+.nav-link-intro,
+.nav-link {
+  margin-left: 30px;
 }

@@ -44,76 +44,94 @@ function ContactUs(props) {
 
   return (
     <div className="contact_us chapter" id="contact">
-      <Container>
+      <Container style={{ position: 'relative', top: '7%' }}>
         <form ref={form} onSubmit={sendEmail}>
           <Row>
             <Col>
-              <div>
+              <div style={{ margin: '3% 0' }}>
                 <img id="con1" src={contactus_letter} alt="" />
               </div>
             </Col>
           </Row>
-          <div>
-            <div>
+
+          <Row>
+            <Col>
               <Row>
                 <Col>
-                  <Row>
-                    <Col>
-                      <div>
-                        <img id="con2" src={contactus_local} alt="" />
-                        <img id="con3" src={contactus_mail} alt="" />
-                      </div>
-                    </Col>
-                    <Col></Col>
-                  </Row>
-                  <Row>
-                    <Col></Col>
-                    <Col>
-                      <div id="con4">이름</div>
-                      <div>
-                        <input className="form-control form-control1" style={{}} name="from_name" required></input>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <div>
-                        <div id="map" style={{ width: '500px', height: '400px' }}></div>
-                      </div>
-                    </Col>
-                    <Col>
-                      <div id="con5">이메일</div>
-                      <input
-                        className="form-control form-control1"
-                        type="email"
-                        style={{ height: '46px' }}
-                        name="email"
-                        required
-                      ></input>
-                      <div id="con6">내용</div>
-                      <div>
-                        <textarea
-                          className="form-control form-control1"
-                          style={{ outline: 'none' }}
-                          name="message"
-                          required
-                        ></textarea>
-                      </div>
-                      <div>
-                        <input id="checkbox" type="checkbox" />
-                        <img id="con7" src={contactus_agree} alt="" />
+                  <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                    <img id="con2" src={contactus_local} alt="" />
+                    <img id="con3" src={contactus_mail} alt="" />
+                  </div>
+                </Col>
+                <Col></Col>
+              </Row>
+              <Row>
+                <Col></Col>
+                <Col></Col>
+              </Row>
+              <Row>
+                <Col>
+                  <div>
+                    <div id="map" style={{ width: '100%', height: '300px' }}></div>
+                  </div>
+                </Col>
+                <Col
+                  style={{ display: 'flex', flexWrap: 'wrap', alignContent: 'space-around', justifyContent: 'center' }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                    <input
+                      className="form-control form-control1"
+                      style={{}}
+                      name="from_name"
+                      placeholder="성함"
+                      required
+                    ></input>
+                    <input
+                      className="form-control form-control1"
+                      type="tel"
+                      placeholder="연락처"
+                      name="from_tel"
+                      required
+                    ></input>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+                    <input
+                      className="form-control form-control1"
+                      type="email"
+                      placeholder="이메일"
+                      style={{ height: '46px' }}
+                      name="email"
+                      required
+                    ></input>
+                    <input
+                      className="form-control form-control1"
+                      placeholder="회사명"
+                      style={{ height: '46px' }}
+                      name="company"
+                      required
+                    ></input>
+                  </div>
+                  <div style={{ width: '100%', height: '40%' }}>
+                    <textarea
+                      className="form-control form-control1"
+                      style={{ outline: 'none' }}
+                      name="message"
+                      required
+                    ></textarea>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                    <input id="checkbox" required type="checkbox" />
+                    <img id="con7" src={contactus_agree} alt="" />
 
-                        <input id="con8" type="image" src={contactus_send} />
-                      </div>
-                      <a href="/">
-                        <img id="fixed_goto" src={service_bottom_button} alt="" />
-                      </a>
-                    </Col>
-                  </Row>
+                    <input id="con8" type="image" required src={contactus_send} />
+                  </div>
+                  <a href="/">
+                    <img id="fixed_goto" src={service_bottom_button} alt="" />
+                  </a>
                 </Col>
               </Row>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </form>
       </Container>
     </div>
