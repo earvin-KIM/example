@@ -16,6 +16,8 @@
   position: absolute;
   bottom: 20%;
   left: 10%;
+  opacity: 0;
+  animation: intro_ani 500ms ease 3500ms forwards;
   width: 10%;
   /* border-radius: 60rem !important;
   border: solid !important; */
@@ -27,31 +29,43 @@
   height: 100%;
   width: auto;
   right: 0;
+  opacity: 0;
+  animation: intro_ani 1000ms ease forwards;
 }
 #intro_copy1 {
   height: 3%;
   width: auto;
   left: 11%;
   top: 20%;
+  opacity: 0;
+
+  animation: intro_ani 1000ms ease 500ms forwards;
 }
 #intro_copy2 {
   height: 20%;
   width: auto;
   left: 10%;
   top: 25%;
+  opacity: 0;
+
+  animation: intro_ani 1000ms ease 1500ms forwards;
 }
 #intro_logo {
   height: 15%;
   width: auto;
   left: 10%;
   top: 50%;
+  opacity: 0;
+
+  animation: intro_ani 1000ms ease 2500ms forwards;
 }
 #scroll_img {
   position: absolute;
   width: 5%;
   bottom: 5%;
   left: 50%;
-  animation: float 1.5s ease-in-out infinite;
+  opacity: 0;
+  animation: intro_ani 1000ms ease 4000ms forwards, float 1.5s ease-in-out infinite;
 }
 .one {
   z-index: 1;
@@ -106,5 +120,15 @@
   }
   100% {
     transform: translate(-50%, 0px);
+  }
+}
+@keyframes intro_ani {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
