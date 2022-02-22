@@ -131,14 +131,21 @@ function App() {
     };
     const paging_now = () => {
       let paging = 0,
-        rem;
+        rem = -1;
       $('.chapter').each(function () {
         if ($(this).offset().top - window.scrollY < 20) {
           rem = paging;
         }
         paging++;
       });
+      var footer_bottom = document.querySelector('#footer').offsetHeight + document.querySelector('#footer').offsetTop;
+      if (footer_bottom - (window.scrollY + window.innerHeight) < 20) {
+        rem = paging - 1;
+      }
+
       console.log(rem);
+      console.log($('#footer').offsetHeight);
+      console.log($('#footer').offsetTop);
 
       return rem;
     };
