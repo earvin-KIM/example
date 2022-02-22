@@ -77,3 +77,10 @@ html {
 .active .side_nav {
   margin-left: 10px;
 }
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}

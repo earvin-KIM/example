@@ -5,9 +5,7 @@ function Footer() {
   return (
     <>
       <div className="footer chapter" id="footer">
-        <div className="footer_div">
-          <img src={footer} alt="" />
-        </div>
+        <div className="footer_div">{/* <img src={footer} alt="" /> */}</div>
       </div>
     </>
   );
