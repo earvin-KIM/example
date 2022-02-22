@@ -43,12 +43,12 @@ function AboutUs() {
         </div>
 
         <div className="about chapter" id="list-item-2">
-          <h1>Mission & Vision</h1>
-          <img src={about1} alt="미션&비전" />
+          {/* <h1>Mission & Vision</h1>
+          <img src={about1} alt="미션&비전" /> */}
         </div>
 
         <div className="about chapter" id="list-item-3">
-          <Container>
+          {/* <Container>
             <Row>
               <Col>
                 <h1>대표 소개</h1>
@@ -74,23 +74,23 @@ function AboutUs() {
                 <img src={about2} alt="대표님 사진" />
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </div>
 
         <div className="about cer chapter" id="list-item-4">
-          <h1>
+          {/* <h1>
             Authorized Certification <br />
           </h1>
           <img src={about3} alt="인증서" />
           <img src={about4} alt="인증서" />
           <img src={about5} alt="인증서" />
           <img src={about6} alt="인증서" />
-          <img src={about7} alt="인증서" />
+          <img src={about7} alt="인증서" /> */}
         </div>
 
         <div className="about chapter" id="list-item-5">
-          <h1>Partner</h1>
-          <img src="" alt="파트너||팀" />
+          {/* <h1>Partner</h1>
+          <img src="" alt="파트너||팀" /> */}
         </div>
       </div>
     </>

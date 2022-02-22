@@ -9,7 +9,7 @@
   overflow: hidden;
   background-image: url('../img/solution/solution_back.png');
 
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -29,4 +29,7 @@
   width: 100%;
   position: absolute;
   bottom: 12%;
+}
+.sol #list-item-2 {
+  background-image: url('../img/solution/solution-1.png');
 }

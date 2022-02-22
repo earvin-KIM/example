@@ -65,10 +65,10 @@ p {
   margin: auto;
 }
 .service {
-  background-image: url('../img/service/service-b-img.png');
+  /* background-image: url('../img/service/service-b-img.png'); */
   background-position: center;
 
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
 }
 .servh1 {
@@ -81,4 +81,40 @@ p {
 }
 #service_container {
   color: rgb(206, 206, 206);
+}
+.se #list-item-1 {
+  background-image: url('../img/service/service-b-img.png');
+}
+.se #list-item-2 {
+  background-image: url('../img/service/business--1.png');
+}
+.se #list-item-3 {
+  background-image: url('../img/service/business--2.png');
+}
+.se #list-item-4 {
+  background-image: url('../img/service/business--1.png');
+}
+.se #list-item-5 {
+  background-image: url('../img/service/business--0.png');
+}
+.se #list-item-6 {
+  background-image: url('../img/service/business.png');
+}
+.se #list-item-7 {
+  background-image: url('../img/service/business-2.png');
+}
+.se #list-item-8 {
+  background-image: url('../img/service/business-3.png');
+}
+.se #list-item-9 {
+  background-image: url('../img/service/business-4.png');
+}
+.se #list-item-10 {
+  background-image: url('../img/service/business-5.png');
+}
+.se #list-item-11 {
+  background-image: url('../img/service/business-6.png');
+}
+.se #list-item-12 {
+  background-image: url('../img/service/business-6.png');
 }

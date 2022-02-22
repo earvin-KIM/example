@@ -7,11 +7,16 @@
   max-height: 100%;
   overflow: hidden;
 
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.bottom-gotoservice {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 10%;
+}
 .gotoservice {
   position: absolute;
   bottom: 20%;
@@ -69,27 +74,27 @@
 }
 .one {
   z-index: 1;
-  background-image: url('../img/sli2.PNG');
+  background-image: url('../img/intro/intro.png');
 }
 .two {
   z-index: 2;
-  background-image: url('../img/sli3.PNG');
+  background-image: url('../img/intro/intro-1.png');
 }
 .three {
   z-index: 3;
-  background-image: url('../img/sli4.PNG');
+  background-image: url('../img/intro/intro-2.png');
 }
 .four {
   z-index: 4;
-  background-image: url('../img/why.png');
+  background-image: url('../img/intro/intro-3.png');
 }
 .five {
   z-index: 5;
-  background-image: url('../img/sli6.png');
+  background-image: url('../img/intro/intro-4.png');
 }
 .six {
   z-index: 6;
-  background-image: url('../img/sli5.PNG');
+  background-image: url('../img/intro/intro-5.png');
 }
 .blink {
   animation: blink 0.5s infinite;

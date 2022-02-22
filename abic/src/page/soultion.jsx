@@ -7,7 +7,7 @@ import scroll from '../img/service/service-scroll.png';
 import './solution.css';
 function Soultion() {
   return (
-    <>
+    <div className="sol">
       <div id="list-item-1" className="chapter solution">
         <div>
           <div className="solh1">
@@ -31,7 +31,8 @@ function Soultion() {
           <img id="fixed_goto" src={service_bottom_button} alt="" />
         </a>
       </div>
-    </>
+      <div id="list-item-2" className="chapter solution"></div>
+    </div>
   );
 }
 

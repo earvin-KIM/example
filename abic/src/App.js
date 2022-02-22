@@ -62,28 +62,23 @@ function App() {
     let n = 0;
     var state = false;
     const typing = function () {
-      if (document.querySelector('.four') != null) {
-        if ($('.four').offset().top == window.scrollY) {
-          if (state == false) {
-            state = true;
-            console.log('1');
-            var type = setInterval(function () {
-              txt.innerHTML += intro_text[n];
-              n++;
-              if (n > intro_text.length - 1) {
-                clearInterval(type);
-                n = 0;
-              }
-            }, 100);
-            console.log('2');
-          }
-        }
-      }
-      //  else {
-      //   txt.innerHTML = '';
-      //   clearInterval(type);
-      //   n = 0;
-      // }
+      // if (document.querySelector('.four') != null) {
+      //   if ($('.four').offset().top == window.scrollY) {
+      //     if (state == false) {
+      //       state = true;
+      //       console.log('1');
+      //       var type = setInterval(function () {
+      //         txt.innerHTML += intro_text[n];
+      //         n++;
+      //         if (n > intro_text.length - 1) {
+      //           clearInterval(type);
+      //           n = 0;
+      //         }
+      //       }, 100);
+      //       console.log('2');
+      //     }
+      //   }
+      // } --------------------------비활성화 경계선
     };
     $(window).off().on('scroll', typing);
     $(window).on('scroll', function () {

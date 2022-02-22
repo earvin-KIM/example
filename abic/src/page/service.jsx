@@ -22,7 +22,7 @@ import service_bottom_button from '../img/service/service-bottom-button.png';
 import './service.css';
 function Service() {
   return (
-    <>
+    <div className="se">
       <nav id="navbar-example3">
         <a className="nav-link serlink" href="#list-item-1">
           목차
@@ -63,10 +63,10 @@ function Service() {
           서비스 필요성
           <img className="side_nav" src="" alt="" />
         </a>{' '}
-        <a className="nav-link serlink" href="#list-item-11">
+        {/* <a className="nav-link serlink" href="#list-item-11">
           정보격차
           <img className="side_nav" src="" alt="" />
-        </a>{' '}
+        </a>{' '} */}
         <a className="nav-link serlink" href="#list-item-12">
           abic 필요성
           <img className="side_nav" src="" alt="" />
@@ -101,46 +101,46 @@ function Service() {
             <h1>서비스 소개</h1>
           </div> */}
           <div className="chapter service" id="list-item-3">
-            <img src={serv1} className="servimg" alt="비지니스 인사이트" style={{ width: '80%', marginTop: '10%' }} />
+            {/* <img src={serv1} className="servimg" alt="비지니스 인사이트" style={{ width: '80%', marginTop: '10%' }} /> */}
           </div>
           <div className="chapter service" id="list-item-4">
-            <h1 className="servh1">0단계 : 사업모델 개요/유형 판단</h1>
+            {/* <h1 className="servh1">0단계 : 사업모델 개요/유형 판단</h1> */}
 
             <div className="servinner" style={{ top: '15rem' }}>
-              <img src={serv2} className="servimg_s" alt="0단계" />
-              <img src={serv3} className="servimg_s" alt="0단계-1" />
+              {/* <img src={serv2} className="servimg_s" alt="0단계" />
+              <img src={serv3} className="servimg_s" alt="0단계-1" /> */}
             </div>
           </div>
           <div className="chapter service" id="list-item-5">
-            <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1>
+            {/* <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1> */}
             <div className="servinner">
-              <p>
+              {/* <p>
                 구상 중인 신사업 아이디어의 TAM/SAM 시장을 정의하고 고객/경쟁 등에 대한 트랜드를 분석합니다. 이를
                 바탕으로 TAM/SAM 시장규모와 성장잠재력을 논리적으로 추정하여 사업아이디어의 타당성을 점검할 수 있도록
                 합니다.
-              </p>
-              <img src={serv4} className="servimg" alt="1단계" />
+              </p> */}
+              {/* <img src={serv4} className="servimg" alt="1단계" /> */}
             </div>
           </div>
           <div className="chapter service" id="list-item-6">
-            <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1>
-            <div className="servinner">
+            {/* <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1> */}
+            {/* <div className="servinner">
               <p>
                 신사업이 초기 1~2년 안에 반드시 공략해야 하는 거점시장(SOM)을 정의하고, 거점시장 목표고객의 특성/니즈,
                 경쟁자들의 전략방향 등에 대해 구체적으로 분석합니다.
               </p>
               <img src={serv5} className="servimg" alt="2단계" />
-            </div>
+            </div> */}
           </div>
           <div className="chapter service" id="list-item-7">
-            <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
+            {/* <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
             <div className="servinner">
               <p>
                 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시 초기거점시장(SOM)을 공략하기 위한 GTM 전략방향을
                 Who(목표고객)-What(고객가치)-How(유통/마케팅)의 관점에서 개발하여 제시합니다
               </p>
               <img src={gtm} className="servimg" alt="3단계" />
-            </div>
+            </div> */}
           </div>
           <div className="spliderdiv">
             <div className="chapter service" id="list-item-8">
@@ -161,29 +161,29 @@ function Service() {
         </div>
         <div id="service_need">
           <div className="chapter service" id="list-item-9">
-            <h1>서비스 필요성</h1>
+            {/* <h1>서비스 필요성</h1> */}
           </div>
 
           <div className="chapter service" id="list-item-10">
-            <p>
+            {/* <p>
               스타트업이 창업하여 중견기업으로 성장하는 과정에 곳곳에 도사린 성장 함정으로 인하여 지속적인 성장을
               견인하는 기업은 드뭅니다.
             </p>
-            <img src={serv6} className="servimg" alt="문제점" />
+            <img src={serv6} className="servimg" alt="문제점" /> */}
           </div>
-          <div className="chapter service" id="list-item-11">
-            <p>
+          {/* <div className="chapter service" id="list-item-11"> */}
+          {/* <p>
               게다가 환경의 급변으로 의사결정해야 할 사항은 급속히 늘어 나는데, 스타트업, 중소/중견 기업들의 정보 확보
               역량은 그에 못 미치고 있어 경영층의 시의적절한 의사결정이 점점 어려워지고 있습니다.
             </p>
-            <img src={serv7} alt="해결책 솔루션" />
-          </div>
+            <img src={serv7} alt="해결책 솔루션" /> */}
+          {/* </div> */}
           <div className="chapter service" id="list-item-12">
-            <img src={serv8} className="servimg" alt="필요성 어필" />
+            {/* <img src={serv8} className="servimg" alt="필요성 어필" /> */}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

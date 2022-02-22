@@ -77,7 +77,7 @@ function Intro() {
           <div data-aos="fade-in" data-aos-duration="300" className="chapter two" id="list-item-3"></div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter three" id="list-item-4"></div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter four" id="list-item-5">
-            <img src={head} alt="Why abic" style={{ width: '100px' }} />
+            {/* <img src={head} alt="Why abic" style={{ width: '100px' }} />
             <h3>
               스타트업, 중소/중견기업은 필요한 정보를 확보하기 어렵고 신사업을 기획하는 스킬도 미흡하여 성장 동력이 될
               새로운 사업 아이템 모델 개발에 많은 어려움을 겪고 있습니다
@@ -85,7 +85,7 @@ function Intro() {
             <div id="text_box">
               <span id="txt_here"></span>
               <span className="blink">|</span>
-            </div>
+            </div> */}
             {/* <TypeAnimation
               data-aos="fade-in"
               cursor={true}
@@ -97,12 +97,10 @@ function Intro() {
               repeat={1}
             /> */}
           </div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter five" id="list-item-6">
-            <img src={intro6} alt="감정곡선" />
-          </div>
+          <div data-aos="fade-in" data-aos-duration="300" className="chapter five" id="list-item-6"></div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter six" id="list-item-7">
             <a href="#">
-              <button className="gotoservice btn btn-light">서비스 받기</button>
+              <img src={intro_button} alt="gotoservice" className="bottom-gotoservice" />
             </a>
           </div>
         </div>

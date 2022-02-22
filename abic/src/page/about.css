@@ -30,3 +30,15 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.about_us #list-item-2 {
+  background-image: url('../img/aboutus/about-misson.png');
+}
+.about_us #list-item-3 {
+  background-image: url('../img/aboutus/about-misson2.png');
+}
+.about_us #list-item-4 {
+  background-image: url('../img/aboutus/about-misson3.png');
+}
+.about_us #list-item-5 {
+  background-image: url('../img/aboutus/about-misson4.png');
+}
