@@ -1,9 +1,9 @@
 import React from 'react';
-import intro1 from '../img/sli1.PNG';
-import intro2 from '../img/sli2.PNG';
-import intro3 from '../img/sli3.PNG';
-import intro4 from '../img/sli4.PNG';
-import intro5 from '../img/sli5.PNG';
+import intro1 from '../img/intro/image_1.png';
+import intro2 from '../img/intro/image_2.png';
+import intro3 from '../img/intro/intro-b-logo.png';
+import intro4 from '../img/intro/Oval_2.png';
+import intro5 from '../img/intro/graph.png';
 import intro6 from '../img/sli6.png';
 import head from '../img/head.svg';
 import why from '../img/why.png';
@@ -73,9 +73,27 @@ function Intro() {
             <img id="scroll_img" src={scroll} />
           </div>
 
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter one " id="list-item-2"></div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter two" id="list-item-3"></div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter three" id="list-item-4"></div>
+          <div data-aos="fade-in" data-aos-duration="300" className="chapter one " id="list-item-2">
+            <img src={intro1} alt="" style={{ position: 'absolute', width: '30%', bottom: '32%', left: '10%' }} />{' '}
+            <img src={intro2} alt="" style={{ position: 'absolute', width: '40%', left: '0', bottom: '0' }} />
+            <img src={intro3} alt="" style={{ position: 'absolute', width: '20%', bottom: '55%', left: '15%' }} />
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '22%', bottom: '32%', left: '45%' }} />
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '22%', bottom: '32%', left: '70%' }} />
+          </div>
+          <div data-aos="fade-in" data-aos-duration="300" className="chapter two" id="list-item-3">
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '5%' }} />
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '26%' }} />
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '47%' }} />
+          </div>
+          <div
+            data-aos="fade-in"
+            data-aos-duration="300"
+            className="chapter three"
+            id="list-item-4"
+            style={{ backgroundPosition: 'unset' }}
+          >
+            <img src={intro5} alt="" style={{ position: 'absolute', width: '35%', bottom: '20%', left: '5%' }} />
+          </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter four" id="list-item-5">
             {/* <img src={head} alt="Why abic" style={{ width: '100px' }} />
             <h3>
@@ -99,6 +117,7 @@ function Intro() {
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter five" id="list-item-6"></div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter six" id="list-item-7">
+            <img src={intro_b_logo} alt="" style={{ position: 'absolute', width: '20%', top: '40%', left: '5%' }} />
             <a href="#">
               <img src={intro_button} alt="gotoservice" className="bottom-gotoservice" />
             </a>

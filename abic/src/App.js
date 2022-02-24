@@ -14,34 +14,44 @@ import side_active_about from './img/aboutus/aboutus-side-bar.png';
 import side_none from './img/intro/side-circle.png';
 import side_none_about from './img/aboutus/aboutus-side-circle.png';
 import $ from 'jquery';
-import logoi from './img/intro/intro-s-logo.png';
 import { State } from '@splidejs/splide';
 
 function App() {
+  if (window.location.pathname == '/') {
+    document.title = 'ABIC';
+  }
+  if (window.location.pathname == '/about') {
+    document.title = 'ABOUT US';
+  }
+  if (window.location.pathname == '/contact') {
+    document.title = 'CONTACT US';
+  }
+  if (window.location.pathname == '/service') {
+    document.title = 'SERVICE';
+  }
+  if (window.location.pathname == '/solution') {
+    document.title = 'SOLUTION';
+  }
+  // ^-------------------title 바꾸기---------------
+
   $(function () {
     window.scrollTo(0, $('.chapter').offset().top);
     var link = $('.serlink');
     var chapter_id = $('.serlink').attr('href');
     $('.serlink').addClass('active');
-    $(window).on('scroll', function () {
-      findPosition();
-    });
-    var side_ = side_active_about,
-      side = side_none_about;
-    if (window.location.pathname == '/') {
-      side_ = side_active;
+    var pageIndex_next;
+    var side_ = side_active,
       side = side_none;
-      $('.nav-link').addClass('nav-link-intro');
-      $('.nav-link').removeClass('nav-link');
-      $('#logo1').attr('src', logoi);
-      $('#navbar').css('border-bottom', 'solid 1px #020548');
-    }
+
     function findPosition() {
+      //사이드 바에 활성화 비활성화 주는 함수
       $('.chapter').each(function () {
         if (Math.abs($(this).offset().top - $(window).scrollTop()) < 10) {
           // console.log($(this).offset().top);
           // console.log($(window).scrollTop());
           console.log('find');
+          pageIndex_next = $('.chapter').index(this); //현재 페이지가 몇번째인지 찾기
+          header_visi(); //몇번째 페이지인지 알아내서 헤더 숨길지 말지, 사이드바 흰색인지 검정색인지 결정
           $('.side_nav').attr('src', side);
           link.removeClass('active');
           $('[href="#' + $(this).attr('id') + '"]').addClass('active');
@@ -53,7 +63,6 @@ function App() {
         }
       });
     }
-    findPosition();
 
     //----------------------------목차 activ----------------------
     var intro_text =
@@ -80,7 +89,7 @@ function App() {
       //   }
       // } --------------------------비활성화 경계선
     };
-    $(window).off().on('scroll', typing);
+    // $(window).off().on('scroll', typing);
     $(window).on('scroll', function () {
       findPosition();
     });
@@ -88,6 +97,77 @@ function App() {
     let positionDivs = document.getElementsByClassName('chapter');
     /// 현재 페이지
     let pageIndex = 0;
+    $('#navbar').css('opacity', '1');
+
+    function header_visi() {
+      if (pageIndex_next == 0) {
+        $('#navbar').css('opacity', '1');
+        $('#navbar').hover(
+          function () {
+            $('#navbar').css('opacity', '1');
+          },
+          function () {
+            $('#navbar').css('opacity', '1');
+          }
+        );
+      } else {
+        $('#navbar').css('opacity', '0');
+        $('#navbar').hover(
+          function () {
+            $('#navbar').css('opacity', '1');
+          },
+          function () {
+            $('#navbar').css('opacity', '0');
+          }
+        );
+      }
+      switch_side(); //헤더부분 스크롤 내리면 hover로 활성화되는 알고리즘과 함께 호출됨
+    }
+    const switch_side = () => {
+      //사이드 바 색상 바뀌게하는 함수
+      switch (window.location.pathname) {
+        case '/':
+          if (pageIndex_next == 4 || pageIndex_next == 7) {
+            side = side_none_about;
+            side_ = side_active_about;
+            $('#navbar-example3 .nav-link').css('color', 'white');
+          } else {
+            side = side_none; //옆에 버튼의 소스 변수를 바꿔줌
+            side_ = side_active;
+            $('#navbar-example3 .nav-link').css('color', 'black');
+          }
+          break;
+        case '/about':
+          if (pageIndex_next == 0 || pageIndex_next == 5) {
+            side = side_none_about;
+            side_ = side_active_about;
+            $('#navbar-example3 .nav-link').css('color', 'white');
+          } else {
+            side = side_none;
+            side_ = side_active;
+            $('#navbar-example3 .nav-link').css('color', 'black');
+          }
+          break;
+        case '/contact':
+          break;
+        case '/service':
+          if (pageIndex_next == 0 || pageIndex_next == 1 || pageIndex_next == 9 || pageIndex_next == 10) {
+            side = side_none_about;
+            side_ = side_active_about;
+            $('#navbar-example3 .nav-link').css('color', 'white');
+          } else {
+            side = side_none;
+            side_ = side_active;
+            $('#navbar-example3 .nav-link').css('color', 'black');
+          }
+          break;
+        case '/solution':
+          break;
+      }
+    };
+    findPosition();
+
+    //^-----------------------sidenav색상 자동변경
     /// 최대 페이지
     let maxPageIndex = positionDivs.length - 1;
     /// 현재 페이지가 넘어가고 있는지 확인
@@ -120,9 +200,7 @@ function App() {
           } else {
             // 페이지 끝날 때
             scrollEle.scrollTop = targetY;
-            setTimeout(function () {
-              isMoving = false;
-            }, scrollEndDelay + 100);
+            setTimeout((isMoving = false), scrollEndDelay + 100);
             console.log('End off.');
           }
         };
@@ -138,6 +216,7 @@ function App() {
         }
         paging++;
       });
+
       var footer_bottom = document.querySelector('#footer').offsetHeight + document.querySelector('#footer').offsetTop;
       if (footer_bottom - (window.scrollY + window.innerHeight) < 20) {
         rem = paging - 1;
@@ -212,7 +291,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/soultion" element={<Soultion />} />
+          <Route path="/solution" element={<Soultion />} />
         </Routes>
 
         <Footer></Footer>

@@ -2,14 +2,23 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import service_letter from '../img/service/service-b-letter.png';
-import serv1 from '../img/business1.png';
-import serv2 from '../img/serv2.png';
-import serv3 from '../img/serv3.png';
-import serv4 from '../img/serv4.jpg';
-import serv5 from '../img/serv5.jpg';
-import serv6 from '../img/serv6.png';
-import serv7 from '../img/serv7.png';
-import serv8 from '../img/serv8.png';
+import serv1 from '../img/service/bg_3.png';
+import serv2 from '../img/service/Group_1.png';
+import serv3 from '../img/service/Group_2.png';
+import serv4 from '../img/service/Group_3.png';
+import serv5 from '../img/service/text_1.png';
+import serv6 from '../img/service/text_2.png';
+import serv7 from '../img/service/text_3.png';
+import serv8 from '../img/service/text_4.png';
+import serv9 from '../img/service/docu_1.png';
+import serv10 from '../img/service/docu_2.png';
+import serv11 from '../img/service/text_5.png';
+import serv12 from '../img/service/text_6.png';
+import serv13 from '../img/service/text_4.png';
+import serv14 from '../img/service/text_4.png';
+import serv15 from '../img/service/text_4.png';
+import serv16 from '../img/service/text_4.png';
+import serv17 from '../img/service/text_4.png';
 import gtm from '../img/gtm.png';
 import san1 from '../img/san1.png';
 import san2 from '../img/san2.png';
@@ -101,39 +110,49 @@ function Service() {
             <h1>서비스 소개</h1>
           </div> */}
           <div className="chapter service" id="list-item-3">
-            {/* <img src={serv1} className="servimg" alt="비지니스 인사이트" style={{ width: '80%', marginTop: '10%' }} /> */}
+            <img
+              src={serv1}
+              alt=""
+              style={{ position: 'absolute', width: '70%', height: '80%', top: '15%', left: '15%' }}
+            />
+            <img src={serv2} alt="" style={{ position: 'absolute', width: '50%', top: '17%', left: '25%' }} />{' '}
+            <img src={serv3} alt="" style={{ position: 'absolute', width: '40%', top: '50%', left: '32%' }} />
+            <img src={serv4} alt="" style={{ position: 'absolute', width: '1.5%', top: '75%', left: '51%' }} />
+            <img src={serv5} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }} />
+            <img src={serv6} alt="" style={{ position: 'absolute', width: '30%', top: '85%', left: '37%' }} />
           </div>
           <div className="chapter service" id="list-item-4">
-            {/* <h1 className="servh1">0단계 : 사업모델 개요/유형 판단</h1> */}
-
-            <div className="servinner" style={{ top: '15rem' }}>
-              {/* <img src={serv2} className="servimg_s" alt="0단계" />
-              <img src={serv3} className="servimg_s" alt="0단계-1" /> */}
-            </div>
+            <img src={serv7} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }} />
+            <img src={serv8} alt="" style={{ position: 'absolute', width: '25%', top: '17%', left: '40%' }} />
+            <img src={serv9} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '25%' }} />
+            <img src={serv10} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '55%' }} />
+            <img src={serv11} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '35%' }} />
+            <img src={serv12} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '65%' }} />
           </div>
-          <div className="chapter service" id="list-item-5">
-            {/* <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1> */}
-            <div className="servinner">
-              {/* <p>
+          <div className="outer">
+            <div className="chapter service" id="list-item-5">
+              {/* <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1> */}
+              <div className="servinner">
+                {/* <p>
                 구상 중인 신사업 아이디어의 TAM/SAM 시장을 정의하고 고객/경쟁 등에 대한 트랜드를 분석합니다. 이를
                 바탕으로 TAM/SAM 시장규모와 성장잠재력을 논리적으로 추정하여 사업아이디어의 타당성을 점검할 수 있도록
                 합니다.
               </p> */}
-              {/* <img src={serv4} className="servimg" alt="1단계" /> */}
+                {/* <img src={serv4} className="servimg" alt="1단계" /> */}
+              </div>
             </div>
-          </div>
-          <div className="chapter service" id="list-item-6">
-            {/* <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1> */}
-            {/* <div className="servinner">
+            <div className="chapter service" id="list-item-6">
+              {/* <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1> */}
+              {/* <div className="servinner">
               <p>
                 신사업이 초기 1~2년 안에 반드시 공략해야 하는 거점시장(SOM)을 정의하고, 거점시장 목표고객의 특성/니즈,
                 경쟁자들의 전략방향 등에 대해 구체적으로 분석합니다.
               </p>
               <img src={serv5} className="servimg" alt="2단계" />
             </div> */}
-          </div>
-          <div className="chapter service" id="list-item-7">
-            {/* <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
+            </div>
+            <div className="chapter service" id="list-item-7">
+              {/* <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
             <div className="servinner">
               <p>
                 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시 초기거점시장(SOM)을 공략하기 위한 GTM 전략방향을
@@ -141,21 +160,23 @@ function Service() {
               </p>
               <img src={gtm} className="servimg" alt="3단계" />
             </div> */}
-          </div>
-          <div className="spliderdiv">
-            <div className="chapter service" id="list-item-8">
-              <h1>산출물 예시</h1>
-              <Splide options={{ width: 800 }}>
-                <SplideSlide>
-                  <img className="san" src={san1} alt="Image 1" />
-                </SplideSlide>
-                <SplideSlide>
-                  <img className="san" src={san2} alt="Image 2" />
-                </SplideSlide>
-                <SplideSlide>
-                  <img className="san" src={san3} alt="Image 3" />
-                </SplideSlide>
-              </Splide>
+            </div>
+
+            <div className="spliderdiv">
+              <div className="chapter service" id="list-item-8">
+                <h1>산출물 예시</h1>
+                <Splide options={{ width: 800 }}>
+                  <SplideSlide>
+                    <img className="san" src={san1} alt="Image 1" />
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img className="san" src={san2} alt="Image 2" />
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img className="san" src={san3} alt="Image 3" />
+                  </SplideSlide>
+                </Splide>
+              </div>
             </div>
           </div>
         </div>

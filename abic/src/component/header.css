@@ -7,7 +7,8 @@
   width: 100%;
   z-index: 10;
   transition: 500ms;
-  border-bottom: solid white 1px;
+  border-bottom: solid black 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #navbar > #contain {
   align-items: flex-start !important;
@@ -18,9 +19,7 @@
 .navbar-collapse {
   flex-direction: row-reverse;
 }
-#navbar:hover {
-  opacity: 1;
-}
+
 .list-group,
 #navbar-example3 {
   position: fixed;
@@ -37,7 +36,7 @@
   transition: 100ms;
 }
 .nav-link {
-  color: white !important;
+  color: black;
 }
 .nav-link-intro {
   color: black !important;
@@ -48,7 +47,7 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 .nav-link-intro.active {
-  color: #020548 !important;
+  color: black !important;
   font-size: large;
   font-weight: bolder;
   transition: 100ms;
@@ -62,7 +61,7 @@ html {
   scroll-behavior: smooth;
 }
 .nav-link.active {
-  color: whitesmoke !important;
+  color: black;
   font-size: large;
   font-weight: bolder;
   transition: 100ms;

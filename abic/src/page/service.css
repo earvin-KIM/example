@@ -86,22 +86,27 @@ p {
   background-image: url('../img/service/service-b-img.png');
 }
 .se #list-item-2 {
-  background-image: url('../img/service/business--1.png');
+  background-image: url('../img/service/bg_2.png');
 }
 .se #list-item-3 {
-  background-image: url('../img/service/business--2.png');
+  background-image: url('../img/service/bg_2.png');
 }
 .se #list-item-4 {
-  background-image: url('../img/service/business--1.png');
+  background-image: url('../img/service/bg_5.png');
+  background-size: 80% 80%;
+  background-position: center 65%;
+}
+.se .outer {
+  background-image: url('../img/service/bg_oval_1.png'), url('../img/service/bg_oval_2.png');
+  background-size: 70%, 30%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
 }
 .se #list-item-5 {
-  background-image: url('../img/service/business--0.png');
 }
 .se #list-item-6 {
-  background-image: url('../img/service/business.png');
 }
 .se #list-item-7 {
-  background-image: url('../img/service/business-2.png');
 }
 .se #list-item-8 {
   background-image: url('../img/service/business-3.png');

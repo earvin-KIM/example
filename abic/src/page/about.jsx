@@ -24,15 +24,15 @@ function AboutUs() {
           <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-3">
-          대표 소개
+          Misson&Vision
           <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-4">
-          인증서
+          대표 소개
           <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-5">
-          Partner&Team
+          인증서{/* Partner&Team */}
           <img className="side_nav" src="" alt="" />
         </a>
       </nav>

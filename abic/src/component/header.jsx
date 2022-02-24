@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/aboutus/aboutus-logo.png';
+import logo from '../img/intro/intro-s-logo.png';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
 import './header.css';
@@ -38,7 +38,7 @@ function Header() {
                 Intro
               </Nav.Link>
               <Nav.Link href="/service">Service</Nav.Link>
-              <Nav.Link href="/soultion">Solution</Nav.Link>
+              <Nav.Link href="/solution">Solution</Nav.Link>
               <Nav.Link href="/about">About Us</Nav.Link>
               <Nav.Link href="/contact">Contact Us</Nav.Link>
             </Nav>
