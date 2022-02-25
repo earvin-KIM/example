@@ -47,10 +47,10 @@ textarea {
 }
 #checkbox {
   height: 20px;
+  width: 20px !important;
 }
 #con7 {
-  position: relative;
-  right: 10px;
+  margin-left: 10px;
 }
 .d-flex {
   align-items: center;
@@ -58,4 +58,8 @@ textarea {
 .nav-link-intro,
 .nav-link {
   margin-left: 30px;
+}
+#con8 {
+  margin-left: auto;
+  width: 35% !important;
 }

@@ -109,17 +109,50 @@ p {
 .se #list-item-7 {
 }
 .se #list-item-8 {
-  background-image: url('../img/service/business-3.png');
+}
+.splide {
+  position: absolute !important;
+  right: 10%;
+  top: 5%;
+}
+.splide .san {
+  border-radius: 2rem;
+}
+.splide__pagination {
+  position: absolute !important;
+  bottom: -3%;
+}
+.splide__pagination__page.is-active {
+  background: black !important;
+}
+.splide__arrows {
+  position: absolute !important;
+  bottom: -2%;
+  right: 43%;
+  width: 15%;
+}
+.splide__arrow--prev {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+.splide__arrow--next {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
 }
 .se #list-item-9 {
-  background-image: url('../img/service/business-4.png');
+  background-image: url('../img/service/bg_7.png');
+  background-position: center 72%;
 }
 .se #list-item-10 {
-  background-image: url('../img/service/business-5.png');
+  background-image: url('../img/service/bg_10.png');
 }
 .se #list-item-11 {
-  background-image: url('../img/service/business-6.png');
+  background-image: url('../img/service/bg_11.png');
 }
 .se #list-item-12 {
-  background-image: url('../img/service/business-6.png');
+  background-image: url('../img/service/bg_11.png');
 }

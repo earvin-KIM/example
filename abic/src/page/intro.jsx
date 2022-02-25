@@ -2,16 +2,41 @@ import React from 'react';
 import intro1 from '../img/intro/image_1.png';
 import intro2 from '../img/intro/image_2.png';
 import intro3 from '../img/intro/intro-b-logo.png';
-import intro4 from '../img/intro/Oval_2.png';
+import intro4 from '../img/intro/text_4.png';
+import intro41 from '../img/intro/text_5.png';
+import intro42 from '../img/intro/text_7.png';
+import intro43 from '../img/intro/text_8.png';
+import intro44 from '../img/intro/Oval_2.png';
 import intro5 from '../img/intro/graph.png';
-import intro6 from '../img/sli6.png';
+import text1 from '../img/intro/text_3.png';
+import text2 from '../img/intro/text_6.png';
+import text3 from '../img/intro/text_9.png';
+import text4 from '../img/intro/text_10.png';
+import text5 from '../img/intro/text_11.png';
+import text6 from '../img/intro/text_12.png';
+import text7 from '../img/intro/text_13.png';
+import text8 from '../img/intro/text_14.png';
+import text9 from '../img/intro/ic_1.png';
+import text10 from '../img/intro/box_1.png';
+import text11 from '../img/intro/box_2.png';
+import text12 from '../img/intro/box_3.png';
+import text13 from '../img/intro/box_4.png';
+import text14 from '../img/intro/box_5.png';
+import text15 from '../img/intro/text_15.png';
+import text16 from '../img/intro/text_16.png';
+import text17 from '../img/intro/text_17.png';
+import text18 from '../img/intro/text_18.png';
+import text19 from '../img/intro/text_19.png';
+import text20 from '../img/intro/text_20.png';
+import text21 from '../img/intro/text_21.png';
+import text22 from '../img/intro/text_22.png';
 import head from '../img/head.svg';
 import why from '../img/why.png';
 import intro_b_img from '../img/intro/intro-b-img.png';
 import intro_b_logo from '../img/intro/intro-b-logo.png';
 import intro_button from '../img/intro/intro-button.png';
 import intro_write1 from '../img/intro/intro-write1.png';
-import intro_bottom_button from '../img/intro/intro-bottom-button.png';
+import intro_bottom_button from '../img/intro/ic_chat.png';
 import intro_write2 from '../img/intro/intro-write2.png';
 import scroll from '../img/intro/scroll.png';
 import side_active from '../img/intro/side-bar.png';
@@ -77,13 +102,15 @@ function Intro() {
             <img src={intro1} alt="" style={{ position: 'absolute', width: '30%', bottom: '32%', left: '10%' }} />{' '}
             <img src={intro2} alt="" style={{ position: 'absolute', width: '40%', left: '0', bottom: '0' }} />
             <img src={intro3} alt="" style={{ position: 'absolute', width: '20%', bottom: '55%', left: '15%' }} />
-            <img src={intro4} alt="" style={{ position: 'absolute', width: '22%', bottom: '32%', left: '45%' }} />
-            <img src={intro4} alt="" style={{ position: 'absolute', width: '22%', bottom: '32%', left: '70%' }} />
+            <img src={intro4} alt="" style={{ position: 'absolute', width: '22%', bottom: '20%', left: '45%' }} />
+            <img src={intro41} alt="" style={{ position: 'absolute', width: '22%', bottom: '20%', left: '70%' }} />
+            <img src={text1} alt="" style={{ position: 'absolute', width: '40%', top: '10%', left: '50%' }} />
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter two" id="list-item-3">
-            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '5%' }} />
-            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '26%' }} />
-            <img src={intro4} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '47%' }} />
+            <img src={intro44} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '5%' }} />
+            <img src={intro42} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '26%' }} />
+            <img src={intro43} alt="" style={{ position: 'absolute', width: '19%', bottom: '20%', left: '47%' }} />
+            <img src={text2} alt="" style={{ position: 'absolute', width: '50%', top: '15%', left: '10%' }} />
           </div>
           <div
             data-aos="fade-in"
@@ -93,31 +120,22 @@ function Intro() {
             style={{ backgroundPosition: 'unset' }}
           >
             <img src={intro5} alt="" style={{ position: 'absolute', width: '35%', bottom: '20%', left: '5%' }} />
+            <img src={text3} alt="" style={{ position: 'absolute', width: '60%', top: '10%', left: '5%' }} />
+            <img src={text4} alt="" style={{ position: 'absolute', width: '50%', top: '25%', left: '5%' }} />
+            <img src={text5} alt="" style={{ position: 'absolute', width: '27%', top: '34%', left: '43%' }} />
+            <img src={text6} alt="" style={{ position: 'absolute', width: '30%', top: '85%', left: '5%' }} />
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter four" id="list-item-5">
-            {/* <img src={head} alt="Why abic" style={{ width: '100px' }} />
-            <h3>
-              스타트업, 중소/중견기업은 필요한 정보를 확보하기 어렵고 신사업을 기획하는 스킬도 미흡하여 성장 동력이 될
-              새로운 사업 아이템 모델 개발에 많은 어려움을 겪고 있습니다
-            </h3>
-            <div id="text_box">
-              <span id="txt_here"></span>
-              <span className="blink">|</span>
-            </div> */}
-            {/* <TypeAnimation
-              data-aos="fade-in"
-              cursor={true}
-              sequence={[
-                '그래서 ABIC은 생각했습니다 신사업 기획, 마케팅, 세일즈에 대한 비즈니스 컨설팅을 AI 기술을 통해 ‘신속’하고          ‘편리’하게 제공할 순 없을까?',
-                1000,
-              ]}
-              wrapper="h2"
-              repeat={1}
-            /> */}
+            <img src={text7} alt="" style={{ position: 'absolute', width: '60%', top: '15%', left: '20%' }} />
+            <img src={text8} alt="" style={{ position: 'absolute', width: '60%', top: '60%', left: '20%' }} />
+            <img src={text9} alt="" style={{ position: 'absolute', width: '5%', top: '40%', left: '50%' }} />
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter five" id="list-item-6"></div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter six" id="list-item-7">
-            <img src={intro_b_logo} alt="" style={{ position: 'absolute', width: '20%', top: '40%', left: '5%' }} />
+            <img src={intro_b_logo} alt="" style={{ position: 'absolute', width: '20%', top: '35%', left: '5%' }} />
+            <img src={text20} alt="" style={{ position: 'absolute', width: '60%', top: '15%', left: '5%' }} />
+            <img src={text21} alt="" style={{ position: 'absolute', width: '30%', top: '55%', left: '5%' }} />
+            <img src={text22} alt="" style={{ position: 'absolute', width: '50%', top: '73%', left: '5%' }} />
             <a href="#">
               <img src={intro_button} alt="gotoservice" className="bottom-gotoservice" />
             </a>

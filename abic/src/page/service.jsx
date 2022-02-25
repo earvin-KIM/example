@@ -14,11 +14,32 @@ import serv9 from '../img/service/docu_1.png';
 import serv10 from '../img/service/docu_2.png';
 import serv11 from '../img/service/text_5.png';
 import serv12 from '../img/service/text_6.png';
-import serv13 from '../img/service/text_4.png';
-import serv14 from '../img/service/text_4.png';
-import serv15 from '../img/service/text_4.png';
-import serv16 from '../img/service/text_4.png';
-import serv17 from '../img/service/text_4.png';
+import serv13 from '../img/service/Group_4.png';
+import serv14 from '../img/service/text_7.png';
+import serv15 from '../img/service/text_8.png';
+import serv16 from '../img/service/Group_5.png';
+import serv17 from '../img/service/text_9.png';
+import serv18 from '../img/service/text_10.png';
+import serv19 from '../img/service/Group_6.png';
+import serv20 from '../img/service/text_11.png';
+import serv21 from '../img/service/text_12.png';
+import serv22 from '../img/service/text_13.png';
+import serv23 from '../img/service/line_16.png';
+import serv24 from '../img/service/bg_8.png';
+import serv25 from '../img/service/Group_7.png';
+import serv26 from '../img/service/text_14.png';
+import serv27 from '../img/service/text_15.png';
+import serv28 from '../img/service/text_16.png';
+import serv29 from '../img/service/text_17.png';
+import serv30 from '../img/service/bg_9.png';
+import serv31 from '../img/service/Group_8.png';
+import serv32 from '../img/service/text_18.png';
+import serv33 from '../img/service/Group_9.png';
+import serv34 from '../img/service/Group_10.png';
+import serv35 from '../img/service/Group_11.png';
+import serv36 from '../img/service/Group_12.png';
+import serv37 from '../img/service/text_19.png';
+import serv38 from '../img/service/_ (2).png';
 import gtm from '../img/gtm.png';
 import san1 from '../img/san1.png';
 import san2 from '../img/san2.png';
@@ -26,7 +47,7 @@ import san3 from '../img/san3.png';
 import service_circle from '../img/service/service-l-circle.png';
 import service_circle1 from '../img/service/service-r-circle.png';
 import scroll from '../img/service/service-scroll.png';
-import service_bottom_button from '../img/service/service-bottom-button.png';
+import service_bottom_button from '../img/intro/ic_chat.png';
 
 import './service.css';
 function Service() {
@@ -131,41 +152,24 @@ function Service() {
           </div>
           <div className="outer">
             <div className="chapter service" id="list-item-5">
-              {/* <h1 className="servh1">1단계 : 전체시장 및 유효시장(TAM/SAM) 정의 및 추정</h1> */}
-              <div className="servinner">
-                {/* <p>
-                구상 중인 신사업 아이디어의 TAM/SAM 시장을 정의하고 고객/경쟁 등에 대한 트랜드를 분석합니다. 이를
-                바탕으로 TAM/SAM 시장규모와 성장잠재력을 논리적으로 추정하여 사업아이디어의 타당성을 점검할 수 있도록
-                합니다.
-              </p> */}
-                {/* <img src={serv4} className="servimg" alt="1단계" /> */}
-              </div>
+              <img src={serv13} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '10%' }} />
+              <img src={serv14} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '55%' }} />
+              <img src={serv15} alt="" style={{ position: 'absolute', width: '30%', top: '35%', left: '55%' }} />
             </div>
             <div className="chapter service" id="list-item-6">
-              {/* <h1 className="servh1">2단계 : 초기거점시장(SOM)정의 및 추정</h1> */}
-              {/* <div className="servinner">
-              <p>
-                신사업이 초기 1~2년 안에 반드시 공략해야 하는 거점시장(SOM)을 정의하고, 거점시장 목표고객의 특성/니즈,
-                경쟁자들의 전략방향 등에 대해 구체적으로 분석합니다.
-              </p>
-              <img src={serv5} className="servimg" alt="2단계" />
-            </div> */}
+              <img src={serv16} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '45%' }} />
+              <img src={serv17} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }} />
+              <img src={serv18} alt="" style={{ position: 'absolute', width: '30%', top: '35%', left: '9%' }} />
             </div>
             <div className="chapter service" id="list-item-7">
-              {/* <h1 className="servh1"> 3단계 : 초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시</h1>
-            <div className="servinner">
-              <p>
-                초기거점시장(SOM)의 GTM(Go To Market)전략방향 제시 초기거점시장(SOM)을 공략하기 위한 GTM 전략방향을
-                Who(목표고객)-What(고객가치)-How(유통/마케팅)의 관점에서 개발하여 제시합니다
-              </p>
-              <img src={gtm} className="servimg" alt="3단계" />
-            </div> */}
+              <img src={serv19} alt="" style={{ position: 'absolute', width: '40%', top: '15%', left: '15%' }} />
+              <img src={serv20} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '60%' }} />
+              <img src={serv21} alt="" style={{ position: 'absolute', width: '30%', top: '45%', left: '60%' }} />
             </div>
 
             <div className="spliderdiv">
               <div className="chapter service" id="list-item-8">
-                <h1>산출물 예시</h1>
-                <Splide options={{ width: 800 }}>
+                <Splide options={{ width: 800, arrows: true }}>
                   <SplideSlide>
                     <img className="san" src={san1} alt="Image 1" />
                   </SplideSlide>
@@ -176,21 +180,38 @@ function Service() {
                     <img className="san" src={san3} alt="Image 3" />
                   </SplideSlide>
                 </Splide>
+                <img src={serv22} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }} />
+                <img
+                  src={serv23}
+                  alt=""
+                  style={{ position: 'absolute', width: '8%', top: '40%', left: '42%', zIndex: '-1' }}
+                />
               </div>
             </div>
           </div>
         </div>
         <div id="service_need">
           <div className="chapter service" id="list-item-9">
-            {/* <h1>서비스 필요성</h1> */}
+            <img
+              src={serv24}
+              alt=""
+              style={{ position: 'absolute', width: '70%', height: '80%', top: '15%', left: '15%' }}
+            />
+            <img src={serv25} alt="" style={{ position: 'absolute', width: '50%', top: '30%', left: '25%' }} />
+            <img src={serv26} alt="" style={{ position: 'absolute', width: '30%', top: '2%', left: '35%' }} />
+            <img src={serv27} alt="" style={{ position: 'absolute', width: '10%', top: '10%', left: '45%' }} />
+            <img src={serv28} alt="" style={{ position: 'absolute', width: '40%', top: '20%', left: '30%' }} />
           </div>
 
           <div className="chapter service" id="list-item-10">
-            {/* <p>
-              스타트업이 창업하여 중견기업으로 성장하는 과정에 곳곳에 도사린 성장 함정으로 인하여 지속적인 성장을
-              견인하는 기업은 드뭅니다.
-            </p>
-            <img src={serv6} className="servimg" alt="문제점" /> */}
+            <img
+              src={serv30}
+              alt=""
+              style={{ position: 'absolute', width: '70%', height: '80%', top: '10%', left: '15%' }}
+            />{' '}
+            <img src={serv31} alt="" style={{ position: 'absolute', width: '60%', top: '35%', left: '20%' }} />
+            <img src={serv29} alt="" style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }} />
+            <img src={serv32} alt="" style={{ position: 'absolute', width: '40%', top: '15%', left: '30%' }} />
           </div>
           {/* <div className="chapter service" id="list-item-11"> */}
           {/* <p>
@@ -200,7 +221,13 @@ function Service() {
             <img src={serv7} alt="해결책 솔루션" /> */}
           {/* </div> */}
           <div className="chapter service" id="list-item-12">
-            {/* <img src={serv8} className="servimg" alt="필요성 어필" /> */}
+            <img src={serv33} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '15%' }} />
+            <img src={serv34} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '40%' }} />
+            <img src={serv35} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '65%' }} />
+            <img src={serv36} alt="" style={{ position: 'absolute', width: '75%', top: '58%', left: '13%' }} />
+            <img src={serv37} alt="" style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }} />
+            <img src={serv38} alt="" style={{ position: 'absolute', width: 'auto', top: '37%', left: '37%' }} />
+            <img src={serv38} alt="" style={{ position: 'absolute', width: 'auto', top: '37%', right: '37%' }} />
           </div>
         </div>
       </div>

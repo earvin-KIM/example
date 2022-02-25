@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import './contact.css';
 import emailjs from '@emailjs/browser';
 import { Container, Row, Col } from 'react-bootstrap';
-import service_bottom_button from '../img/service/service-bottom-button.png';
+import service_bottom_button from '../img/intro/ic_chat.png';
 
 import contactus_local from '../img/contactus/contactus-local.png';
 import contactus_letter from '../img/contactus/contactus-letter.png';

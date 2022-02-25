@@ -1,9 +1,11 @@
 import React from 'react';
-import service_bottom_button from '../img/service/service-bottom-button.png';
+import service_bottom_button from '../img/intro/ic_chat.png';
 import solution_circle from '../img/service/service-l-circle.png';
 import solution_circle1 from '../img/solution/solution-r-circle.png';
 import soultion_letter from '../img/solution/solution-b-letter.png';
 import scroll from '../img/service/service-scroll.png';
+import sol1 from '../img/solution/diagram.png';
+import sol2 from '../img/solution/text_4.png';
 import './solution.css';
 function Soultion() {
   return (
@@ -31,7 +33,10 @@ function Soultion() {
           <img id="fixed_goto" src={service_bottom_button} alt="" />
         </a>
       </div>
-      <div id="list-item-2" className="chapter solution"></div>
+      <div id="list-item-2" className="chapter solution">
+        <img src={sol1} alt="" style={{ position: 'absolute', width: '80%', top: '15%', left: '10%' }} />
+        <img src={sol2} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '35%' }} />
+      </div>
     </div>
   );
 }
