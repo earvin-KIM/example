@@ -71,27 +71,38 @@ function App() {
     let n = 0;
     var state = false;
     const typing = function () {
-      // if (document.querySelector('.four') != null) {
-      //   if ($('.four').offset().top == window.scrollY) {
-      //     if (state == false) {
-      //       state = true;
-      //       console.log('1');
-      //       var type = setInterval(function () {
-      //         txt.innerHTML += intro_text[n];
-      //         n++;
-      //         if (n > intro_text.length - 1) {
-      //           clearInterval(type);
-      //           n = 0;
-      //         }
-      //       }, 100);
-      //       console.log('2');
-      //     }
-      //   }
-      // } --------------------------비활성화 경계선
+      if (document.querySelector('.three') != null) {
+        if ($('.three').offset().top == window.scrollY) {
+          var per1 = 38,
+            per2 = 35,
+            per3 = 20,
+            per4 = 19,
+            per5 = 18;
+          document.getElementById('intro_graph').style.width = '35%';
+          setInterval(function () {
+            if (document.getElementById('per_1').innerHTML < per1) {
+              document.getElementById('per_1').innerHTML++;
+            }
+            if (document.getElementById('per_2').innerHTML < per2) {
+              document.getElementById('per_2').innerHTML++;
+            }
+            if (document.getElementById('per_3').innerHTML < per3) {
+              document.getElementById('per_3').innerHTML++;
+            }
+            if (document.getElementById('per_4').innerHTML < per4) {
+              document.getElementById('per_4').innerHTML++;
+            }
+            if (document.getElementById('per_5').innerHTML < per5) {
+              document.getElementById('per_5').innerHTML++;
+            }
+          }, 30);
+        }
+      }
     };
     // $(window).off().on('scroll', typing);
     $(window).on('scroll', function () {
       findPosition();
+      typing();
     });
     // ----------------페이지 스크롤링--------------------------
     let positionDivs = document.getElementsByClassName('chapter');

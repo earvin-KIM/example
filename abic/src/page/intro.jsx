@@ -119,10 +119,30 @@ function Intro() {
             id="list-item-4"
             style={{ backgroundPosition: 'unset' }}
           >
-            <img src={intro5} alt="" style={{ position: 'absolute', width: '35%', bottom: '20%', left: '5%' }} />
+            <h1 style={{ position: 'absolute', fontSize: '2rem', bottom: '60%', left: '43%', display: 'flex' }}>
+              <div id="per_1">0</div>%
+            </h1>
+            <h1 style={{ position: 'absolute', fontSize: '2rem', bottom: '51%', left: '43%', display: 'flex' }}>
+              <div id="per_2">0</div>%
+            </h1>
+            <h1 style={{ position: 'absolute', fontSize: '2rem', bottom: '42%', left: '43%', display: 'flex' }}>
+              <div id="per_3">0</div>%
+            </h1>
+            <h1 style={{ position: 'absolute', fontSize: '2rem', bottom: '32%', left: '43%', display: 'flex' }}>
+              <div id="per_4">0</div>%
+            </h1>
+            <h1 style={{ position: 'absolute', fontSize: '2rem', bottom: '22%', left: '43%', display: 'flex' }}>
+              <div id="per_5">0</div>%
+            </h1>
+            <img
+              src={intro5}
+              id="intro_graph"
+              alt=""
+              style={{ position: 'absolute', width: '0%', height: '50%', bottom: '20%', left: '5%' }}
+            />
             <img src={text3} alt="" style={{ position: 'absolute', width: '60%', top: '10%', left: '5%' }} />
             <img src={text4} alt="" style={{ position: 'absolute', width: '50%', top: '25%', left: '5%' }} />
-            <img src={text5} alt="" style={{ position: 'absolute', width: '27%', top: '34%', left: '43%' }} />
+            <img src={text5} alt="" style={{ position: 'absolute', width: '27%', top: '34%', left: '50%' }} />
             <img src={text6} alt="" style={{ position: 'absolute', width: '30%', top: '85%', left: '5%' }} />
           </div>
           <div data-aos="fade-in" data-aos-duration="300" className="chapter four" id="list-item-5">

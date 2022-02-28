@@ -139,3 +139,6 @@
     transform: translateY(0);
   }
 }
+#intro_graph {
+  transition: all 1s;
+}
