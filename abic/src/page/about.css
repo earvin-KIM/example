@@ -25,7 +25,7 @@
   overflow: hidden;
 }
 .about_intro {
-  background-image: url('../img/aboutus/aboutus-b-img.png');
+  background-image: url('../img/aboutus/bg_1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -41,8 +41,7 @@
 .about_us #list-item-3 {
 }
 .about_us #list-item-4 {
-  background-image: url('../img/aboutus/about-misson3.png');
 }
 .about_us #list-item-5 {
-  background-image: url('../img/aboutus/about-misson4.png');
+  background-image: url('../img/aboutus/bg_4.png');
 }

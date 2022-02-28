@@ -10,6 +10,17 @@ import about5 from '../img/aboutus/text_1.png';
 import about6 from '../img/aboutus/text_2.png';
 import about7 from '../img/aboutus/text_3.png';
 import about8 from '../img/aboutus/text_4.png';
+import about9 from '../img/aboutus/text_5.png';
+import about10 from '../img/aboutus/image_1.png';
+import about11 from '../img/aboutus/text_6.png';
+import about12 from '../img/aboutus/text_7.png';
+import about13 from '../img/aboutus/text_8.png';
+import about14 from '../img/aboutus/text_9.png';
+import about15 from '../img/aboutus/image_2.png';
+import about16 from '../img/aboutus/image_3.png';
+import about17 from '../img/aboutus/image_4.png';
+import about18 from '../img/aboutus/image_5.png';
+import about19 from '../img/aboutus/image_6.png';
 import scroll from '../img/service/service-scroll.png';
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -49,27 +60,33 @@ function AboutUs() {
             <img src={about3} alt="" style={{ position: 'absolute', width: '10%', top: '30%', right: '22%' }} />
             <img src={about4} alt="" style={{ position: 'absolute', width: '10%', top: '30%', left: '22%' }} />
             <img src={about5} alt="" style={{ position: 'absolute', width: '20%', top: '40%', left: '17%' }} />
-            <img src={about6} alt="" style={{ position: 'absolute', width: '50%', top: '73%', left: '5%' }} />
-            <img src={about7} alt="" style={{ position: 'absolute', width: '50%', top: '73%', left: '5%' }} />
-            <img src={about8} alt="" style={{ position: 'absolute', width: '50%', top: '73%', left: '5%' }} />
+            <img src={about6} alt="" style={{ position: 'absolute', width: '25%', top: '40%', right: '15%' }} />
+            <img src={about7} alt="" style={{ position: 'absolute', width: '25%', top: '55%', left: '15%' }} />
+            <img src={about8} alt="" style={{ position: 'absolute', width: '30%', top: '55%', right: '12%' }} />
           </div>
 
-          <div className="about chapter" id="list-item-3"></div>
+          <div className="about chapter" id="list-item-3">
+            <img src={about9} alt="" style={{ position: 'absolute', width: '50%', top: '55%', right: '25%' }} />
+          </div>
         </div>
         <div className="about cer chapter" id="list-item-4">
-          {/* <h1>
-            Authorized Certification <br />
-          </h1>
-          <img src={about3} alt="인증서" />
-          <img src={about4} alt="인증서" />
-          <img src={about5} alt="인증서" />
-          <img src={about6} alt="인증서" />
-          <img src={about7} alt="인증서" /> */}
+          <img
+            src={about10}
+            alt=""
+            style={{ position: 'absolute', width: 'auto', height: '90%', top: '5%', right: '15%' }}
+          />
+          <img src={about11} alt="" style={{ position: 'absolute', width: '10%', top: '5%', left: '10%' }} />
+          <img src={about12} alt="" style={{ position: 'absolute', width: '25%', top: '20%', left: '10%' }} />
+          <img src={about13} alt="" style={{ position: 'absolute', width: '10%', top: '90%', left: '10%' }} />
         </div>
 
         <div className="about chapter" id="list-item-5">
-          {/* <h1>Partner</h1>
-          <img src="" alt="파트너||팀" /> */}
+          <img src={about14} alt="" style={{ position: 'absolute', width: '5%', top: '10%', left: '10%' }} />
+          <img src={about15} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '10%' }} />
+          <img src={about16} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '25%' }} />
+          <img src={about17} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '40%' }} />
+          <img src={about18} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '55%' }} />
+          <img src={about19} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '70%' }} />
         </div>
       </div>
     </>
