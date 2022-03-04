@@ -9,10 +9,10 @@ import Soultion from './page/soultion';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import jQuery from 'jquery';
-import side_active from './img/intro/side-bar.png';
-import side_active_about from './img/aboutus/aboutus-side-bar.png';
-import side_none from './img/intro/side-circle.png';
-import side_none_about from './img/aboutus/aboutus-side-circle.png';
+import side_active from './img/intro/intro_01_side_circle.png';
+import side_active_about from './img/intro/intro_01_side_circle.png';
+import side_none from './img/intro/intro_01_sidecircle.png';
+import side_none_about from './img/intro/intro_01_sidecircle.png';
 import $ from 'jquery';
 import { State } from '@splidejs/splide';
 
@@ -138,7 +138,7 @@ function App() {
       //사이드 바 색상 바뀌게하는 함수
       switch (window.location.pathname) {
         case '/':
-          if (pageIndex_next == 4 || pageIndex_next == 7) {
+          if (pageIndex_next == 2 || pageIndex_next == 5) {
             side = side_none_about;
             side_ = side_active_about;
             $('#navbar-example3 .nav-link').css('color', 'white');

@@ -1,12 +1,13 @@
 .footer {
   width: 100%;
-  height: 80vh !important;
+  height: 60vh !important;
   position: relative;
 }
 .footer_div {
   width: 100%;
-  height: 80vh !important;
-  background-image: url('../img/footer/footer-bottom.png'), url('../img/footer/bg_1.png'), url('../img/footer/bg_2.png');
+  height: 60vh !important;
+  background-image: url('../img/footer/footer_bottom.png'), url('../img/footer/footer_left.png'),
+    url('../img/footer/footer_right.png');
   background-position: bottom, top left, top right;
   background-size: 100%, 50%, 50%;
   background-repeat: no-repeat;

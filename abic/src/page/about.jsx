@@ -22,6 +22,7 @@ import about17 from '../img/aboutus/image_4.png';
 import about18 from '../img/aboutus/image_5.png';
 import about19 from '../img/aboutus/image_6.png';
 import scroll from '../img/service/service-scroll.png';
+import side_line from '../img/intro/intro_01_sideline1.png';
 
 import { Container, Row, Col } from 'react-bootstrap';
 function AboutUs() {
@@ -47,6 +48,7 @@ function AboutUs() {
           인증서{/* Partner&Team */}
           <img className="side_nav" src="" alt="" />
         </a>
+        <img src={side_line} alt="" className="side_line" />
       </nav>
       <div className="about_us">
         <img id="scroll_img" src={scroll} />

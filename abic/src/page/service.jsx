@@ -48,6 +48,7 @@ import service_circle from '../img/service/service-l-circle.png';
 import service_circle1 from '../img/service/service-r-circle.png';
 import scroll from '../img/service/service-scroll.png';
 import service_bottom_button from '../img/intro/ic_chat.png';
+import side_line from '../img/intro/intro_01_sideline1.png';
 
 import './service.css';
 function Service() {
@@ -101,6 +102,7 @@ function Service() {
           abic 필요성
           <img className="side_nav" src="" alt="" />
         </a>
+        <img src={side_line} alt="" className="side_line" />
       </nav>
       <div id="service_container">
         <div id="list-item-1" className="chapter service">

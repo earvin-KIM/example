@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/intro/intro-s-logo.png';
+import logo from '../img/aboutus/aboutus-logo.png';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
 import './header.css';
