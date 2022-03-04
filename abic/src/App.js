@@ -38,7 +38,7 @@ function App() {
     var link = $('.serlink');
     var chapter_id = $('.serlink').attr('href');
     $('.serlink').addClass('active');
-    var pageIndex_next;
+    var pageIndex_next; //현재 페이지
     var side_ = side_active,
       side = side_none;
 
@@ -65,14 +65,16 @@ function App() {
 
     //----------------------------목차 activ----------------------
     var intro_text =
-      '그래서 ABIC은 생각했습니다. 신사업 기획, 마케팅, 세일즈에 대한 비즈니스 컨설팅을 AI 기술을 통해 ‘신속’하고 ‘편리’하게 제공할 순 없을까?';
+      '그래서 ABIC은 생각했습니다. 신사업 기획, 마케팅, 세일즈에 대한 비즈니스 컨설팅을 AI 기술을 통해 ‘신속’하고 ‘편리’하게 제공할 순 없을까?'; //타이핑 효과를 위한 텍스트
     var txt = document.getElementById('txt_here');
     let n = 0;
     var state = false;
     const typing = function () {
+      //숫자 올라가는 함수
       if (document.querySelector('.three') != null) {
         if ($('.three').offset().top == window.scrollY) {
-          var per1 = 38,
+          //three 클래스의 div와 스크롤 위치가 동일할때
+          var per1 = 38, //올라갈 숫자
             per2 = 35,
             per3 = 20,
             per4 = 19,
@@ -94,22 +96,23 @@ function App() {
             if (document.getElementById('per_5').innerHTML < per5) {
               document.getElementById('per_5').innerHTML++;
             }
-          }, 30);
+          }, 30); //30ms에 1씩 올라감
         }
       }
     };
     // $(window).off().on('scroll', typing);
     $(window).on('scroll', function () {
       findPosition();
-      typing();
+      typing(); //스크롤 할때 감지
     });
     // ----------------페이지 스크롤링--------------------------
     let positionDivs = document.getElementsByClassName('chapter');
-    /// 현재 페이지
-    let pageIndex = 0;
-    $('#navbar').css('opacity', '1');
+    // 스크롤 목적지 리스트 chapter 클래스 없으면 거기서 안멈춤
+    let pageIndex = 0; //스크롤 할 때의 div, pageIndex_next와 다름 주의
+    $('#navbar').css('opacity', '1'); //상단 nav 투명하게
 
     function header_visi() {
+      //nav 투명도 첫 페이지에서는 보이게 하는 함수
       if (pageIndex_next == 0) {
         $('#navbar').css('opacity', '1');
         $('#navbar').hover(
@@ -134,7 +137,7 @@ function App() {
       switch_side(); //헤더부분 스크롤 내리면 hover로 활성화되는 알고리즘과 함께 호출됨
     }
     const switch_side = () => {
-      //사이드 바 색상 바뀌게하는 함수
+      //사이드 바 몇번째 페이지인지에 따라 색상 바뀌게하는 함수, active 주는 함수와 다름
       switch (window.location.pathname) {
         case '/':
           if (pageIndex_next == 2 || pageIndex_next == 5) {
@@ -177,14 +180,15 @@ function App() {
     };
     findPosition();
 
-    //^-----------------------sidenav색상 자동변경
-    /// 최대 페이지
-    let maxPageIndex = positionDivs.length - 1;
-    /// 현재 페이지가 넘어가고 있는지 확인
-    let isMoving = false;
-    /// 페이징 끝난 후 페이지 못 넘기게 딜레이 추가
-    let scrollEndDelay = 200;
+    //^-----------------------sidenav색상 변경
+
+    let maxPageIndex = positionDivs.length - 1; /// 최대 페이지
+
+    let isMoving = false; /// 현재 페이지가 넘어가고 있는지 확인
+
+    let scrollEndDelay = 200; /// 페이징 끝난 후 페이지 못 넘기게 딜레이 추가
     const animteScrollTo = function (_selector, _duration, _adjust) {
+      //페이지 넘어가는 애니메이션
       const targetEle = document.querySelector('#' + _selector.id);
       if (!targetEle) return;
       // - Get current &amp; target positions
@@ -218,10 +222,12 @@ function App() {
       }
     };
     const paging_now = () => {
+      //pageIndex를 반환해주는 함수, 새로고침시 pageIndex==1이 되는 걸 방지
       let paging = 0,
         rem = -1;
       $('.chapter').each(function () {
         if ($(this).offset().top - window.scrollY < 20) {
+          //페이지 찾기
           rem = paging;
         }
         paging++;
@@ -229,6 +235,7 @@ function App() {
 
       var footer_bottom = document.querySelector('#footer').offsetHeight + document.querySelector('#footer').offsetTop;
       if (footer_bottom - (window.scrollY + window.innerHeight) < 20) {
+        //footer의 경우 top 기준이 아니라 bottom 기준으로 스크롤 되게 변경
         rem = paging - 1;
       }
 
@@ -250,10 +257,7 @@ function App() {
     const keypress = (event) => {
       if (maxPageIndex <= 0) return;
       // 스크롤 방지
-      // $('input').on('focus', function () {
-      //   isMoving = true;
-      // });
-      if (isMoving || (event.key != 'ArrowDown' && event.key != 'ArrowUp')) return;
+      if (isMoving || (event.key != 'ArrowDown' && event.key != 'ArrowUp')) return; //화살표 스크롤 방지
       event.preventDefault();
 
       console.log(event.key);
@@ -266,9 +270,10 @@ function App() {
       scorlling(next);
     };
     const scorlling = function (next) {
+      //스크롤 애니메이션 함수 호출 함수
       if (maxPageIndex <= 0) return;
 
-      if (isMoving || (document.querySelector('#map') != null && $('#map').is(':hover'))) return;
+      if (isMoving || (document.querySelector('#map') != null && $('#map').is(':hover'))) return; //지도 줌 할 때 스크롤 넘어가는 것 방지
 
       let paging = 0;
       pageIndex = paging_now();
