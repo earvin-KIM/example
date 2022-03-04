@@ -1,49 +1,48 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
-import service_letter from '../img/service/service-b-letter.png';
-import serv1 from '../img/service/bg_3.png';
-import serv2 from '../img/service/Group_1.png';
-import serv3 from '../img/service/Group_2.png';
-import serv4 from '../img/service/Group_3.png';
-import serv5 from '../img/service/text_1.png';
-import serv6 from '../img/service/text_2.png';
-import serv7 from '../img/service/text_3.png';
-import serv8 from '../img/service/text_4.png';
-import serv9 from '../img/service/docu_1.png';
-import serv10 from '../img/service/docu_2.png';
-import serv11 from '../img/service/text_5.png';
-import serv12 from '../img/service/text_6.png';
-import serv13 from '../img/service/Group_4.png';
-import serv14 from '../img/service/text_7.png';
-import serv15 from '../img/service/text_8.png';
-import serv16 from '../img/service/Group_5.png';
-import serv17 from '../img/service/text_9.png';
-import serv18 from '../img/service/text_10.png';
-import serv19 from '../img/service/Group_6.png';
-import serv20 from '../img/service/text_11.png';
-import serv21 from '../img/service/text_12.png';
-import serv22 from '../img/service/text_13.png';
-import serv23 from '../img/service/line_16.png';
-import serv24 from '../img/service/bg_8.png';
-import serv25 from '../img/service/Group_7.png';
-import serv26 from '../img/service/text_14.png';
-import serv27 from '../img/service/text_15.png';
-import serv28 from '../img/service/text_16.png';
-import serv29 from '../img/service/text_17.png';
-import serv30 from '../img/service/bg_9.png';
-import serv31 from '../img/service/Group_8.png';
-import serv32 from '../img/service/text_18.png';
-import serv33 from '../img/service/Group_9.png';
-import serv34 from '../img/service/Group_10.png';
-import serv35 from '../img/service/Group_11.png';
-import serv36 from '../img/service/Group_12.png';
-import serv37 from '../img/service/text_19.png';
-import serv38 from '../img/service/_ (2).png';
-import gtm from '../img/gtm.png';
-import san1 from '../img/san1.png';
-import san2 from '../img/san2.png';
-import san3 from '../img/san3.png';
+import service_01_letter from '../img/service/service-b-letter.png';
+import service_02_back from '../img/service/bg_3.png';
+import service_02_pic from '../img/service/Group_1.png';
+import service_02_123 from '../img/service/Group_2.png';
+import service_02_arrow from '../img/service/Group_3.png';
+import text_02_solution from '../img/service/text_1.png';
+import text_02_insight from '../img/service/text_2.png';
+import text_03_abic_process from '../img/service/text_3.png';
+import text_03_0 from '../img/service/text_4.png';
+import service_03_left from '../img/service/docu_1.png';
+import service_03_right from '../img/service/docu_2.png';
+import text_03_left from '../img/service/text_5.png';
+import text_03_right from '../img/service/text_6.png';
+import service_04_1st from '../img/service/Group_4.png';
+import text_04_1st from '../img/service/text_7.png';
+import text_04_description from '../img/service/text_8.png';
+import service_05_2ed from '../img/service/Group_5.png';
+import text_05_2ed from '../img/service/text_9.png';
+import text_05_description from '../img/service/text_10.png';
+import service_06_3rd from '../img/service/Group_6.png';
+import text_06_3rd from '../img/service/text_11.png';
+import text_06_description from '../img/service/text_12.png';
+import text_07_description from '../img/service/text_13.png';
+import service_07_line from '../img/service/line_16.png';
+import service_08_back from '../img/service/bg_8.png';
+import service_08_graph from '../img/service/Group_7.png';
+import text_08_necessity from '../img/service/text_14.png';
+import text_08_startup_problem from '../img/service/text_15.png';
+import text_08_description from '../img/service/text_16.png';
+import text_09_startup_problem from '../img/service/text_17.png';
+import service_09_back from '../img/service/bg_9.png';
+import service_09_graph from '../img/service/Group_8.png';
+import text_09_description from '../img/service/text_18.png';
+import service_10_idea from '../img/service/Group_9.png';
+import service_10_low_price from '../img/service/Group_10.png';
+import service_10_speed from '../img/service/Group_11.png';
+import service_10_panel from '../img/service/Group_12.png';
+import text_10_problem_solve from '../img/service/text_19.png';
+import service_10_arrow from '../img/service/_ (2).png';
+import sample1 from '../img/san1.png';
+import sample2 from '../img/san2.png';
+import sample3 from '../img/san3.png';
 import service_circle from '../img/service/service-l-circle.png';
 import service_circle1 from '../img/service/service-r-circle.png';
 import scroll from '../img/service/service-scroll.png';
@@ -108,7 +107,7 @@ function Service() {
         <div id="list-item-1" className="chapter service">
           <div>
             <div className="servh1">
-              <img src={service_letter} alt="" />
+              <img src={service_01_letter} alt="" />
             </div>
           </div>
           <div className="pic_nav">
@@ -134,57 +133,89 @@ function Service() {
           </div> */}
           <div className="chapter service" id="list-item-3">
             <img
-              src={serv1}
+              src={service_02_back}
               alt=""
               style={{ position: 'absolute', width: '70%', height: '80%', top: '15%', left: '15%' }}
             />
-            <img src={serv2} alt="" style={{ position: 'absolute', width: '50%', top: '17%', left: '25%' }} />{' '}
-            <img src={serv3} alt="" style={{ position: 'absolute', width: '40%', top: '50%', left: '32%' }} />
-            <img src={serv4} alt="" style={{ position: 'absolute', width: '1.5%', top: '75%', left: '51%' }} />
-            <img src={serv5} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }} />
-            <img src={serv6} alt="" style={{ position: 'absolute', width: '30%', top: '85%', left: '37%' }} />
+            <img src={service_02_pic} alt="" style={{ position: 'absolute', width: '50%', top: '17%', left: '25%' }} />{' '}
+            <img src={service_02_123} alt="" style={{ position: 'absolute', width: '40%', top: '50%', left: '32%' }} />
+            <img
+              src={service_02_arrow}
+              alt=""
+              style={{ position: 'absolute', width: '1.5%', top: '75%', left: '51%' }}
+            />
+            <img src={text_02_solution} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }} />
+            <img src={text_02_insight} alt="" style={{ position: 'absolute', width: '30%', top: '85%', left: '37%' }} />
           </div>
           <div className="chapter service" id="list-item-4">
-            <img src={serv7} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }} />
-            <img src={serv8} alt="" style={{ position: 'absolute', width: '25%', top: '17%', left: '40%' }} />
-            <img src={serv9} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '25%' }} />
-            <img src={serv10} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '55%' }} />
-            <img src={serv11} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '35%' }} />
-            <img src={serv12} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '65%' }} />
+            <img
+              src={text_03_abic_process}
+              alt=""
+              style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }}
+            />
+            <img src={text_03_0} alt="" style={{ position: 'absolute', width: '25%', top: '17%', left: '40%' }} />
+            <img src={service_03_left} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '25%' }} />
+            <img
+              src={service_03_right}
+              alt=""
+              style={{ position: 'absolute', width: '25%', top: '30%', left: '55%' }}
+            />
+            <img src={text_03_left} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '35%' }} />
+            <img src={text_03_right} alt="" style={{ position: 'absolute', width: '5%', top: '70%', left: '65%' }} />
           </div>
           <div className="outer">
             <div className="chapter service" id="list-item-5">
-              <img src={serv13} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '10%' }} />
-              <img src={serv14} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '55%' }} />
-              <img src={serv15} alt="" style={{ position: 'absolute', width: '30%', top: '35%', left: '55%' }} />
+              <img src={service_04_1st} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '10%' }} />
+              <img src={text_04_1st} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '55%' }} />
+              <img
+                src={text_04_description}
+                alt=""
+                style={{ position: 'absolute', width: '30%', top: '35%', left: '55%' }}
+              />
             </div>
             <div className="chapter service" id="list-item-6">
-              <img src={serv16} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '45%' }} />
-              <img src={serv17} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }} />
-              <img src={serv18} alt="" style={{ position: 'absolute', width: '30%', top: '35%', left: '9%' }} />
+              <img src={service_05_2ed} alt="" style={{ position: 'absolute', width: '40%', top: '5%', left: '45%' }} />
+              <img src={text_05_2ed} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }} />
+              <img
+                src={text_05_description}
+                alt=""
+                style={{ position: 'absolute', width: '30%', top: '35%', left: '9%' }}
+              />
             </div>
             <div className="chapter service" id="list-item-7">
-              <img src={serv19} alt="" style={{ position: 'absolute', width: '40%', top: '15%', left: '15%' }} />
-              <img src={serv20} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '60%' }} />
-              <img src={serv21} alt="" style={{ position: 'absolute', width: '30%', top: '45%', left: '60%' }} />
+              <img
+                src={service_06_3rd}
+                alt=""
+                style={{ position: 'absolute', height: '80%', top: '15%', left: '15%' }}
+              />
+              <img src={text_06_3rd} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '60%' }} />
+              <img
+                src={text_06_description}
+                alt=""
+                style={{ position: 'absolute', width: '30%', top: '45%', left: '60%' }}
+              />
             </div>
 
             <div className="spliderdiv">
               <div className="chapter service" id="list-item-8">
                 <Splide options={{ width: 800, arrows: true }}>
                   <SplideSlide>
-                    <img className="san" src={san1} alt="Image 1" />
+                    <img className="san" src={sample1} alt="Image 1" />
                   </SplideSlide>
                   <SplideSlide>
-                    <img className="san" src={san2} alt="Image 2" />
+                    <img className="san" src={sample2} alt="Image 2" />
                   </SplideSlide>
                   <SplideSlide>
-                    <img className="san" src={san3} alt="Image 3" />
+                    <img className="san" src={sample3} alt="Image 3" />
                   </SplideSlide>
                 </Splide>
-                <img src={serv22} alt="" style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }} />
                 <img
-                  src={serv23}
+                  src={text_07_description}
+                  alt=""
+                  style={{ position: 'absolute', width: '30%', top: '25%', left: '9%' }}
+                />
+                <img
+                  src={service_07_line}
                   alt=""
                   style={{ position: 'absolute', width: '8%', top: '40%', left: '42%', zIndex: '-1' }}
                 />
@@ -195,25 +226,60 @@ function Service() {
         <div id="service_need">
           <div className="chapter service" id="list-item-9">
             <img
-              src={serv24}
+              src={service_08_back}
               alt=""
               style={{ position: 'absolute', width: '70%', height: '80%', top: '15%', left: '15%' }}
             />
-            <img src={serv25} alt="" style={{ position: 'absolute', width: '50%', top: '30%', left: '25%' }} />
-            <img src={serv26} alt="" style={{ position: 'absolute', width: '30%', top: '2%', left: '35%' }} />
-            <img src={serv27} alt="" style={{ position: 'absolute', width: '10%', top: '10%', left: '45%' }} />
-            <img src={serv28} alt="" style={{ position: 'absolute', width: '40%', top: '20%', left: '30%' }} />
+            <img
+              src={service_08_graph}
+              alt=""
+              style={{ position: 'absolute', height: '60%', top: '30%', left: '50%', transform: 'translateX(-50%)' }}
+            />
+            <img
+              src={text_08_necessity}
+              alt=""
+              style={{ position: 'absolute', width: '30%', top: '2%', left: '35%' }}
+            />
+            <img
+              src={text_08_startup_problem}
+              alt=""
+              style={{ position: 'absolute', width: '10%', top: '10%', left: '45%' }}
+            />
+            <img
+              src={text_08_description}
+              alt=""
+              style={{ position: 'absolute', width: '40%', top: '20%', left: '30%' }}
+            />
           </div>
 
           <div className="chapter service" id="list-item-10">
             <img
-              src={serv30}
+              src={service_09_back}
               alt=""
-              style={{ position: 'absolute', width: '70%', height: '80%', top: '10%', left: '15%' }}
+              style={{
+                position: 'absolute',
+                width: '70%',
+                height: '80%',
+                top: '10%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+              }}
             />{' '}
-            <img src={serv31} alt="" style={{ position: 'absolute', width: '60%', top: '35%', left: '20%' }} />
-            <img src={serv29} alt="" style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }} />
-            <img src={serv32} alt="" style={{ position: 'absolute', width: '40%', top: '15%', left: '30%' }} />
+            <img
+              src={service_09_graph}
+              alt=""
+              style={{ position: 'absolute', height: '45%', top: '35%', left: '50%', transform: 'translateX(-50%)' }}
+            />
+            <img
+              src={text_09_startup_problem}
+              alt=""
+              style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }}
+            />
+            <img
+              src={text_09_description}
+              alt=""
+              style={{ position: 'absolute', width: '40%', top: '15%', left: '30%' }}
+            />
           </div>
           {/* <div className="chapter service" id="list-item-11"> */}
           {/* <p>
@@ -223,13 +289,37 @@ function Service() {
             <img src={serv7} alt="해결책 솔루션" /> */}
           {/* </div> */}
           <div className="chapter service" id="list-item-12">
-            <img src={serv33} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '15%' }} />
-            <img src={serv34} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '40%' }} />
-            <img src={serv35} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '65%' }} />
-            <img src={serv36} alt="" style={{ position: 'absolute', width: '75%', top: '58%', left: '13%' }} />
-            <img src={serv37} alt="" style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }} />
-            <img src={serv38} alt="" style={{ position: 'absolute', width: 'auto', top: '37%', left: '37%' }} />
-            <img src={serv38} alt="" style={{ position: 'absolute', width: 'auto', top: '37%', right: '37%' }} />
+            <img src={service_10_idea} alt="" style={{ position: 'absolute', width: '20%', top: '15%', left: '15%' }} />
+            <img
+              src={service_10_low_price}
+              alt=""
+              style={{ position: 'absolute', width: '20%', top: '15%', left: '40%' }}
+            />
+            <img
+              src={service_10_speed}
+              alt=""
+              style={{ position: 'absolute', width: '20%', top: '15%', left: '65%' }}
+            />
+            <img
+              src={service_10_panel}
+              alt=""
+              style={{ position: 'absolute', width: '75%', top: '58%', left: '13%' }}
+            />
+            <img
+              src={text_10_problem_solve}
+              alt=""
+              style={{ position: 'absolute', width: '10%', top: '5%', left: '45%' }}
+            />
+            <img
+              src={service_10_arrow}
+              alt=""
+              style={{ position: 'absolute', width: 'auto', top: '37%', left: '37%' }}
+            />
+            <img
+              src={service_10_arrow}
+              alt=""
+              style={{ position: 'absolute', width: 'auto', top: '37%', right: '37%' }}
+            />
           </div>
         </div>
       </div>

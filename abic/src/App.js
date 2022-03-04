@@ -35,7 +35,6 @@ function App() {
   // ^-------------------title 바꾸기---------------
 
   $(function () {
-    window.scrollTo(0, $('.chapter').offset().top);
     var link = $('.serlink');
     var chapter_id = $('.serlink').attr('href');
     $('.serlink').addClass('active');
