@@ -8,8 +8,9 @@
 } */
 .ser_img {
   overflow: hidden;
-  width: 15rem;
-  height: 15rem;
+  width: 17rem;
+  height: 17rem;
+  opacity: 0.9;
 }
 .ser_btn {
   width: 100%;
@@ -48,9 +49,10 @@
   align-items: center;
   justify-content: space-evenly;
   height: 50%;
-  width: 100%;
+  width: 80%;
   position: absolute;
   bottom: 20%;
+  margin-left: 10%;
 }
 .san {
   height: 90vh;
@@ -83,25 +85,39 @@ p {
   color: rgb(206, 206, 206);
 }
 .se #list-item-1 {
-  background-image: url('../img/service/bg_1.jpg');
+  background-image: url('../img/service/service01/service_01_back.png');
 }
 .se #list-item-2 {
-  background-image: url('../img/service/bg_2.png');
+  background-image: url('../img/service/service02/service_02_back.png');
 }
 .se #list-item-3 {
-  background-image: url('../img/service/bg_2.png');
+  background-image: url('../img/service/service02/service_02_back.png');
 }
 .se #list-item-4 {
-  background-image: url('../img/service/bg_5.png');
-  background-size: 80% 80%;
-  background-position: center 65%;
+  background-image: url('../img/service/service03/service_03_back.png');
 }
-.se .outer {
+.se #list-item-5 {
+  background-image: url('../img/service/service04/service_04_back.png');
+  background-size: 100% 100%;
+}
+.se #list-item-6 {
+  background-image: url('../img/service/service05/service_05_back.png');
+  background-size: 100% 100%;
+}
+.se #list-item-7 {
+  background-image: url('../img/service/service06/sevice_06_back.png');
+  background-size: 100% 100%;
+}
+.se #list-item-8 {
+  background-image: url('../img/service/service07/service_07_back.png');
+  background-size: 100% 100%;
+}
+/* .se .outer {
   background-image: url('../img/service/bg_oval_1.png'), url('../img/service/bg_oval_2.png');
   background-size: 70%, 30%;
   background-position: top left, bottom right;
   background-repeat: no-repeat;
-}
+} */
 .splide {
   position: absolute !important;
   right: 10%;
@@ -136,15 +152,17 @@ p {
   right: 0;
 }
 .se #list-item-9 {
-  background-image: url('../img/service/bg_7.png');
-  background-position: center 72%;
+  background-image: url('../img/service/service08/service_08_back.png');
+  background-size: 100% 100%;
 }
 .se #list-item-10 {
-  background-image: url('../img/service/bg_10.png');
+  background-image: url('../img/service/service09/service_09_back.png');
+  background-size: 100% 100%;
 }
 .se #list-item-11 {
   background-image: url('../img/service/bg_11.png');
 }
 .se #list-item-12 {
-  background-image: url('../img/service/bg_11.png');
+  background-image: url('../img/service/service10/service_10_back.png');
+  background-size: 100% 100%;
 }

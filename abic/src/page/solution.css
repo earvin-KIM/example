@@ -7,7 +7,7 @@
   height: 100vh;
   max-height: 100%;
   overflow: hidden;
-  background-image: url('../img/solution/bg_1.jpg');
+  background-image: url('../img/solution/solution01/solution_01_back.png');
 
   /* background-size: cover; */
   background-position: center;
@@ -31,5 +31,5 @@
   bottom: 12%;
 }
 .sol #list-item-2 {
-  background-image: url('../img/solution/bg_2.png');
+  background-image: url('../img/solution/solution02/solution_02_back.png');
 }

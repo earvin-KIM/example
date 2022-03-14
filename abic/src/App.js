@@ -151,7 +151,7 @@ function App() {
           }
           break;
         case '/about':
-          if (pageIndex_next == 0 || pageIndex_next == 5) {
+          if (1 == 1) {
             side = side_none_about;
             side_ = side_active_about;
             $('#navbar-example3 .nav-link').css('color', 'white');
@@ -164,7 +164,13 @@ function App() {
         case '/contact':
           break;
         case '/service':
-          if (pageIndex_next == 0 || pageIndex_next == 1 || pageIndex_next == 9 || pageIndex_next == 10) {
+          if (
+            pageIndex_next == 0 ||
+            pageIndex_next == 1 ||
+            pageIndex_next == 2 ||
+            pageIndex_next == 9 ||
+            pageIndex_next == 10
+          ) {
             side = side_none_about;
             side_ = side_active_about;
             $('#navbar-example3 .nav-link').css('color', 'white');
@@ -198,23 +204,31 @@ function App() {
       animateScrollTo(currentY, targetY, _duration);
       // - Animate and scroll to target position
       function animateScrollTo(_startY, _endY, _duration) {
-        _duration = _duration ? _duration : 300;
+        _duration = _duration ? _duration : 100;
         const unitY = (targetY - currentY) / _duration;
         const startTime = new Date().getTime();
         const endTime = new Date().getTime() + _duration;
+        if (isMoving == true) {
+          console.log('stop');
+          return;
+        }
         isMoving = true;
+        console.log(isMoving);
         const scrollTo = function () {
           let now = new Date().getTime();
           let passed = now - startTime;
           if (now <= endTime) {
-            let dot = passed / (endTime - startTime);
-            let animatePosition = 1 - Math.pow(1 - dot, 1 / Math.max(0.5)); //ease 애니메이션
-            scrollEle.scrollTop = currentY + unitY * passed * animatePosition;
+            // let dot = passed / (endTime - startTime);
+            // let animatePosition = 1 - Math.pow(1 - dot, 1 / Math.max(0.5)); //ease 애니메이션
+            // scrollEle.scrollTop = currentY + unitY;
+            scrollEle.scrollTop = targetY / Math.pow(passed, 0.5);
             requestAnimationFrame(scrollTo);
           } else {
             // 페이지 끝날 때
             scrollEle.scrollTop = targetY;
-            setTimeout((isMoving = false), scrollEndDelay + 100);
+            setTimeout(function () {
+              isMoving = false;
+            }, scrollEndDelay + 500); //페이지 다 넘어가기 전까지 isMoving==true
             console.log('End off.');
           }
         };

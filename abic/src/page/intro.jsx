@@ -30,7 +30,7 @@ import scroll from '../img/intro/intro_01_mouse.png';
 import side_none from '../img/intro/intro_01_sidecircle.png';
 
 import './intro.css';
-// import AOS from 'aos';
+// import AOS from 'aos'; 스크롤시 등장하는 애니메이션 라이브러리, 쓸거면 주석 풀면 됨
 // import 'aos/dist/aos.css';
 // import TypeAnimation from 'react-type-animation';
 

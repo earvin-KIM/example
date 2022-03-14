@@ -2,25 +2,21 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import './about.css';
-import about_02_bulb from '../img/aboutus/ic_bulb.png';
-import about_02_pin from '../img/aboutus/ic_pin.png';
-import text_02_vision_btn from '../img/aboutus/ic_vision.png';
-import text_02_mission_btn from '../img/aboutus/ic_mission.png';
-import text_02_mission from '../img/aboutus/text_1.png';
-import text_02_vision from '../img/aboutus/text_2.png';
-import text_02_mission_description from '../img/aboutus/text_3.png';
-import text_02_vison_description from '../img/aboutus/text_4.png';
+import about_01_Main from '../img/aboutus/aboutus01/abouus_01_letter.png';
+
+import text_02_Maintext from '../img/aboutus/aboutus02/aboutus_02_letter.png';
+import text_02_mission_description from '../img/aboutus/aboutus02/aboutus_02_letter2.png';
+import text_02_vison_description from '../img/aboutus/aboutus02/aboutus_02_letter3.png';
+import about_02_line from '../img/aboutus/aboutus02/aboutus_02_line.png';
 import text_03_below_arrow from '../img/aboutus/text_5.png';
-import about_04_ceo_pic from '../img/aboutus/image_1.png';
-import text_04_greet from '../img/aboutus/text_6.png';
-import text_04_greeting from '../img/aboutus/text_7.png';
-import text_04_ceo from '../img/aboutus/text_8.png';
-import text_05_certifi from '../img/aboutus/text_9.png';
-import about_05_pic1 from '../img/aboutus/image_2.png';
-import about_05_pic2 from '../img/aboutus/image_3.png';
-import about_05_pic3 from '../img/aboutus/image_4.png';
-import about_05_pic4 from '../img/aboutus/image_5.png';
-import about_05_pic5 from '../img/aboutus/image_6.png';
+import about_04_ceo_pic from '../img/aboutus/aboutus03/abouus_03_img.png';
+import text_04_greet from '../img/aboutus/aboutus03/abouus_03_letter.png';
+import text_04_greeting from '../img/aboutus/aboutus03/abouus_03_letter2.png';
+import text_04_ceo from '../img/aboutus/aboutus03/abouus_03_letter3.png';
+import text_05_certifi from '../img/aboutus/aboutus04/abouus_04_letter.png';
+import about_05_pic1 from '../img/aboutus/aboutus04/abouus_04_img.png';
+import about_05_pic2 from '../img/aboutus/aboutus04/abouus_04_square.png';
+
 import scroll from '../img/service/service-scroll.png';
 import side_line from '../img/intro/intro_01_sideline1.png';
 
@@ -30,22 +26,18 @@ function AboutUs() {
     <>
       <nav id="navbar-example3">
         <a className="nav-link serlink" href="#list-item-1">
-          About Us <img className="side_nav" src="" alt="" />
+          Main <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-2">
-          Misson&Vision
-          <img className="side_nav" src="" alt="" />
-        </a>
-        <a className="nav-link serlink" href="#list-item-3">
-          Misson&Vision
+          Mission
           <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-4">
-          대표 소개
+          Greetings
           <img className="side_nav" src="" alt="" />
         </a>
         <a className="nav-link serlink" href="#list-item-5">
-          인증서{/* Partner&Team */}
+          Certification{/* Partner&Team */}
           <img className="side_nav" src="" alt="" />
         </a>
         <img src={side_line} alt="" className="side_line" />
@@ -54,40 +46,33 @@ function AboutUs() {
         <img id="scroll_img" src={scroll} />
         <div className="about about_intro chapter" id="list-item-1">
           <img id="scroll_img" src={scroll} />
+          <img
+            src={about_01_Main}
+            alt=""
+            style={{ position: 'absolute', width: '30%', top: '35%', left: '50%', transform: 'translateX(-50%)' }}
+          />
         </div>
         <div className="about_outer">
           <div className="about chapter" id="list-item-2">
-            <img src={about_02_bulb} alt="" style={{ position: 'absolute', width: '5%', top: '10%', left: '25%' }} />
-            <img src={about_02_pin} alt="" style={{ position: 'absolute', width: '5%', top: '10%', right: '25%' }} />
             <img
-              src={text_02_vision_btn}
+              src={text_02_Maintext}
               alt=""
-              style={{ position: 'absolute', width: '10%', top: '30%', right: '22%' }}
-            />
+              style={{ position: 'absolute', width: '40%', top: '15%', left: '50%', transform: 'translateX(-50%)' }}
+            />{' '}
             <img
-              src={text_02_mission_btn}
+              src={about_02_line}
               alt=""
-              style={{ position: 'absolute', width: '10%', top: '30%', left: '22%' }}
+              style={{ position: 'absolute', height: '30%', top: '60%', left: '50%', transform: 'translateX(-50%)' }}
             />
-            <img src={text_02_mission} alt="" style={{ position: 'absolute', width: '20%', top: '40%', left: '17%' }} />
-            <img src={text_02_vision} alt="" style={{ position: 'absolute', width: '25%', top: '40%', right: '15%' }} />
             <img
               src={text_02_mission_description}
               alt=""
-              style={{ position: 'absolute', width: '25%', top: '55%', left: '15%' }}
+              style={{ position: 'absolute', width: '25%', top: '60%', left: '15%' }}
             />
             <img
               src={text_02_vison_description}
               alt=""
-              style={{ position: 'absolute', width: '30%', top: '55%', right: '12%' }}
-            />
-          </div>
-
-          <div className="about chapter" id="list-item-3">
-            <img
-              src={text_03_below_arrow}
-              alt=""
-              style={{ position: 'absolute', width: '50%', top: '55%', right: '25%' }}
+              style={{ position: 'absolute', width: '30%', top: '60%', right: '12%' }}
             />
           </div>
         </div>
@@ -95,12 +80,12 @@ function AboutUs() {
           <img
             src={about_04_ceo_pic}
             alt=""
-            style={{ position: 'absolute', width: 'auto', height: '90%', top: '5%', right: '15%' }}
+            style={{ position: 'absolute', width: 'auto', height: '80%', top: '5%', right: '10%' }}
           />
           <img
             src={text_04_greet}
             alt=""
-            style={{ position: 'absolute', height: '10%', width: 'auto', top: '5%', left: '10%' }}
+            style={{ position: 'absolute', height: '7%', width: 'auto', top: '5%', left: '10%' }}
           />
           <img
             src={text_04_greeting}
@@ -115,12 +100,28 @@ function AboutUs() {
         </div>
 
         <div className="about chapter" id="list-item-5">
-          <img src={text_05_certifi} alt="" style={{ position: 'absolute', width: '5%', top: '10%', left: '10%' }} />
-          <img src={about_05_pic1} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '10%' }} />
-          <img src={about_05_pic2} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '25%' }} />
-          <img src={about_05_pic3} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '40%' }} />
-          <img src={about_05_pic4} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '55%' }} />
-          <img src={about_05_pic5} alt="" style={{ position: 'absolute', width: '15%', top: '30%', left: '70%' }} />
+          <img
+            src={text_05_certifi}
+            alt=""
+            style={{ position: 'absolute', width: '5%', top: '7%', left: '50%', transform: 'translateX(-50%)' }}
+          />
+          <img
+            src={about_05_pic1}
+            alt=""
+            style={{
+              position: 'absolute',
+              width: '35%',
+              top: '20%',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: '2',
+            }}
+          />
+          <img
+            src={about_05_pic2}
+            alt=""
+            style={{ position: 'absolute', width: '70%', top: '17%', left: '50%', transform: 'translateX(-50%)' }}
+          />
         </div>
       </div>
     </>

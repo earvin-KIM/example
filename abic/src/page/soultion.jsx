@@ -4,8 +4,9 @@ import solution_circle from '../img/service/service-l-circle.png';
 import solution_circle1 from '../img/solution/solution-r-circle.png';
 import soultion_letter from '../img/solution/solution-b-letter.png';
 import scroll from '../img/service/service-scroll.png';
-import sol1 from '../img/solution/diagram.png';
-import sol2 from '../img/solution/text_4.png';
+import sol1 from '../img/solution/solution02/solution_02_img.png';
+import sol2 from '../img/solution/solution02/solution_02_letter.png';
+import sol02back from '../img/solution/solution02/solution_02_square.png';
 import './solution.css';
 function Soultion() {
   return (
@@ -34,8 +35,31 @@ function Soultion() {
         </a>
       </div>
       <div id="list-item-2" className="chapter solution">
-        <img src={sol1} alt="" style={{ position: 'absolute', width: '80%', top: '15%', left: '10%' }} />
+        <img
+          src={sol1}
+          alt=""
+          style={{
+            position: 'absolute',
+            height: '70%',
+            top: '18%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: '1',
+          }}
+        />
         <img src={sol2} alt="" style={{ position: 'absolute', width: '30%', top: '5%', left: '35%' }} />
+        <img
+          src={sol02back}
+          alt=""
+          style={{
+            position: 'absolute',
+            height: '85%',
+            top: '15%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: '0',
+          }}
+        />
       </div>
     </div>
   );

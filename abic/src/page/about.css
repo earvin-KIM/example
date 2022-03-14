@@ -25,17 +25,18 @@
   overflow: hidden;
 }
 .about_intro {
-  background-image: url('../img/aboutus/bg_1.jpg');
+  background-image: url('../img/aboutus/aboutus01/abouus_01_back.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
-.about_outer {
-  background-image: url('../img/aboutus/bg_2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+.about_us #list-item-2 {
+  background-image: url('../img/aboutus/aboutus02/aboutus_02_back.png');
+}
+.about_us #list-item-4 {
+  background-image: url('../img/aboutus/aboutus03/abouus_03_back.png');
 }
 .about_us #list-item-5 {
-  background-image: url('../img/aboutus/bg_4.png');
+  background-image: url('../img/aboutus/aboutus04/abouus_04_back.png');
 }
