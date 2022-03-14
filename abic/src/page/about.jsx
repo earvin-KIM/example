@@ -110,7 +110,7 @@ function AboutUs() {
             alt=""
             style={{
               position: 'absolute',
-              width: '35%',
+              height: '70%',
               top: '20%',
               left: '50%',
               transform: 'translateX(-50%)',
@@ -120,7 +120,7 @@ function AboutUs() {
           <img
             src={about_05_pic2}
             alt=""
-            style={{ position: 'absolute', width: '70%', top: '17%', left: '50%', transform: 'translateX(-50%)' }}
+            style={{ position: 'absolute', height: '80%', top: '15%', left: '50%', transform: 'translateX(-50%)' }}
           />
         </div>
       </div>

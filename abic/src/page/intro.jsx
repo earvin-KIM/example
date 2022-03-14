@@ -134,19 +134,19 @@ function Intro() {
             id="list-item-4"
             style={{ backgroundPosition: 'unset' }}
           >
-            <h1 style={{ position: 'absolute', fontSize: '1.8rem', bottom: '60%', left: '43%', display: 'flex' }}>
+            <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '60%', left: '43%', display: 'flex' }}>
               <div id="per_1">0</div>%
             </h1>
-            <h1 style={{ position: 'absolute', fontSize: '1.8rem', bottom: '52%', left: '43%', display: 'flex' }}>
+            <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '52.5%', left: '43%', display: 'flex' }}>
               <div id="per_2">0</div>%
             </h1>
-            <h1 style={{ position: 'absolute', fontSize: '1.8rem', bottom: '44%', left: '43%', display: 'flex' }}>
+            <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '44.5%', left: '43%', display: 'flex' }}>
               <div id="per_3">0</div>%
             </h1>
-            <h1 style={{ position: 'absolute', fontSize: '1.8rem', bottom: '36%', left: '43%', display: 'flex' }}>
+            <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '36.5%', left: '43%', display: 'flex' }}>
               <div id="per_4">0</div>%
             </h1>
-            <h1 style={{ position: 'absolute', fontSize: '1.8rem', bottom: '28%', left: '43%', display: 'flex' }}>
+            <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '28.5%', left: '43%', display: 'flex' }}>
               <div id="per_5">0</div>%
             </h1>
             <img
@@ -160,7 +160,7 @@ function Intro() {
             <img
               src={text_04_near_bar}
               alt=""
-              style={{ position: 'absolute', height: '36%', top: '34%', left: '50%' }}
+              style={{ position: 'absolute', height: '35%', bottom: '30%', left: '50%' }}
             />
             <img src={text_04_korea} alt="" style={{ position: 'absolute', height: '4%', top: '75%', left: '5%' }} />
             <img

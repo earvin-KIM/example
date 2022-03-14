@@ -136,28 +136,56 @@ function Service() {
             <img
               src={service_02_back}
               alt=""
-              style={{ position: 'absolute', width: '80%', height: '80%', top: '15%', left: '10%', opacity: '0.7' }}
+              style={{
+                position: 'absolute',
+                width: '80%',
+                height: '80%',
+                top: '15%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                opacity: '0.7',
+              }}
             />
-            <img src={service_02_pic} alt="" style={{ position: 'absolute', width: '55%', top: '17%', left: '23%' }} />{' '}
-            <img src={text_02_solution} alt="" style={{ position: 'absolute', width: '25%', top: '5%', left: '37%' }} />
+            <img
+              src={service_02_pic}
+              alt=""
+              style={{ position: 'absolute', height: '73%', top: '18%', left: '50%', transform: 'translateX(-50%)' }}
+            />{' '}
+            <img
+              src={text_02_solution}
+              alt=""
+              style={{ position: 'absolute', width: '25%', top: '5%', left: '50%', transform: 'translateX(-50%)' }}
+            />
           </div>
           <div className="chapter service" id="list-item-4">
             <img
               src={service_02_back}
               alt=""
-              style={{ position: 'absolute', width: '80%', height: '80%', top: '15%', left: '10%', opacity: '0.7' }}
+              style={{
+                position: 'absolute',
+                width: '80%',
+                height: '80%',
+                top: '15%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                opacity: '0.7',
+              }}
             />
             <img
               src={text_03_abic_process}
               alt=""
-              style={{ position: 'absolute', width: '30%', top: '5%', left: '37%' }}
+              style={{ position: 'absolute', width: '30%', top: '5%', left: '50%', transform: 'translateX(-50%)' }}
             />
-            <img src={text_03_0} alt="" style={{ position: 'absolute', width: '25%', top: '17%', left: '40%' }} />
-            <img src={service_03_left} alt="" style={{ position: 'absolute', width: '25%', top: '30%', left: '25%' }} />
+            <img
+              src={text_03_0}
+              alt=""
+              style={{ position: 'absolute', width: '25%', top: '22%', left: '50%', transform: 'translateX(-50%)' }}
+            />
+            <img src={service_03_left} alt="" style={{ position: 'absolute', width: '25%', top: '35%', left: '23%' }} />
             <img
               src={service_03_right}
               alt=""
-              style={{ position: 'absolute', width: '25%', top: '30%', left: '55%' }}
+              style={{ position: 'absolute', width: '25%', top: '35%', left: '52%' }}
             />
           </div>
           <div className="outer">
@@ -230,7 +258,14 @@ function Service() {
             <img
               src={service_08_back}
               alt=""
-              style={{ position: 'absolute', width: '70%', height: '80%', top: '15%', left: '15%' }}
+              style={{
+                position: 'absolute',
+                width: '70%',
+                height: '80%',
+                top: '15%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+              }}
             />
             <img
               src={service_08_graph}
@@ -240,13 +275,13 @@ function Service() {
             <img
               src={text_08_necessity}
               alt=""
-              style={{ position: 'absolute', width: '30%', top: '5%', left: '35%' }}
+              style={{ position: 'absolute', width: '30%', top: '5%', left: '50%', transform: 'translateX(-50%)' }}
             />
 
             <img
               src={text_08_description}
               alt=""
-              style={{ position: 'absolute', width: '40%', top: '20%', left: '30%' }}
+              style={{ position: 'absolute', width: '40%', top: '20%', left: '50%', transform: 'translateX(-50%)' }}
             />
           </div>
 
@@ -266,7 +301,7 @@ function Service() {
             <img
               src={service_09_graph}
               alt=""
-              style={{ position: 'absolute', height: '45%', top: '35%', left: '50%', transform: 'translateX(-50%)' }}
+              style={{ position: 'absolute', height: '45%', top: '40%', left: '50%', transform: 'translateX(-50%)' }}
             />
             <img
               src={text_09_startup_problem}
@@ -276,7 +311,7 @@ function Service() {
             <img
               src={text_09_description}
               alt=""
-              style={{ position: 'absolute', width: '40%', top: '20%', left: '30%' }}
+              style={{ position: 'absolute', width: '40%', top: '23%', left: '30%' }}
             />
           </div>
           {/* <div className="chapter service" id="list-item-11"> */}
@@ -299,7 +334,11 @@ function Service() {
                 transform: 'translateX(-50%)',
               }}
             />
-            <img src={service_10_idea} alt="" style={{ position: 'absolute', width: '70%', top: '10%', left: '15%' }} />{' '}
+            <img
+              src={service_10_idea}
+              alt=""
+              style={{ position: 'absolute', height: '80%', top: '9%', left: '50%', transform: 'translateX(-50%)' }}
+            />{' '}
           </div>
         </div>
       </div>
