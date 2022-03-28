@@ -30,11 +30,11 @@ import scroll from '../img/intro/intro_01_mouse.png';
 import side_none from '../img/intro/intro_01_sidecircle.png';
 
 import './intro.css';
-// import AOS from 'aos'; 스크롤시 등장하는 애니메이션 라이브러리, 쓸거면 주석 풀면 됨
-// import 'aos/dist/aos.css';
-// import TypeAnimation from 'react-type-animation';
+import AOS from 'aos'; //스크롤시 등장하는 애니메이션 라이브러리, 쓸거면 주석 풀면 됨
+import 'aos/dist/aos.css';
+import TypeAnimation from 'react-type-animation';
 
-// AOS.init({ mirror: true, delay: 300 });
+AOS.init({ duration: 1000 });
 function Intro() {
   /// 이동할 페이지 목록
 
@@ -82,16 +82,20 @@ function Intro() {
             <img id="scroll_img" src={scroll} />
           </div>
 
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter one " id="list-item-2">
+          <div className="chapter one " id="list-item-2">
             <img
               src={intro_circle}
               alt=""
               style={{ position: 'absolute', height: '41%', bottom: '15%', left: '23%' }}
+              data-aos="fade-down"
+              data-aos-delay="300"
             />
             <img
               src={intro_circle1}
               alt=""
               style={{ position: 'absolute', height: '41%', bottom: '15%', left: '57%' }}
+              data-aos="fade-down"
+              data-aos-delay="600"
             />
             <img
               src={text_02_ABIC}
@@ -99,21 +103,27 @@ function Intro() {
               style={{ position: 'absolute', height: '15%', top: '15%', left: '50%', transform: 'translateX(-50%)' }}
             />
           </div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter two" id="list-item-3">
+          <div className="chapter two" id="list-item-3">
             <img
               src={intro_circle2}
               alt=""
               style={{ position: 'absolute', height: '41%', bottom: '25%', left: '5%' }}
+              data-aos="fade-down"
+              data-aos-delay="300"
             />
             <img
               src={intro_circle3}
               alt=""
               style={{ position: 'absolute', height: '41%', bottom: '25%', left: '26%' }}
+              data-aos="fade-down"
+              data-aos-delay="600"
             />
             <img
               src={intro_circle4}
               alt=""
               style={{ position: 'absolute', height: '41%', bottom: '25%', left: '47%' }}
+              data-aos="fade-down"
+              data-aos-delay="900"
             />
             <img
               src={text_03_every_year}
@@ -127,13 +137,7 @@ function Intro() {
             />
             <img src={intro_03_info2} alt="" style={{ position: 'absolute', height: '2%', top: '90%', left: '5%' }} />
           </div>
-          <div
-            data-aos="fade-in"
-            data-aos-duration="300"
-            className="chapter three"
-            id="list-item-4"
-            style={{ backgroundPosition: 'unset' }}
-          >
+          <div className="chapter three" id="list-item-4" style={{ backgroundPosition: 'unset' }}>
             <h1 style={{ position: 'absolute', fontSize: '4vh', bottom: '60%', left: '43%', display: 'flex' }}>
               <div id="per_1">0</div>%
             </h1>
@@ -170,19 +174,29 @@ function Intro() {
             />
             <img src={intro_04_info} alt="" style={{ position: 'absolute', height: '2%', bottom: '5%', left: '5%' }} />
           </div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter four" id="list-item-5">
+          <div className="chapter four" id="list-item-5">
             <img
               src={text_05_cause}
               alt=""
               style={{ position: 'absolute', height: '35%', top: '10%', left: '50%', transform: 'translateX(-50%)' }}
+              data-aos="fade-down"
+              data-aos-delay="300"
             />
             <img
               src={text_05_result}
               alt=""
-              style={{ position: 'absolute', height: '35%', top: '55%', left: '50%', transform: 'translateX(-50%)' }}
+              style={{
+                position: 'absolute',
+                height: '35%',
+                top: '55%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+              }}
+              data-aos="fade-down"
+              data-aos-delay="600"
             />
           </div>
-          <div data-aos="fade-in" data-aos-duration="300" className="chapter six" id="list-item-7">
+          <div className="chapter six" id="list-item-7">
             <img src={intro_b_logo} alt="" style={{ position: 'absolute', height: '15%', top: '43%', left: '5%' }} />
             <img src={text_06_so_now} alt="" style={{ position: 'absolute', height: '20%', top: '10%', left: '5%' }} />
             <img
