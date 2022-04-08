@@ -12,10 +12,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Entity
-@Table(name = "client")
+@Table(name = "customer")
 @DynamicInsert  // insert ㅅㅣ null 인 필드 제외하기위해 사용
 @DynamicUpdate // update ㅅㅣ null 인 필드 제외하기위해 사용
-public class client {
+public class customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,9 +68,9 @@ public class client {
 
 
     @Builder  // alt insert   맨위에거 누르기
-    public client(Integer ID, String Address, String Catery, String ClientCode, String ClientName, String CompanyNumber,
-                  String Description, String Division, String Email, String Fax, String Manager, String PhoneNumber,
-                  String Representative, String WriteDate, String Writer, String ZipCode ) {
+    public customer(Integer ID, String Address, String Catery, String ClientCode, String ClientName, String CompanyNumber,
+                    String Description, String Division, String Email, String Fax, String Manager, String PhoneNumber,
+                    String Representative, String WriteDate, String Writer, String ZipCode ) {
         this.ID = ID;
         this.Address = Address;
         this.Catery = Catery;

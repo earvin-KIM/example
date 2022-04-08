@@ -12,26 +12,23 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Entity
-@Table(name = "customer")
+@Table(name = "department")
 @DynamicInsert  // insert ㅅㅣ null 인 필드 제외하기위해 사용
 @DynamicUpdate // update ㅅㅣ null 인 필드 제외하기위해 사용
-public class customer {
+public class department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
 
-    @Column(name = "Address")
-    private String Address;
+    @Column(name = "DepartmentCode")
+    private String DepartmentCode;
 
-    @Column(name = "Catery")
-    private String Catery;
+    @Column(name = "DepartmentName")
+    private String DepartmentName;
 
-    @Column(name = "ClientCode")
-    private String ClientCode;
-
-    @Column(name = "ClientName")
-    private String ClientName;
+    @Column(name = "Position")
+    private String Position;
 
     @Column(name = "CompanyNumber")
     private String CompanyNumber;
@@ -39,23 +36,8 @@ public class customer {
     @Column(name = "Description")
     private String Description;
 
-    @Column(name = "Division")
-    private String Division;
-
-    @Column(name = "Email")
-    private String Email;
-
-    @Column(name = "Fax")
-    private String Fax;
-
     @Column(name = "Manager")
     private String Manager;
-
-    @Column(name = "PhoneNumber")
-    private String PhoneNumber;
-
-    @Column(name = "Representative")
-    private String Representative;
 
     @Column(name = "WriteDate")
     private String WriteDate;
@@ -63,30 +45,19 @@ public class customer {
     @Column(name = "Writer")
     private String Writer;
 
-    @Column(name = "ZipCode")
-    private String ZipCode;
-
 
     @Builder  // alt insert   맨위에거 누르기
-    public customer(Integer ID, String Address, String Catery, String ClientCode, String ClientName, String CompanyNumber,
-                    String Description, String Division, String Email, String Fax, String Manager, String PhoneNumber,
-                    String Representative, String WriteDate, String Writer, String ZipCode ) {
+    public department(Integer ID, String DepartmentCode, String DepartmentName, String Position,  String CompanyNumber,
+                      String Description, String Manager,  String WriteDate, String Writer ) {
         this.ID = ID;
-        this.Address = Address;
-        this.Catery = Catery;
-        this.ClientCode = ClientCode;
-        this.ClientName = ClientName;
+        this.DepartmentCode = DepartmentCode;
+        this.DepartmentName = DepartmentName;
+        this.Position = Position;
         this.CompanyNumber = CompanyNumber;
         this.Description = Description;
-        this.Division = Division;
-        this.Email = Email;
-        this.Fax = Fax;
         this.Manager = Manager;
-        this.PhoneNumber = PhoneNumber;
-        this.Representative = Representative;
         this.WriteDate = WriteDate;
         this.Writer = Writer;
-        this.ZipCode = ZipCode;
 
     }
 }
