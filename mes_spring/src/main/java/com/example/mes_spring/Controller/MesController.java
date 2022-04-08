@@ -81,6 +81,54 @@ public class MesController {
     private ProductReturnRepository productreturnRepository;
     @Autowired
     private QAInspectionRepository qainspectionRepository;
+    @Autowired
+    private QAProductRepository qaproductRepository;
+    @Autowired
+    private RawHistoryRepository rawhistoryRepository;
+    @Autowired
+    private RawInspectionRepository rawinspectionRepository;
+    @Autowired
+    private RawMaterialRepository rawmaterialRepository;
+    @Autowired
+    private RawMaterialMasterRepository rawmaterialmasterRepository;
+    @Autowired
+    private RawMaterialtagRepository rawmaterialtagRepository;
+    @Autowired
+    private RFIDRepository rfidRepository;
+    @Autowired
+    private RFID_BarrelRepository rfid_barrelRepository;
+    @Autowired
+    private SetPlusRepository setplusRepository;
+    @Autowired
+    private ShipInspectionRepository shipinspectionRepository;
+    @Autowired
+    private ShipOrderDocRepository shiporderdocRepository;
+    @Autowired
+    private SortRepository sortRepository;
+    @Autowired
+    private TemperatureRepository temperatureRepository;
+    @Autowired
+    private TemperatureCheckRepository temperaturecheckRepository;
+    @Autowired
+    private UnitRepository unitRepository;
+    @Autowired
+    private UsePageRepository usepageRepository;
+    @Autowired
+    private WarehouseRepository warehouseRepository;
+    @Autowired
+    private WashRepository washRepository;
+    @Autowired
+    private WeightRepository weightRepository;
+    @Autowired
+    private Weight_RecRepository weight_recRepository;
+    @Autowired
+    private WorkerRepository workerRepository;
+    @Autowired
+    private WorkOrderDocRepository workorderdocRepository;
+    @Autowired
+    private WorkPerformanceRepository workperformanceRepository;
+    @Autowired
+    private WorkStandardRepository workstandardRepository;
     // 모든 게시글 부름
     @GetMapping("/barcode")
     public List getBarcode() {
@@ -162,6 +210,10 @@ public class MesController {
     public List getOrderDoc() {
         return orderdocRepository.findAll();
     }
+    @GetMapping("/orders")
+    public List getOrders() {
+        return ordersRepository.findAll();
+    }
     @GetMapping("/ordersheet")
     public List getOrderSheet() {
         return ordersheetRepository.findAll();
@@ -213,5 +265,101 @@ public class MesController {
     @GetMapping("/qainspection")
     public List getQAInspection() {
         return qainspectionRepository.findAll();
+    }
+    @GetMapping("/qaproduct")
+    public List getQAproduct() {
+        return qaproductRepository.findAll();
+    }
+    @GetMapping("/rawhistory")
+    public List getRawHistory() {
+        return rawhistoryRepository.findAll();
+    }
+    @GetMapping("/rawinspection")
+    public List getRawInspection() {
+        return rawinspectionRepository.findAll();
+    }
+    @GetMapping("/rawmaterial")
+    public List getRawMaterial() {
+        return rawmaterialRepository.findAll();
+    }
+    @GetMapping("/rawmaterialmaster")
+    public List getRawmaterialMaster() {
+        return rawmaterialmasterRepository.findAll();
+    }
+    @GetMapping("/rawmaterialtag")
+    public List getRawMaterialtag() {
+        return rawmaterialtagRepository.findAll();
+    }
+    @GetMapping("/rfid")
+    public List RFID() {
+        return rfidRepository.findAll();
+    }
+    @GetMapping("/rfid_barrel")
+    public List getRFID_Barrel() {
+        return rfid_barrelRepository.findAll();
+    }
+    @GetMapping("/setplus")
+    public List getSetPlus() {
+        return setplusRepository.findAll();
+    }
+    @GetMapping("/shipinspection")
+    public List getShipInspection() {
+        return shipinspectionRepository.findAll();
+    }
+    @GetMapping("/shiporderdoc")
+    public List getShipOrderDoc() {
+        return shiporderdocRepository.findAll();
+    }
+    @GetMapping("/sort")
+    public List getSort() {
+        return sortRepository.findAll();
+    }
+    @GetMapping("/temperature")
+    public List getTemperature() {
+        return temperatureRepository.findAll();
+    }
+    @GetMapping("/temperaturecheck")
+    public List getTemperaturecheck() {
+        return temperaturecheckRepository.findAll();
+    }
+    @GetMapping("/unit")
+    public List getUnit() {
+        return unitRepository.findAll();
+    }
+    @GetMapping("/usepage")
+    public List getUsePage() {
+        return usepageRepository.findAll();
+    }
+    @GetMapping("/warehouse")
+    public List getWareHouse() {
+        return warehouseRepository.findAll();
+    }
+    @GetMapping("/wash")
+    public List getWash() {
+        return washRepository.findAll();
+    }
+    @GetMapping("/weight")
+    public List getWeight() {
+        return weightRepository.findAll();
+    }
+    @GetMapping("/weight_rec")
+    public List getWeight_rec() {
+        return weight_recRepository.findAll();
+    }
+    @GetMapping("/worker")
+    public List getWorker() {
+        return workerRepository.findAll();
+    }
+    @GetMapping("/workorderdoc")
+    public List getWorkOrderDoc() {
+        return workorderdocRepository.findAll();
+    }
+    @GetMapping("/workperformance")
+    public List getWorkPerformance() {
+        return workperformanceRepository.findAll();
+    }
+    @GetMapping("/workstandard")
+    public List getWorkStandard() {
+        return workstandardRepository.findAll();
     }
 }
