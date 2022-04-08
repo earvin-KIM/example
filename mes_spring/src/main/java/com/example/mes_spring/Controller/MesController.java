@@ -20,6 +20,10 @@ public class MesController {
     @Autowired
     private ClientRepository clientRepository;
     @Autowired
+    private CustomerRepository customerRepository;
+    @Autowired
+    private DepartmentRepository departmentRepository;
+    @Autowired
     private EquipmentRepository equipmentRepository;
     @Autowired
     private EquipmentCheckListRepository equipmentchecklistRepository;
@@ -89,6 +93,14 @@ public class MesController {
     @GetMapping("/client")
     public List getClient() {
         return clientRepository.findAll();
+    }
+    @GetMapping("/customer")
+    public List getCustomer() {
+        return customerRepository.findAll();
+    }
+    @GetMapping("/client")
+    public List getDepartment() {
+        return departmentRepository.findAll();
     }
     @GetMapping("/equipment")
     public List getEquipment() {
