@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [message, setMessage] = useState([]);
   useEffect(() => {
-    fetch('/api/board')
+    fetch('/api/errorcode')
       .then((res) => {
         return res.json();
       })
@@ -24,11 +24,9 @@ function App() {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
-        <ul>
-          {message.map((v, idx) => (
-            <li key={`${idx}-${v}`}>{v}</li>
-          ))}
-        </ul>
+        {message.map((message) => (
+          <div key={message.id}>{message.errorCode}</div>
+        ))}
       </header>
     </div>
   );

@@ -3,7 +3,9 @@ package com.example.mes_spring.Model;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -11,6 +13,7 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
 @Table(name = "customer")
 @DynamicInsert  // insert ㅅㅣ null 인 필드 제외하기위해 사용
@@ -67,7 +70,7 @@ public class customer {
     private String ZipCode;
 
 
-    @Builder  // alt insert   맨위에거 누르기
+    @Builder
     public customer(Integer ID, String Address, String Catery, String ClientCode, String ClientName, String CompanyNumber,
                     String Description, String Division, String Email, String Fax, String Manager, String PhoneNumber,
                     String Representative, String WriteDate, String Writer, String ZipCode ) {

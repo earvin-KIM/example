@@ -3,6 +3,7 @@ package com.example.mes_spring.Model;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
 @Table(name = "position")
 @DynamicInsert  // insert ㅅㅣ null 인 필드 제외하기위해 사용
