@@ -146,7 +146,7 @@ public class MesController {
     public List getCustomer() {
         return customerRepository.findAll();
     }
-    @GetMapping("/client")
+    @GetMapping("/department")
     public List getDepartment() {
         return departmentRepository.findAll();
     }
