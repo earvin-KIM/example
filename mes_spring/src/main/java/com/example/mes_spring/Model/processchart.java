@@ -33,7 +33,7 @@ public class processchart {
     private String ProcessChartCode;
 
     @Column(name = "ProcessCode")
-    private String ATell;
+    private String ProcessCode;
 
     @Column(name = "ProcessName")
     private String ProcessName;
@@ -55,7 +55,7 @@ public class processchart {
         this.BOMCode = BOMCode;
         this.GuideDocument = GuideDocument;
         this.ProcessChartCode = ProcessChartCode;
-        this.ATell = ATell;
+        this.ProcessCode = ProcessCode;
         this.ProcessName = ProcessName;
         this.SortCode = SortCode;
         this.WriteDate = WriteDate;
