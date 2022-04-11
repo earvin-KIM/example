@@ -946,7 +946,7 @@ public class MesController {
     }
 //PutMapping
     @PutMapping("/barcode/{ID}")
-    public ResponseEntity <barcode> updateBarcodeByID(@PathVariable Integer ID, @RequestBody barcode barcodeDetail) {
+    public ResponseEntity <barcode> updateBarcode(@PathVariable Integer ID, @RequestBody barcode barcodeDetail) {
         barcode barcode=barcodeRepository.findById(ID)
             .orElseThrow(()->new RuntimeException("{ID}"));
         barcode.setBarcode((barcodeDetail.getBarcode()));
@@ -955,10 +955,11 @@ public class MesController {
         barcode.setProductCode((barcodeDetail.getProductCode()));
         barcode.setProductName((barcodeDetail.getProductName()));
         barcode.setWriteDate((barcodeDetail.getWriteDate()));
-        return ResponseEntity.ok(barcode);
+        barcode updateBarcode = barcodeRepository.save(barcode);
+        return ResponseEntity.ok(updateBarcode);
 }
     @PutMapping("/bom/{ID}")
-    public ResponseEntity <bom> updateBomByID(@PathVariable Integer ID, @RequestBody bom bomDetail) {
+    public ResponseEntity <bom> updateBom(@PathVariable Integer ID, @RequestBody bom bomDetail) {
         bom bom=bomRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         bom.setID((bomDetail.getID()));
@@ -967,399 +968,866 @@ public class MesController {
         bom.setBomcode((bomDetail.getBomcode()));
         bom.setMaterialBom((bomDetail.getMaterialBom()));
         bom.setDescription((bomDetail.getDescription()));
-        return ResponseEntity.ok(bom);
+        bom.setQuantity((bomDetail.getQuantity()));
+        bom.setRawPlus((bomDetail.getRawPlus()));
+        bom.setWriteDate((bomDetail.getWriteDate()));
+        bom.setWriter((bomDetail.getWriter()));
+        bom.setUnit((bomDetail.getUnit()));
+        bom.setSortCode((bomDetail.getSortCode()));
+        bom.setMiddleMaterial((bomDetail.getMiddleMaterial()));
+        bom updateBom = bomRepository.save(bom);
+        return ResponseEntity.ok(updateBom);
     }
     @PutMapping("/client/{ID}")
-    public ResponseEntity <client> updateClientByID(@PathVariable Integer ID, @RequestBody client clientDetail) {
+    public ResponseEntity <client> updateClient(@PathVariable Integer ID, @RequestBody client clientDetail) {
         client client=clientRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        client.
-        return ResponseEntity.ok(client);
+        client.setAddress(clientDetail.getAddress());
+        client.setID(clientDetail.getID());
+        client.setCatery(clientDetail.getCatery());
+        client.setClientCode(clientDetail.getClientCode());
+        client.setClientName(clientDetail.getClientName());
+        client.setCompanyNumber(clientDetail.getCompanyNumber());
+        client.setDescription(clientDetail.getDescription());
+        client.setDivision(clientDetail.getDivision());
+        client.setEmail(clientDetail.getEmail());
+        client.setFax(clientDetail.getFax());
+        client.setManager(clientDetail.getManager());
+        client.setPhoneNumber(clientDetail.getPhoneNumber());
+        client.setRepresentative(clientDetail.getRepresentative());
+        client.setWriteDate(clientDetail.getWriteDate());
+        client.setWriter(clientDetail.getWriter());
+        client.setZipCode(clientDetail.getZipCode());
+        client updateClient = clientRepository.save(client);
+        return ResponseEntity.ok(updateClient);
     }
     @PutMapping("/customer/{ID}")
-    public ResponseEntity <customer> updateCustomerByID(@PathVariable Integer ID, @RequestBody customer customerDetail) {
+    public ResponseEntity <customer> updateCustomer(@PathVariable Integer ID, @RequestBody customer customerDetail) {
         customer customer=customerRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        customer.
-        return ResponseEntity.ok(customer);
+        customer.setAddress(customerDetail.getAddress());
+        customer.setCatery(customerDetail.getCatery());
+        customer.setClientName(customerDetail.getClientName());
+        customer.setClientCode(customerDetail.getClientCode());
+        customer.setCompanyNumber(customerDetail.getCompanyNumber());
+        customer.setDescription(customerDetail.getDescription());
+        customer.setDivision(customerDetail.getDivision());
+        customer.setEmail(customerDetail.getEmail());
+        customer.setFax(customerDetail.getFax());
+        customer.setManager(customerDetail.getManager());
+        customer.setPhoneNumber(customerDetail.getPhoneNumber());
+        customer.setRepresentative(customerDetail.getRepresentative());
+        customer.setWriteDate(customerDetail.getWriteDate());
+        customer.setWriter(customerDetail.getWriter());
+        customer.setZipCode(customerDetail.getZipCode());
+        customer.setID(customerDetail.getID());
+
+        customer updateCustomer = customerRepository.save(customer);
+        return ResponseEntity.ok(updateCustomer);
     }
     @PutMapping("/department/{ID}")
-    public ResponseEntity <department> updateDepartmentByID(@PathVariable Integer ID, @RequestBody department departmentDetail) {
+    public ResponseEntity <department> updateDepartment(@PathVariable Integer ID, @RequestBody department departmentDetail) {
         department department=departmentRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        department.
-        return ResponseEntity.ok(department);
+        department.setDepartmentCode((departmentDetail.getDepartmentCode()));
+        department.setDepartmentName((departmentDetail.getDepartmentName()));
+        department.setPosition((departmentDetail.getPosition()));
+        department.setCompanyNumber((departmentDetail.getCompanyNumber()));
+        department.setDescription((departmentDetail.getDescription()));
+        department.setManager((departmentDetail.getManager()));
+        department.setWriteDate((departmentDetail.getWriteDate()));
+        department.setWriter((departmentDetail.getWriter()));
+        department.setID((departmentDetail.getID()));
+        department updateDepartment = departmentRepository.save(department);
+        return ResponseEntity.ok(updateDepartment);
     }
     @PutMapping("/equipment/{ID}")
-    public ResponseEntity <equipment> updateEquipmentByID(@PathVariable Integer ID, @RequestBody equipment equipmentDetail) {
+    public ResponseEntity <equipment> updateEquipment(@PathVariable Integer ID, @RequestBody equipment equipmentDetail) {
         equipment equipment=equipmentRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        equipment.
-        return ResponseEntity.ok(equipment);
+        equipment.setEqupmentCode(equipmentDetail.getEqupmentCode());
+        equipment.setDescription(equipmentDetail.getDescription());
+        equipment.setEquipmentDescription(equipmentDetail.getEquipmentDescription());
+        equipment.setEquipmentManagers(equipmentDetail.getEquipmentManagers());
+        equipment.setEquipmentManufacture(equipmentDetail.getEquipmentManufacture());
+        equipment.setEquipmentQuantity(equipmentDetail.getEquipmentQuantity());
+        equipment.setEquipmentSpecifications(equipmentDetail.getEquipmentSpecifications());
+        equipment.setMainProducts(equipmentDetail.getMainProducts());
+        equipment.setManufactureDate(equipmentDetail.getManufactureDate());
+        equipment.setProcessName(equipmentDetail.getProcessName());
+        equipment.setState(equipmentDetail.getState());
+        equipment.setStateChangeDate(equipmentDetail.getStateChangeDate());
+        equipment.setUsingDepartmentsEquipment(equipmentDetail.getUsingDepartmentsEquipment());
+        equipment.setWriteDate(equipmentDetail.getWriteDate());
+        equipment.setWriter(equipmentDetail.getWriter());
+        equipment updateEquipment = equipmentRepository.save(equipment);
+        return ResponseEntity.ok(updateEquipment);
     }
     @PutMapping("/equipmentchecklist/{ID}")
-    public ResponseEntity <equipmentchecklist> updateEquipmentCheckListByID(@PathVariable Integer ID, @RequestBody equipmentchecklist equipmentchecklistDetail) {
+    public ResponseEntity <equipmentchecklist> updateEquipmentCheckList(@PathVariable Integer ID, @RequestBody equipmentchecklist equipmentchecklistDetail) {
         equipmentchecklist equipmentchecklist=equipmentchecklistRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        equipmentchecklist.
-        return ResponseEntity.ok(equipmentchecklist);
+        equipmentchecklist.setID(equipmentchecklistDetail.getID());
+        equipmentchecklist.setEquipmentCode(equipmentchecklist.getEquipmentCode());
+        equipmentchecklist.setInspectionName(equipmentchecklistDetail.getInspectionName());
+        equipmentchecklist.setWriteDate(equipmentchecklistDetail.getWriteDate());
+        equipmentchecklist.setWriter(equipmentchecklistDetail.getWriter());
+        equipmentchecklist updateEquipmentCheckList = equipmentchecklistRepository.save(equipmentchecklist);
+        return ResponseEntity.ok(updateEquipmentCheckList);
     }
     @PutMapping("/equipmentcheck/{ID}")
-    public ResponseEntity <equipmentcheck> updateEquipmentCheckByID(@PathVariable Integer ID, @RequestBody equipmentcheck equipmentcheckDetail) {
+    public ResponseEntity <equipmentcheck> updateEquipmentCheck(@PathVariable Integer ID, @RequestBody equipmentcheck equipmentcheckDetail) {
         equipmentcheck equipmentcheck=equipmentcheckRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        equipmentcheck.
-        return ResponseEntity.ok(equipmentcheck);
+        equipmentcheck.setID(equipmentcheckDetail.getID());
+        equipmentcheck.setCleanness(equipmentcheckDetail.getCleanness());
+        equipmentcheck.setControlPart(equipmentcheckDetail.getControlPart());
+        equipmentcheck.setDamage(equipmentcheckDetail.getDamage());
+        equipmentcheck.setEquipmentCode(equipmentcheckDetail.getEquipmentCode());
+        equipmentcheck.setPower(equipmentcheckDetail.getPower());
+        equipmentcheck.setScrew(equipmentcheckDetail.getScrew());
+        equipmentcheck.setWriter(equipmentcheckDetail.getWriter());
+        equipmentcheck.setWriteDate(equipmentcheckDetail.getWriteDate());
+        equipmentcheck updateEquipmentCheck = equipmentcheckRepository.save(equipmentcheck);
+        return ResponseEntity.ok(updateEquipmentCheck);
     }
     @PutMapping("/equipmentinspection/{ID}")
-    public ResponseEntity <equipmentinspection> updateEquipmentInspectionByID(@PathVariable Integer ID, @RequestBody equipmentinspection equipmentinspectionDetail) {
+    public ResponseEntity <equipmentinspection> updateEquipmentInspection(@PathVariable Integer ID, @RequestBody equipmentinspection equipmentinspectionDetail) {
         equipmentinspection equipmentinspection=equipmentinspectionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        equipmentinspection.
-        return ResponseEntity.ok(equipmentinspection);
+        equipmentinspection.setID(equipmentinspectionDetail.getID());
+        equipmentinspection.setBroken(equipmentinspectionDetail.getBroken());
+        equipmentinspection.setControll(equipmentinspectionDetail.getControll());
+        equipmentinspection.setEquipmentCode(equipmentinspectionDetail.getEquipmentCode());
+        equipmentinspection.setForeignBody(equipmentinspectionDetail.getForeignBody());
+        equipmentinspection.setInspectionTime(equipmentinspectionDetail.getInspectionTime());
+        equipmentinspection.setDescription(equipmentinspectionDetail.getDescription());
+        equipmentinspection.setPower(equipmentinspectionDetail.getPower());
+        equipmentinspection.setVolte(equipmentinspectionDetail.getVolte());
+        equipmentinspection.setWriteDate(equipmentinspectionDetail.getWriteDate());
+        equipmentinspection.setWriter(equipmentinspectionDetail.getWriter());
+        equipmentinspection updateEquipmentInspection = equipmentinspectionRepository.save(equipmentinspection);
+        return ResponseEntity.ok(updateEquipmentInspection);
     }
     @PutMapping("/equipmentprevention/{ID}")
-    public ResponseEntity <equipmentprevention> updateEquipmentPreventionByID(@PathVariable Integer ID, @RequestBody equipmentprevention equipmentpreventionDetail) {
+    public ResponseEntity <equipmentprevention> updateEquipmentPrevention(@PathVariable Integer ID, @RequestBody equipmentprevention equipmentpreventionDetail) {
         equipmentprevention equipmentprevention=equipmentpreventionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        equipmentprevention.
-        return ResponseEntity.ok(equipmentprevention);
+        equipmentprevention.setID(equipmentpreventionDetail.getID());
+        equipmentprevention.setCleanness(equipmentpreventionDetail.getCleanness());
+        equipmentprevention.setControlPart(equipmentpreventionDetail.getControlPart());
+        equipmentprevention.setDamage(equipmentpreventionDetail.getDamage());
+        equipmentprevention.setEquipmentCode(equipmentpreventionDetail.getEquipmentCode());
+        equipmentprevention.setPower(equipmentpreventionDetail.getPower());
+        equipmentprevention.setScrew(equipmentpreventionDetail.getScrew());
+        equipmentprevention.setWriter(equipmentpreventionDetail.getWriter());
+        equipmentprevention.setWriteDate(equipmentpreventionDetail.getWriteDate());
+        equipmentprevention updateEquipmentPrevention = equipmentpreventionRepository.save(equipmentprevention);
+        return ResponseEntity.ok(updateEquipmentPrevention);
     }
     @PutMapping("/errorcode/{ID}")
-    public ResponseEntity <errorcode> updateErrorCodeByID(@PathVariable Integer ID, @RequestBody errorcode errorcodeDetail) {
+    public ResponseEntity <errorcode> updateErrorCode(@PathVariable Integer ID, @RequestBody errorcode errorcodeDetail) {
         errorcode errorcode=errorcodeRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        errorcode.
-        return ResponseEntity.ok(errorcode);
+        errorcode.setErrorCode(errorcodeDetail.getErrorCode());
+        errorcode.setID(errorcodeDetail.getID());
+        errorcode.setErrorContents(errorcodeDetail.getErrorContents());
+        errorcode.setErrorName(errorcodeDetail.getErrorName());
+        errorcode.setDescription(errorcodeDetail.getDescription());
+        errorcode.setWriteDate(errorcodeDetail.getWriteDate());
+        errorcode.setWriter(errorcodeDetail.getWriter());
+        errorcode updateErrorCode = errorcodeRepository.save(errorcode);
+        return ResponseEntity.ok(updateErrorCode);
     }
     @PutMapping("/fileboard/{ID}")
-    public ResponseEntity <fileboard> updateFileBoardByID(@PathVariable Integer ID, @RequestBody fileboard fileboardDetail) {
+    public ResponseEntity <fileboard> updateFileBoard(@PathVariable Integer ID, @RequestBody fileboard fileboardDetail) {
         fileboard fileboard=fileboardRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        fileboard.
-        return ResponseEntity.ok(fileboard);
+        fileboard.setID(fileboardDetail.getID());
+        fileboard.setDocument(fileboardDetail.getDocument());
+        fileboard.setCatery(fileboardDetail.getCatery());
+        fileboard.setFileNumber(fileboardDetail.getFileNumber());
+        fileboard.setTag(fileboardDetail.getTag());
+        fileboard.setTitle(fileboardDetail.getTitle());
+        fileboard.setDescription(fileboardDetail.getDescription());
+        fileboard.setWriteDate(fileboardDetail.getWriteDate());
+        fileboard.setWriter(fileboardDetail.getWriter());
+        fileboard updateFileBoard = fileboardRepository.save(fileboard);
+        return ResponseEntity.ok(updateFileBoard);
     }
     @PutMapping("/filter/{ID}")
-    public ResponseEntity <filter> updateFilterByID(@PathVariable Integer ID, @RequestBody filter filterDetail) {
+    public ResponseEntity <filter> updateFilter(@PathVariable Integer ID, @RequestBody filter filterDetail) {
         filter filter=filterRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        filter.
-        return ResponseEntity.ok(filter);
+        filter.setID(filterDetail.getID());
+        filter.setChecker(filterDetail.getChecker());
+        filter.setFiltering(filterDetail.getFiltering());
+        filter.setImproving(filterDetail.getImproving());
+        filter.setInspectionTime(filterDetail.getInspectionTime());
+        filter.setMatter(filterDetail.getMatter());
+        filter.setDescription(filterDetail.getDescription());
+        filter.setProblem(filterDetail.getProblem());
+        filter.setProductCode(filterDetail.getProductCode());
+        filter.setManager(filterDetail.getManager());
+        filter.setWriteDate(filterDetail.getWriteDate());
+        filter.setWriter(filterDetail.getWriter());
+
+        filter updateFilter = filterRepository.save(filter);
+        return ResponseEntity.ok(updateFilter);
     }
     @PutMapping("/heating/{ID}")
-    public ResponseEntity <heating> updateHeatingByID(@PathVariable Integer ID, @RequestBody heating heatingDetail) {
+    public ResponseEntity <heating> updateHeating(@PathVariable Integer ID, @RequestBody heating heatingDetail) {
         heating heating=heatingRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        heating.
-        return ResponseEntity.ok(heating);
+        heating.setChecker(heatingDetail.getChecker());
+        heating.setEndtime(heatingDetail.getEndtime());
+        heating.setImproving(heatingDetail.getImproving());
+        heating.setKettle(heatingDetail.getKettle());
+        heating.setProblem(heatingDetail.getProblem());
+        heating.setDescription(heatingDetail.getDescription());
+        heating.setSauceEndTem(heatingDetail.getSauceEndTem());
+        heating.setSauceStartTem(heatingDetail.getSauceStartTem());
+        heating.setStartTime(heatingDetail.getStartTime());
+        heating.setManager(heatingDetail.getManager());
+        heating.setWriteDate(heatingDetail.getWriteDate());
+        heating.setWriter(heatingDetail.getWriter());
+        heating.setID(heatingDetail.getID());
+        heating updateHeating = heatingRepository.save(heating);
+        return ResponseEntity.ok(updateHeating);
     }
     @PutMapping("/inventory/{ID}")
-    public ResponseEntity <inventory> updateInventoryByID(@PathVariable Integer ID, @RequestBody inventory inventoryDetail) {
+    public ResponseEntity <inventory> updateInventory(@PathVariable Integer ID, @RequestBody inventory inventoryDetail) {
         inventory inventory=inventoryRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        inventory.
-        return ResponseEntity.ok(inventory);
+        inventory.setCarryover(inventoryDetail.getCarryover());
+        inventory.setID(inventoryDetail.getID());
+        inventory.setInventoryLOT(inventoryDetail.getInventoryLOT());
+        inventory.setMaterialCode(inventoryDetail.getMaterialCode());
+        inventory.setPackBarrel(inventoryDetail.getPackBarrel());
+        inventory.setProcess(inventoryDetail.getProcess());
+        inventory.setProductCode(inventoryDetail.getProductCode());
+        inventory.setQuantity(inventoryDetail.getQuantity());
+        inventory.setRawMaterialLOT(inventoryDetail.getRawMaterialLOT());
+        inventory.setRemainder(inventoryDetail.getRemainder());
+        inventory.setShipOrderDocNumber(inventoryDetail.getShipOrderDocNumber());
+        inventory.setTagForm(inventoryDetail.getTagForm());
+        inventory.setTagTo(inventoryDetail.getTagTo());
+        inventory.setWriteDate(inventoryDetail.getWriteDate());
+        inventory.setWriter(inventoryDetail.getWriter());
+        inventory.setWorkOderDocNumber(inventoryDetail.getWorkOderDocNumber());
+        inventory updateInventory = inventoryRepository.save(inventory);
+        return ResponseEntity.ok(updateInventory);
     }
     @PutMapping("/lavorer/{ID}")
-    public ResponseEntity <lavorer> updateLavoerByID(@PathVariable Integer ID, @RequestBody lavorer lavorerDetail) {
+    public ResponseEntity <lavorer> updateLavoer(@PathVariable Integer ID, @RequestBody lavorer lavorerDetail) {
         lavorer lavorer=lavorerRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        lavorer.
-        return ResponseEntity.ok(lavorer);
+        lavorer.setID(lavorerDetail.getID());
+        lavorer.setCountry(lavorerDetail.getCountry());
+        lavorer.setHiredate(lavorerDetail.getHiredate());
+        lavorer.setLavorerCode(lavorerDetail.getLavorerCode());
+        lavorer.setMemberType(lavorerDetail.getMemberType());
+        lavorer.setNightShift(lavorerDetail.getNightShift());
+        lavorer.setDescription(lavorerDetail.getDescription());
+        lavorer.setPosition(lavorerDetail.getPosition());
+        lavorer.setProcessName(lavorerDetail.getProcessName());
+        lavorer.setSpot(lavorerDetail.getSpot());
+        lavorer.setWorkerCode(lavorerDetail.getWorkerCode());
+        lavorer.setWorkingTime(lavorerDetail.getWorkingTime());
+        lavorer.setWriteDate(lavorerDetail.getWriteDate());
+        lavorer.setWriter(lavorerDetail.getWriter());
+        lavorer updateLavoer = lavorerRepository.save(lavorer);
+        return ResponseEntity.ok(updateLavoer);
     }
     @PutMapping("/loginlog/{ID}")
-    public ResponseEntity <loginlog> updateLoginLogByID(@PathVariable Integer ID, @RequestBody loginlog loginlogDetail) {
+    public ResponseEntity <loginlog> updateLoginLog(@PathVariable Integer ID, @RequestBody loginlog loginlogDetail) {
         loginlog loginlog=loginlogRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        loginlog.
-        return ResponseEntity.ok(loginlog);
+        loginlog.setID(loginlogDetail.getID());
+        loginlog.setEndLogin(loginlogDetail.getEndLogin());
+        loginlog.setFailCount(loginlogDetail.getFailCount());
+        loginlog.setIPAdress(loginlogDetail.getIPAdress());
+        loginlog.setStartLogin(loginlogDetail.getStartLogin());
+        loginlog.setWorkerCode(loginlogDetail.getWorkerCode());
+        loginlog updateLoginLog = loginlogRepository.save(loginlog);
+        return ResponseEntity.ok(updateLoginLog);
     }
     @PutMapping("/materialmove/{ID}")
-    public ResponseEntity <materialmove> updateMaterialMoveByID(@PathVariable Integer ID, @RequestBody materialmove materialmoveDetail) {
+    public ResponseEntity <materialmove> updateMaterialMove(@PathVariable Integer ID, @RequestBody materialmove materialmoveDetail) {
         materialmove materialmove=materialmoveRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        materialmove.
-        return ResponseEntity.ok(materialmove);
+        materialmove.setID(materialmoveDetail.getID());
+        materialmove.setCode(materialmoveDetail.getCode());
+        materialmove.setErrorCode(materialmoveDetail.getErrorCode());
+        materialmove.setInstructionKind(materialmoveDetail.getInstructionKind());
+        materialmove.setInstructionNumber(materialmoveDetail.getInstructionNumber());
+        materialmove.setOriginalQuantity(materialmoveDetail.getOriginalQuantity());
+        materialmove.setDescription(materialmoveDetail.getDescription());
+        materialmove.setQuantity(materialmoveDetail.getQuantity());
+        materialmove.setTagFrom(materialmoveDetail.getTagFrom());
+        materialmove.setTagTo(materialmoveDetail.getTagTo());
+        materialmove.setManager(materialmoveDetail.getManager());
+        materialmove.setPhoneNumber(materialmoveDetail.getPhoneNumber());
+        materialmove.setRepresentative(materialmoveDetail.getRepresentative());
+        materialmove.setWriteDate(materialmoveDetail.getWriteDate());
+        materialmove.setWriter(materialmoveDetail.getWriter());
+        materialmove.setZipCode(materialmoveDetail.getZipCode());
+        materialmove updateMaterialMove = materialmoveRepository.save(materialmove);
+        return ResponseEntity.ok(updateMaterialMove);
     }
     @PutMapping("/noticeboard/{ID}")
-    public ResponseEntity <noticeboard> updateNoticeBoardByID(@PathVariable Integer ID, @RequestBody noticeboard noticeboardDetail) {
+    public ResponseEntity <noticeboard> updateNoticeBoard(@PathVariable Integer ID, @RequestBody noticeboard noticeboardDetail) {
         noticeboard noticeboard=noticeboardRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        noticeboard.
-        return ResponseEntity.ok(noticeboard);
+        noticeboard.setGuideDocument(noticeboardDetail.getGuideDocument());
+        noticeboard.setLocation(noticeboardDetail.getLocation());
+        noticeboard.setPreview(noticeboardDetail.getPreview());
+        noticeboard.setSubtitle(noticeboardDetail.getSubtitle());
+        noticeboard.setTitle(noticeboardDetail.getTitle());
+        noticeboard.setToDo(noticeboardDetail.getToDo());
+        noticeboard.setWhen(noticeboardDetail.getWhen());
+        noticeboard.setWhere(noticeboardDetail.getWhere());
+        noticeboard.setWho(noticeboardDetail.getWho());
+        noticeboard.setManager(noticeboardDetail.getManager());
+        noticeboard.setWriteDate(noticeboardDetail.getWriteDate());
+        noticeboard.setWriter(noticeboardDetail.getWriter());
+        noticeboard.setID(noticeboardDetail.getID());
+        noticeboard updateNoticeBoard = noticeboardRepository.save(noticeboard);
+        return ResponseEntity.ok(updateNoticeBoard);
     }
     @PutMapping("/orderdoc/{ID}")
-    public ResponseEntity <orderdoc> updateOrderDocByID(@PathVariable Integer ID, @RequestBody orderdoc orderdocDetail) {
+    public ResponseEntity <orderdoc> updateOrderDoc(@PathVariable Integer ID, @RequestBody orderdoc orderdocDetail) {
         orderdoc orderdoc=orderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        orderdoc.
-        return ResponseEntity.ok(orderdoc);
+        orderdoc.setClientCompany(orderdocDetail.getClientCompany());
+        orderdoc.setConfirmMan(orderdocDetail.getConfirmMan());
+        orderdoc.setContactPrice(orderdocDetail.getContactPrice());
+        orderdoc.setDeliveryCondition(orderdocDetail.getDeliveryCondition());
+        orderdoc.setListPrice(orderdocDetail.getListPrice());
+        orderdoc.setDescription(orderdocDetail.getDescription());
+        orderdoc.setMoneyUnit(orderdocDetail.getMoneyUnit());
+        orderdoc.setOrderDate(orderdocDetail.getOrderDate());
+        orderdoc.setOrderDocNumber(orderdocDetail.getOrderDocNumber());
+        orderdoc.setManager(orderdocDetail.getManager());
+        orderdoc.setState(orderdocDetail.getState());
+        orderdoc.setUnitePrice(orderdocDetail.getUnitePrice());
+        orderdoc.setWriteDate(orderdocDetail.getWriteDate());
+        orderdoc.setWriter(orderdocDetail.getWriter());
+        orderdoc.setWorkplace(orderdocDetail.getWorkplace());
+        orderdoc.setID(orderdocDetail.getID());
+        orderdoc updateOrderDoc = orderdocRepository.save(orderdoc);
+        return ResponseEntity.ok(updateOrderDoc);
     }
     @PutMapping("/orders/{ID}")
-    public ResponseEntity <orders> updateOrdersByID(@PathVariable Integer ID, @RequestBody orders ordersDetail) {
+    public ResponseEntity <orders> updateOrders(@PathVariable Integer ID, @RequestBody orders ordersDetail) {
         orders orders=ordersRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        orders.
-        return ResponseEntity.ok(orders);
+        orders.setID(ordersDetail.getID());
+        orders.setDeliveryDueDate(ordersDetail.getDeliveryDueDate());
+        orders.setOrderDate(ordersDetail.getOrderDate());
+        orders.setOrderDocNumber(ordersDetail.getOrderDocNumber());
+        orders.setProductCode(ordersDetail.getProductCode());
+        orders.setQuantity(ordersDetail.getQuantity());
+        orders.setRemainder(ordersDetail.getRemainder());
+        orders.setState(ordersDetail.getState());
+        orders.setUnit(ordersDetail.getUnit());
+        orders updateOrders = ordersRepository.save(orders);
+        return ResponseEntity.ok(updateOrders);
     }
     @PutMapping("/ordersheet/{ID}")
-    public ResponseEntity <ordersheet> updateOrderSheetByID(@PathVariable Integer ID, @RequestBody ordersheet ordersheetDetail) {
+    public ResponseEntity <ordersheet> updateOrderSheet(@PathVariable Integer ID, @RequestBody ordersheet ordersheetDetail) {
         ordersheet ordersheet=ordersheetRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        ordersheet.
-        return ResponseEntity.ok(ordersheet);
+        ordersheet.setID(ordersheetDetail.getID());
+        ordersheet.setAAddress(ordersheetDetail.getAAddress());
+        ordersheet.setAHP(ordersheetDetail.getAHP());
+        ordersheet.setApplicant(ordersheetDetail.getApplicant());
+        ordersheet.setATell(ordersheetDetail.getATell());
+        ordersheet.setOderSheetCode(ordersheetDetail.getOderSheetCode());
+        ordersheet.setDescription(ordersheetDetail.getDescription());
+        ordersheet.setPayer(ordersheetDetail.getPayer());
+        ordersheet.setPrice(ordersheetDetail.getPrice());
+        ordersheet.setProductCode(ordersheetDetail.getProductCode());
+        ordersheet.setQuantity(ordersheetDetail.getQuantity());
+        ordersheet.setRAdress(ordersheetDetail.getRAdress());
+        ordersheet.setRecipent(ordersheetDetail.getRecipent());
+        ordersheet.setWriteDate(ordersheetDetail.getWriteDate());
+        ordersheet.setWriter(ordersheetDetail.getWriter());
+        ordersheet.setRemainder(ordersheetDetail.getRemainder());
+        ordersheet.setRHP(ordersheetDetail.getRHP());
+        ordersheet.setRTell(ordersheetDetail.getRTell());
+        ordersheet updateOrderSheet = ordersheetRepository.save(ordersheet);
+        return ResponseEntity.ok(updateOrderSheet);
     }
     @PutMapping("/placeorderdoc/{ID}")
-    public ResponseEntity <placeorderdoc> updatePlaceOrderDocByID(@PathVariable Integer ID, @RequestBody placeorderdoc placeorderdocDetail) {
+    public ResponseEntity <placeorderdoc> updatePlaceOrderDoc(@PathVariable Integer ID, @RequestBody placeorderdoc placeorderdocDetail) {
         placeorderdoc placeorderdoc=placeorderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        placeorderdoc.
-        return ResponseEntity.ok(placeorderdoc);
+        placeorderdoc.setID(placeorderdocDetail.getID());
+        placeorderdoc.setClientCompany(placeorderdocDetail.getClientCompany());
+        placeorderdoc.setConfirmMan(placeorderdocDetail.getConfirmMan());
+        placeorderdoc.setContactPrice(placeorderdocDetail.getContactPrice());
+        placeorderdoc.setDeliveryCondition(placeorderdocDetail.getDeliveryCondition());
+        placeorderdoc.setListPrice(placeorderdocDetail.getListPrice());
+        placeorderdoc.setDescription(placeorderdocDetail.getDescription());
+        placeorderdoc.setManager(placeorderdocDetail.getManager());
+        placeorderdoc.setMoneyUnit(placeorderdocDetail.getMoneyUnit());
+        placeorderdoc.setWorkplace(placeorderdocDetail.getWorkplace());
+        placeorderdoc.setPlaceOderDate(placeorderdocDetail.getPlaceOderDate());
+        placeorderdoc.setPlaceOrderDoNumber(placeorderdocDetail.getPlaceOrderDoNumber());
+        placeorderdoc.setPlaceOrderNumber(placeorderdocDetail.getPlaceOrderNumber());
+        placeorderdoc.setWriteDate(placeorderdocDetail.getWriteDate());
+        placeorderdoc.setWriter(placeorderdocDetail.getWriter());
+        placeorderdoc.setState(placeorderdocDetail.getState());
+        placeorderdoc.setUnitPrice(placeorderdocDetail.getUnitPrice());
+        placeorderdoc updatePlaceOrderDoc = placeorderdocRepository.save(placeorderdoc);
+        return ResponseEntity.ok(updatePlaceOrderDoc);
     }
     @PutMapping("/placeorders/{ID}")
-    public ResponseEntity <placeorders> updatePlaceOrdersByID(@PathVariable Integer ID, @RequestBody placeorders placeordersDetail) {
+    public ResponseEntity <placeorders> updatePlaceOrders(@PathVariable Integer ID, @RequestBody placeorders placeordersDetail) {
         placeorders placeorders=placeordersRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        placeorders.
-        return ResponseEntity.ok(placeorders);
+        placeorders.setID(placeordersDetail.getID());
+        placeorders.setMaterialCode(placeordersDetail.getMaterialCode());
+        placeorders.setQuantity(placeordersDetail.getQuantity());
+        placeorders.setPlaceOrderDate(placeordersDetail.getPlaceOrderDate());
+        placeorders.setPlaceOrderDoNumber(placeordersDetail.getPlaceOrderDoNumber());
+        placeorders.setPlaceOrderNumber(placeordersDetail.getPlaceOrderNumber());
+        placeorders.setReceiveDueDate(placeordersDetail.getReceiveDueDate());
+        placeorders.setState(placeordersDetail.getState());
+        placeorders.setStorage(placeordersDetail.getStorage());
+        placeorders.setUnit(placeordersDetail.getUnit());
+        placeorders.setWarehouse(placeordersDetail.getWarehouse());
+        placeorders.setWeight(placeordersDetail.getWeight());
+        placeorders.setRemainder(placeordersDetail.getRemainder());
+        placeorders updatePlaceOrders = placeordersRepository.save(placeorders);
+        return ResponseEntity.ok(updatePlaceOrders);
     }
     @PutMapping("/position/{ID}")
-    public ResponseEntity <position> updatePositionByID(@PathVariable Integer ID, @RequestBody position positionDetail) {
+    public ResponseEntity <position> updatePosition(@PathVariable Integer ID, @RequestBody position positionDetail) {
         position position=positionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        position.
-        return ResponseEntity.ok(position);
+        position.setID(positionDetail.getID());
+        position.setNamePosition(positionDetail.getNamePosition());
+        position.setPositionCode(positionDetail.getPositionCode());
+        position.setDescription(positionDetail.getDescription());
+        position.setWriteDate(positionDetail.getWriteDate());
+        position.setWriter(positionDetail.getWriter());
+        position updatePosition = positionRepository.save(position);
+        return ResponseEntity.ok(updatePosition);
     }
     @PutMapping("/process/{ID}")
-    public ResponseEntity <process> updateProcessByID(@PathVariable Integer ID, @RequestBody process processDetail) {
+    public ResponseEntity <process> updateProcess(@PathVariable Integer ID, @RequestBody process processDetail) {
         process process=processRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        process.
-        return ResponseEntity.ok(process);
+        process.setDocument(processDetail.getDocument());
+        process.setEquipmentCode(processDetail.getEquipmentCode());
+        process.setFinalProcess(processDetail.getFinalProcess());
+        process.setGuideDocument(processDetail.getGuideDocument());
+        process.setInspectionName(processDetail.getInspectionName());
+        process.setDescription(processDetail.getDescription());
+        process.setManager(processDetail.getManager());
+        process.setOutputHour(processDetail.getOutputHour());
+        process.setOutputMinute(processDetail.getOutputMinute());
+        process.setProcessCode(processDetail.getProcessCode());
+        process.setProcessName(processDetail.getProcessName());
+        process.setProductionUnit(processDetail.getProductionUnit());
+        process.setWriteDate(processDetail.getWriteDate());
+        process.setWriter(processDetail.getWriter());
+        process.setSortName(processDetail.getSortName());
+        process.setWarehouse(processDetail.getWarehouse());
+        process.setID(processDetail.getID());
+        process updateProcess = processRepository.save(process);
+        return ResponseEntity.ok(updateProcess);
     }
     @PutMapping("/processchart/{ID}")
-    public ResponseEntity <processchart> updateProcessChartByID(@PathVariable Integer ID, @RequestBody processchart processchartDetail) {
+    public ResponseEntity <processchart> updateProcessChart(@PathVariable Integer ID, @RequestBody processchart processchartDetail) {
         processchart processchart=processchartRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        processchart.
-        return ResponseEntity.ok(processchart);
+        processchart.setID(processchartDetail.getID());
+        processchart.setBOMCode(processchartDetail.getBOMCode());
+        processchart.setGuideDocument(processchartDetail.getGuideDocument());
+        processchart.setProcessChartCode(processchartDetail.getProcessChartCode());
+        processchart.setProcessCode(processchartDetail.getProcessCode());
+        processchart.setProcessName(processchartDetail.getProcessName());
+        processchart.setSortCode(processchartDetail.getSortCode());
+        processchart.setWriteDate(processchartDetail.getWriteDate());
+        processchart.setWriter(processchartDetail.getWriter());
+        processchart updateProcessChart = processchartRepository.save(processchart);
+        return ResponseEntity.ok(updateProcessChart);
     }
     @PutMapping("/processcode/{ID}")
-    public ResponseEntity <processcode> updateProcessCodeByID(@PathVariable Integer ID, @RequestBody processcode processcodeDetail) {
+    public ResponseEntity <processcode> updateProcessCode(@PathVariable Integer ID, @RequestBody processcode processcodeDetail) {
         processcode processcode=processcodeRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        processcode.
-        return ResponseEntity.ok(processcode);
+        processcode.setID(processcodeDetail.getID());
+        processcode.setProcessCode(processcodeDetail.getProcessCode());
+        processcode.setProcessName(processcodeDetail.getProcessName());
+        processcode.setDescription(processcodeDetail.getDescription());
+        processcode.setWriteDate(processcodeDetail.getWriteDate());
+        processcode.setWriter(processcodeDetail.getWriter());
+        processcode updateProcessCode = processcodeRepository.save(processcode);
+        return ResponseEntity.ok(updateProcessCode);
     }
     @PutMapping("/product/{ID}")
-    public ResponseEntity <product> updateProductByID(@PathVariable Integer ID, @RequestBody product productDetail) {
+    public ResponseEntity <product> updateProduct(@PathVariable Integer ID, @RequestBody product productDetail) {
         product product=productRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        product.
-        return ResponseEntity.ok(product);
+        product.setID(productDetail.getID());
+        product.setBundle(productDetail.getBundle());
+        product.setIcePack(productDetail.getIcePack());
+        product.setPacking(productDetail.getPacking());
+        product.setShipping(productDetail.getShipping());
+        product.setSortName(productDetail.getSortName());
+        product.setDescription(productDetail.getDescription());
+        product.setStorage(productDetail.getStorage());
+        product.setPrice(productDetail.getPrice());
+        product.setProductCode(productDetail.getProductCode());
+        product.setQuantity(productDetail.getQuantity());
+        product.setStorageTerm(productDetail.getStorageTerm());
+        product.setUnit(productDetail.getUnit());
+        product.setWriteDate(productDetail.getWriteDate());
+        product.setWriter(productDetail.getWriter());
+        product.setUnitPrice(productDetail.getUnitPrice());
+        product updateProduct = productRepository.save(product);
+        return ResponseEntity.ok(updateProduct);
     }
     @PutMapping("/productcorrect/{ID}")
-    public ResponseEntity <productcorrect> updateProductCorrectByID(@PathVariable Integer ID, @RequestBody productcorrect productcorrectDetail) {
+    public ResponseEntity <productcorrect> updateProductCorrect(@PathVariable Integer ID, @RequestBody productcorrect productcorrectDetail) {
         productcorrect productcorrect=productcorrectRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        productcorrect.
-        return ResponseEntity.ok(productcorrect);
+        productcorrect.setID(productcorrectDetail.getID());
+        productcorrect.setChangeQuantity(productcorrectDetail.getChangeQuantity());
+        productcorrect.setReason(productcorrectDetail.getReason());
+        productcorrect.setProductCode(productcorrectDetail.getProductCode());
+        productcorrect.setQuantity(productcorrectDetail.getQuantity());
+        productcorrect.setWriteDate(productcorrectDetail.getWriteDate());
+        productcorrect.setWriter(productcorrectDetail.getWriter());
+        productcorrect updateProductCorrect = productcorrectRepository.save(productcorrect);
+        return ResponseEntity.ok(updateProductCorrect);
     }
     @PutMapping("/producthistory/{ID}")
-    public ResponseEntity <producthistory> updateProductHistoryByID(@PathVariable Integer ID, @RequestBody producthistory producthistoryDetail) {
+    public ResponseEntity <producthistory> updateProductHistory(@PathVariable Integer ID, @RequestBody producthistory producthistoryDetail) {
         producthistory producthistory=producthistoryRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        producthistory.
-        return ResponseEntity.ok(producthistory);
+        producthistory.setID(producthistoryDetail.getID());
+        producthistory.setCarryover(producthistoryDetail.getCarryover());
+        producthistory.setChangeReason(producthistoryDetail.getChangeReason());
+        producthistory.setRealRetention(producthistoryDetail.getRealRetention());
+        producthistory.setVarianceQuantity(producthistoryDetail.getVarianceQuantity());
+        producthistory.setOderSheetCode(producthistoryDetail.getOderSheetCode());
+        producthistory.setProductCode(producthistoryDetail.getProductCode());
+        producthistory.setWriteDate(producthistoryDetail.getWriteDate());
+        producthistory.setWriter(producthistoryDetail.getWriter());
+        producthistory updateProductHistory = producthistoryRepository.save(producthistory);
+        return ResponseEntity.ok(updateProductHistory);
     }
     @PutMapping("/productmove/{ID}")
-    public ResponseEntity <productmove> updateProductMoveByID(@PathVariable Integer ID, @RequestBody productmove productmoveDetail) {
+    public ResponseEntity <productmove> updateProductMove(@PathVariable Integer ID, @RequestBody productmove productmoveDetail) {
         productmove productmove=productmoveRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        productmove.
-        return ResponseEntity.ok(productmove);
+        productmove.setID(productmoveDetail.getID());
+        productmove.setCangeID(productmoveDetail.getCangeID());
+        productmove.setErrorCode(productmoveDetail.getErrorCode());
+        productmove.setMetarialCode(productmoveDetail.getMetarialCode());
+        productmove.setO_Quantity(productmoveDetail.getO_Quantity());
+        productmove.setPlaceOrderNumber(productmoveDetail.getPlaceOrderNumber());
+        productmove.setTagFrom(productmoveDetail.getTagFrom());
+        productmove.setTagTo(productmoveDetail.getTagTo());
+        productmove.setWorkOrderDocNumber(productmoveDetail.getWorkOrderDocNumber());
+        productmove.setProductCode(productmoveDetail.getProductCode());
+        productmove.setQuantity(productmoveDetail.getQuantity());
+        productmove.setWriteDate(productmoveDetail.getWriteDate());
+        productmove.setWriter(productmoveDetail.getWriter());
+        productmove updateProductMove = productmoveRepository.save(productmove);
+        return ResponseEntity.ok(updateProductMove);
     }
     @PutMapping("/productreturn/{ID}")
-    public ResponseEntity <productreturn> updateProductReturnByID(@PathVariable Integer ID, @RequestBody productreturn productreturnDetail) {
+    public ResponseEntity <productreturn> updateProductReturn(@PathVariable Integer ID, @RequestBody productreturn productreturnDetail) {
         productreturn productreturn=productreturnRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        productreturn.
-        return ResponseEntity.ok(productreturn);
+        productreturn.setID(productreturnDetail.getID());
+        productreturn.setClient(productreturnDetail.getClient());
+        productreturn.setManager(productreturnDetail.getManager());
+        productreturn.setProductName(productreturnDetail.getProductName());
+        productreturn.setResult(productreturnDetail.getResult());
+        productreturn.setReturnDate(productreturnDetail.getReturnDate());
+        productreturn.setDescription(productreturnDetail.getDescription());
+        productreturn.setReturnReason(productreturnDetail.getReturnReason());
+        productreturn.setShipOrderDoNumber(productreturnDetail.getShipOrderDoNumber());
+        productreturn.setQuantity(productreturnDetail.getQuantity());
+        productreturn.setWriteDate(productreturnDetail.getWriteDate());
+        productreturn.setWriter(productreturnDetail.getWriter());
+        productreturn updateProductReturn = productreturnRepository.save(productreturn);
+        return ResponseEntity.ok(updateProductReturn);
     }
     @PutMapping("/qainspection/{ID}")
-    public ResponseEntity <qainspection> updateQAInspectionByID(@PathVariable Integer ID, @RequestBody qainspection qainspectionDetail) {
+    public ResponseEntity <qainspection> updateQAInspection(@PathVariable Integer ID, @RequestBody qainspection qainspectionDetail) {
         qainspection qainspection=qainspectionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        qainspection.
-        return ResponseEntity.ok(qainspection);
+        qainspection.setID(qainspectionDetail.getID());
+        qainspection.setErrorCode(qainspectionDetail.getErrorCode());
+        qainspection.setMaterialCode(qainspectionDetail.getMaterialCode());
+        qainspection.setProcess(qainspectionDetail.getProcess());
+        qainspection.setQAInspection(qainspectionDetail.getQAInspection());
+        qainspection.setResult(qainspectionDetail.getResult());
+        qainspection.setDescription(qainspectionDetail.getDescription());
+        qainspection.setSortName(qainspectionDetail.getSortName());
+        qainspection.setTagFrom(qainspectionDetail.getTagFrom());
+        qainspection.setProductCode(qainspectionDetail.getProductCode());
+        qainspection.setQuantity(qainspectionDetail.getQuantity());
+        qainspection.setTagTo(qainspectionDetail.getTagTo());
+        qainspection.setWorkOrderDocNumber(qainspectionDetail.getWorkOrderDocNumber());
+        qainspection.setWriteDate(qainspectionDetail.getWriteDate());
+        qainspection.setWriter(qainspectionDetail.getWriter());
+        qainspection updateQAInspection = qainspectionRepository.save(qainspection);
+        return ResponseEntity.ok(updateQAInspection);
     }
     @PutMapping("/qaproduct/{ID}")
-    public ResponseEntity <qaproduct> updateQAproductByID(@PathVariable Integer ID, @RequestBody qaproduct qaproductDetail) {
+    public ResponseEntity <qaproduct> updateQAproduct(@PathVariable Integer ID, @RequestBody qaproduct qaproductDetail) {
         qaproduct qaproduct=qaproductRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        qaproduct.
-        return ResponseEntity.ok(qaproduct);
+        qaproduct.setID(qaproductDetail.getID());
+        qaproduct.setClient(qaproductDetail.getClient());
+        qaproduct.setManager(qaproductDetail.getManager());
+        qaproduct.setQACode(qaproductDetail.getQACode());
+        qaproduct.setDescription(qaproductDetail.getDescription());
+        qaproduct.setProductCode(qaproductDetail.getProductCode());
+        qaproduct.setWriteDate(qaproductDetail.getWriteDate());
+        qaproduct.setWriter(qaproductDetail.getWriter());
+        qaproduct updateQAproduct = qaproductRepository.save(qaproduct);
+        return ResponseEntity.ok(updateQAproduct);
     }
     @PutMapping("/rawhistory/{ID}")
-    public ResponseEntity <rawhistory> updateRawHistoryByID(@PathVariable Integer ID, @RequestBody rawhistory rawhistoryDetail) {
+    public ResponseEntity <rawhistory> updateRawHistory(@PathVariable Integer ID, @RequestBody rawhistory rawhistoryDetail) {
         rawhistory rawhistory=rawhistoryRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rawhistory.
-        return ResponseEntity.ok(rawhistory);
+        rawhistory.setID(rawhistoryDetail.getID());
+        rawhistory.setCarryover(rawhistoryDetail.getCarryover());
+        rawhistory.setChangeReason(rawhistoryDetail.getChangeReason());
+        rawhistory.setDisposalQuantity(rawhistoryDetail.getDisposalQuantity());
+        rawhistory.setMaterialCode(rawhistoryDetail.getMaterialCode());
+        rawhistory.setRealRetention(rawhistoryDetail.getRealRetention());
+        rawhistory.setReturnQuantity(rawhistoryDetail.getReturnQuantity());
+        rawhistory.setVarianceQuantity(rawhistoryDetail.getVarianceQuantity());
+        rawhistory.setWriteDate(rawhistoryDetail.getWriteDate());
+        rawhistory.setWriter(rawhistoryDetail.getWriter());
+        rawhistory updateRawHistory = rawhistoryRepository.save(rawhistory);
+        return ResponseEntity.ok(updateRawHistory);
     }
     @PutMapping("/rawinspection/{ID}")
-    public ResponseEntity <rawinspection> updateRawInspectionByID(@PathVariable Integer ID, @RequestBody rawinspection rawinspectionDetail) {
+    public ResponseEntity <rawinspection> updateRawInspection(@PathVariable Integer ID, @RequestBody rawinspection rawinspectionDetail) {
         rawinspection rawinspection=rawinspectionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rawinspection.
-        return ResponseEntity.ok(rawinspection);
+        rawinspection.setID(rawinspectionDetail.getID());
+        rawinspection.setForeignBody(rawinspectionDetail.getForeignBody());
+        rawinspection.setFresh(rawinspectionDetail.getFresh());
+        rawinspection.setMaterialCode(rawinspectionDetail.getMaterialCode());
+        rawinspection.setMaterialTemperature(rawinspectionDetail.getMaterialTemperature());
+        rawinspection.setOutside(rawinspectionDetail.getOutside());
+        rawinspection.setDescription(rawinspectionDetail.getDescription());
+        rawinspection.setPacking(rawinspectionDetail.getPacking());
+        rawinspection.setReceiptDate(rawinspectionDetail.getReceiptDate());
+        rawinspection.setSmell(rawinspectionDetail.getSmell());
+        rawinspection.setWriteDate(rawinspectionDetail.getWriteDate());
+        rawinspection.setWriter(rawinspectionDetail.getWriter());
+        rawinspection updateRawInspection = rawinspectionRepository.save(rawinspection);
+        return ResponseEntity.ok(updateRawInspection);
     }
     @PutMapping("/rawmaterial/{ID}")
-    public ResponseEntity <rawmaterial> updateRawMaterialByID(@PathVariable Integer ID, @RequestBody rawmaterial rawmaterialDetail) {
+    public ResponseEntity <rawmaterial> updateRawMaterial(@PathVariable Integer ID, @RequestBody rawmaterial rawmaterialDetail) {
         rawmaterial rawmaterial=rawmaterialRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rawmaterial.
-        return ResponseEntity.ok(rawmaterial);
+        rawmaterial.setID(rawmaterialDetail.getID());
+        rawmaterial.setCarryover(rawmaterialDetail.getCarryover());
+        rawmaterial.setMaterialCode(rawmaterialDetail.getMaterialCode());
+        rawmaterial.setPlaceOrderNumber(rawmaterialDetail.getPlaceOrderNumber());
+        rawmaterial.setRawMaterialLOT(rawmaterialDetail.getRawMaterialLOT());
+        rawmaterial.setTagFrom(rawmaterialDetail.getTagFrom());
+        rawmaterial.setTagTo(rawmaterialDetail.getTagTo());
+        rawmaterial.setQuantity(rawmaterialDetail.getQuantity());
+        rawmaterial.setWriteDate(rawmaterialDetail.getWriteDate());
+        rawmaterial.setWriter(rawmaterialDetail.getWriter());
+        rawmaterial.setRemainder(rawmaterialDetail.getRemainder());
+        rawmaterial updateRawMaterial = rawmaterialRepository.save(rawmaterial);
+        return ResponseEntity.ok(updateRawMaterial);
     }
     @PutMapping("/rawmaterialmaster/{ID}")
-    public ResponseEntity <rawmaterialmaster> updateRawmaterialMasterByID(@PathVariable Integer ID, @RequestBody rawmaterialmaster rawmaterialmasterDetail) {
+    public ResponseEntity <rawmaterialmaster> updateRawmaterialMaster(@PathVariable Integer ID, @RequestBody rawmaterialmaster rawmaterialmasterDetail) {
         rawmaterialmaster rawmaterialmaster=rawmaterialmasterRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rawmaterialmaster.
-        return ResponseEntity.ok(rawmaterialmaster);
+        rawmaterialmaster.setID(rawmaterialmasterDetail.getID());
+        rawmaterialmaster.setClientCompany(rawmaterialmasterDetail.getClientCompany());
+        rawmaterialmaster.setMaterialCode(rawmaterialmasterDetail.getMaterialCode());
+        rawmaterialmaster.setMaterialName(rawmaterialmasterDetail.getMaterialName());
+        rawmaterialmaster.setOrigin(rawmaterialmasterDetail.getOrigin());
+        rawmaterialmaster.setQuantitiyUnit(rawmaterialmasterDetail.getQuantitiyUnit());
+        rawmaterialmaster.setDescription(rawmaterialmasterDetail.getDescription());
+        rawmaterialmaster.setReverse(rawmaterialmasterDetail.getReverse());
+        rawmaterialmaster.setSortation(rawmaterialmasterDetail.getSortation());
+        rawmaterialmaster.setStorage(rawmaterialmasterDetail.getStorage());
+        rawmaterialmaster.setQuantity(rawmaterialmasterDetail.getQuantity());
+        rawmaterialmaster.setStorageTerm(rawmaterialmasterDetail.getStorageTerm());
+        rawmaterialmaster.setTemperature(rawmaterialmasterDetail.getTemperature());
+        rawmaterialmaster.setWriteDate(rawmaterialmasterDetail.getWriteDate());
+        rawmaterialmaster.setWriter(rawmaterialmasterDetail.getWriter());
+        rawmaterialmaster.setUnit(rawmaterialmasterDetail.getUnit());
+        rawmaterialmaster.setUnitPrice(rawmaterialmasterDetail.getUnitPrice());
+        rawmaterialmaster.setWeight(rawmaterialmasterDetail.getWeight());
+        rawmaterialmaster updateRawmaterialMaster = rawmaterialmasterRepository.save(rawmaterialmaster);
+        return ResponseEntity.ok(updateRawmaterialMaster);
     }
     @PutMapping("/rawmaterialtag/{ID}")
-    public ResponseEntity <rawmaterialtag> updateRawMaterialtagByID(@PathVariable Integer ID, @RequestBody rawmaterialtag rawmaterialtagDetail) {
+    public ResponseEntity <rawmaterialtag> updateRawMaterialtag(@PathVariable Integer ID, @RequestBody rawmaterialtag rawmaterialtagDetail) {
         rawmaterialtag rawmaterialtag=rawmaterialtagRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rawmaterialtag.
-        return ResponseEntity.ok(rawmaterialtag);
+        rawmaterialtag.setID(rawmaterialtagDetail.getID());
+        rawmaterialtag updateRawMaterialtag = rawmaterialtagRepository.save(rawmaterialtag);
+        return ResponseEntity.ok(updateRawMaterialtag);
     }
     @PutMapping("/rfid/{ID}")
-    public ResponseEntity <rfid> updateDByID(@PathVariable Integer ID, @RequestBody rfid rfidDetail) {
+    public ResponseEntity <rfid> updateD(@PathVariable Integer ID, @RequestBody rfid rfidDetail) {
         rfid rfid=rfidRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rfid.
-        return ResponseEntity.ok(rfid);
+        rfid.setID(rfidDetail.getID());
+        rfid updateD = rfidRepository.save(rfid);
+        return ResponseEntity.ok(updateD);
     }
     @PutMapping("/rfid_barrel/{ID}")
-    public ResponseEntity <rfid_barrel> updateRFID_BarrelByID(@PathVariable Integer ID, @RequestBody rfid_barrel rfid_barrelDetail) {
+    public ResponseEntity <rfid_barrel> updateRFID_Barrel(@PathVariable Integer ID, @RequestBody rfid_barrel rfid_barrelDetail) {
         rfid_barrel rfid_barrel=rfid_barrelRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        rfid_barrel.
-        return ResponseEntity.ok(rfid_barrel);
+        rfid_barrel.setID(rfid_barrelDetail.getID());
+        rfid_barrel updateRFID_Barrel = rfid_barrelRepository.save(rfid_barrel);
+        return ResponseEntity.ok(updateRFID_Barrel);
     }
     @PutMapping("/setplus/{ID}")
-    public ResponseEntity <setplus> updateSetPlusByID(@PathVariable Integer ID, @RequestBody setplus setplusDetail) {
+    public ResponseEntity <setplus> updateSetPlus(@PathVariable Integer ID, @RequestBody setplus setplusDetail) {
         setplus setplus=setplusRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        setplus.
-        return ResponseEntity.ok(setplus);
+        setplus.setID(setplusDetail.getID());
+        setplus updateSetPlus = setplusRepository.save(setplus);
+        return ResponseEntity.ok(updateSetPlus);
     }
     @PutMapping("/shipinspection/{ID}")
-    public ResponseEntity <shipinspection> updateShipInspectionByID(@PathVariable Integer ID, @RequestBody shipinspection shipinspectionDetail) {
+    public ResponseEntity <shipinspection> updateShipInspection(@PathVariable Integer ID, @RequestBody shipinspection shipinspectionDetail) {
         shipinspection shipinspection=shipinspectionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        shipinspection.
-        return ResponseEntity.ok(shipinspection);
+        shipinspection.setID(shipinspectionDetail.getID());
+        shipinspection updateShipInspection = shipinspectionRepository.save(shipinspection);
+        return ResponseEntity.ok(updateShipInspection);
     }
     @PutMapping("/shiporderdoc/{ID}")
-    public ResponseEntity <shiporderdoc> updateShipOrderDocByID(@PathVariable Integer ID, @RequestBody shiporderdoc shiporderdocDetail) {
+    public ResponseEntity <shiporderdoc> updateShipOrderDoc(@PathVariable Integer ID, @RequestBody shiporderdoc shiporderdocDetail) {
         shiporderdoc shiporderdoc=shiporderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        shiporderdoc.
-        return ResponseEntity.ok(shiporderdoc);
+        shiporderdoc.setID(shiporderdocDetail.getID());
+        shiporderdoc updateShipOrderDoc = shiporderdocRepository.save(shiporderdoc);
+        return ResponseEntity.ok(updateShipOrderDoc);
     }
     @PutMapping("/sort/{ID}")
-    public ResponseEntity <sort> updateSortByID(@PathVariable Integer ID, @RequestBody sort sortDetail) {
+    public ResponseEntity <sort> updateSort(@PathVariable Integer ID, @RequestBody sort sortDetail) {
         sort sort=sortRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        sort.
-        return ResponseEntity.ok(sort);
+        sort.setID(sortDetail.getID());
+        sort updateSort = sortRepository.save(sort);
+        return ResponseEntity.ok(updateSort);
     }
     @PutMapping("/temperature/{ID}")
-    public ResponseEntity <temperature> updateTemperatureByID(@PathVariable Integer ID, @RequestBody temperature temperatureDetail) {
+    public ResponseEntity <temperature> updateTemperature(@PathVariable Integer ID, @RequestBody temperature temperatureDetail) {
         temperature temperature=temperatureRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        temperature.
-        return ResponseEntity.ok(temperature);
+        temperature.setID(temperatureDetail.getID());
+        temperature updateTemperature = temperatureRepository.save(temperature);
+        return ResponseEntity.ok(updateTemperature);
     }
     @PutMapping("/temperaturecheck/{ID}")
-    public ResponseEntity <temperaturecheck> updateTemperaturecheckByID(@PathVariable Integer ID, @RequestBody temperaturecheck temperaturecheckDetail) {
+    public ResponseEntity <temperaturecheck> updateTemperaturecheck(@PathVariable Integer ID, @RequestBody temperaturecheck temperaturecheckDetail) {
         temperaturecheck temperaturecheck=temperaturecheckRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        temperaturecheck.
-        return ResponseEntity.ok(temperaturecheck);
+        temperaturecheck.setID(temperaturecheckDetail.getID());
+        temperaturecheck updateTemperaturecheck = temperaturecheckRepository.save(temperaturecheck);
+        return ResponseEntity.ok(updateTemperaturecheck);
     }
     @PutMapping("/unit/{ID}")
-    public ResponseEntity <unit> updateUnitByID(@PathVariable Integer ID, @RequestBody unit unitDetail) {
+    public ResponseEntity <unit> updateUnit(@PathVariable Integer ID, @RequestBody unit unitDetail) {
         unit unit=unitRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        unit.
-        return ResponseEntity.ok(unit);
+        unit.setID(unitDetail.getID());
+        unit updateUnit = unitRepository.save(unit);
+        return ResponseEntity.ok(updateUnit);
     }
     @PutMapping("/usepage/{ID}")
-    public ResponseEntity <usepage> updateUsePageByID(@PathVariable Integer ID, @RequestBody usepage usepageDetail) {
+    public ResponseEntity <usepage> updateUsePage(@PathVariable Integer ID, @RequestBody usepage usepageDetail) {
         usepage usepage=usepageRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        usepage.
-        return ResponseEntity.ok(usepage);
+        usepage.setID(usepageDetail.getID());
+        usepage updateUsePage = usepageRepository.save(usepage);
+        return ResponseEntity.ok(updateUsePage);
     }
     @PutMapping("/warehouse/{ID}")
-    public ResponseEntity <warehouse> updateWareHouseByID(@PathVariable Integer ID, @RequestBody warehouse warehouseDetail) {
+    public ResponseEntity <warehouse> updateWareHouse(@PathVariable Integer ID, @RequestBody warehouse warehouseDetail) {
         warehouse warehouse=warehouseRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        warehouse.
-        return ResponseEntity.ok(warehouse);
+        warehouse.setID(warehouseDetail.getID());
+        warehouse updateWareHouse = warehouseRepository.save(warehouse);
+        return ResponseEntity.ok(updateWareHouse);
     }
     @PutMapping("/wash/{ID}")
-    public ResponseEntity <wash> updateWashByID(@PathVariable Integer ID, @RequestBody wash washDetail) {
+    public ResponseEntity <wash> updateWash(@PathVariable Integer ID, @RequestBody wash washDetail) {
         wash wash=washRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        wash.
-        return ResponseEntity.ok(wash);
+        wash.setID(washDetail.getID());
+        wash updateWash = washRepository.save(wash);
+        return ResponseEntity.ok(updateWash);
     }
     @PutMapping("/weight/{ID}")
-    public ResponseEntity <weight> updateWeightByID(@PathVariable Integer ID, @RequestBody weight weightDetail) {
+    public ResponseEntity <weight> updateWeight(@PathVariable Integer ID, @RequestBody weight weightDetail) {
         weight weight=weightRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        weight.
-        return ResponseEntity.ok(weight);
+        weight.setID(weightDetail.getID());
+        weight updateWeight = weightRepository.save(weight);
+        return ResponseEntity.ok(updateWeight);
     }
     @PutMapping("/weight_rec/{ID}")
-    public ResponseEntity <weight_rec> updateWeight_recByID(@PathVariable Integer ID, @RequestBody weight_rec weight_recDetail) {
+    public ResponseEntity <weight_rec> updateWeight_rec(@PathVariable Integer ID, @RequestBody weight_rec weight_recDetail) {
         weight_rec weight_rec=weight_recRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        weight_rec.
-        return ResponseEntity.ok(weight_rec);
+        weight_rec.setID(weight_recDetail.getID());
+        weight_rec updateWeight_rec = weight_recRepository.save(weight_rec);
+        return ResponseEntity.ok(updateWeight_rec);
     }
     @PutMapping("/worker/{ID}")
-    public ResponseEntity <worker> updateWorkerByID(@PathVariable Integer ID, @RequestBody worker workerDetail) {
+    public ResponseEntity <worker> updateWorker(@PathVariable Integer ID, @RequestBody worker workerDetail) {
         worker worker=workerRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        worker.
-        return ResponseEntity.ok(worker);
+        worker.setID(workerDetail.getID());
+        worker updateWorker = workerRepository.save(worker);
+        return ResponseEntity.ok(updateWorker);
     }
     @PutMapping("/workorderdoc/{ID}")
-    public ResponseEntity <workorderdoc> updateWorkOrderDocByID(@PathVariable Integer ID, @RequestBody workorderdoc workorderdocDetail) {
+    public ResponseEntity <workorderdoc> updateWorkOrderDoc(@PathVariable Integer ID, @RequestBody workorderdoc workorderdocDetail) {
         workorderdoc workorderdoc=workorderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        workorderdoc.
-        return ResponseEntity.ok(workorderdoc);
+        workorderdoc.setID(workorderdocDetail.getID());
+        workorderdoc updateWorkOrderDoc = workorderdocRepository.save(workorderdoc);
+        return ResponseEntity.ok(updateWorkOrderDoc);
     }
     @PutMapping("/workperformance/{ID}")
-    public ResponseEntity <workperformance> updateWorkPerformanceByID(@PathVariable Integer ID, @RequestBody workperformance workperformanceDetail) {
+    public ResponseEntity <workperformance> updateWorkPerformance(@PathVariable Integer ID, @RequestBody workperformance workperformanceDetail) {
         workperformance workperformance=workperformanceRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        workperformance.
-        return ResponseEntity.ok(workperformance);
+        workperformance.setID(workperformanceDetail.getID());
+        workperformance updateWorkPerformance = workperformanceRepository.save(workperformance);
+        return ResponseEntity.ok(updateWorkPerformance);
     }
     @PutMapping("/workstandard/{ID}")
-    public ResponseEntity <workstandard> updateWorkStandardByID(@PathVariable Integer ID, @RequestBody workstandard workstandardDetail) {
+    public ResponseEntity <workstandard> updateWorkStandard(@PathVariable Integer ID, @RequestBody workstandard workstandardDetail) {
         workstandard workstandard=workstandardRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
-        workstandard.
-        return ResponseEntity.ok(workstandard);
+        workstandard.setID(workstandardDetail.getID());
+        workstandard updateWorkStandard = workstandardRepository.save(workstandard);
+        return ResponseEntity.ok(updateWorkStandard);
     }
 
 }
