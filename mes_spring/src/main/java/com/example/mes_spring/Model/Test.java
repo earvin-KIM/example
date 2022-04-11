@@ -10,39 +10,40 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "weight_rec")
+@Table(name = "Test")
 @DynamicInsert  // insert ㅅㅣ null 인 필드 제외하기위해 사용
 @DynamicUpdate // update ㅅㅣ null 인 필드 제외하기위해 사용
-public class weight_rec {
+public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
 
-    @Column(name = "Unit")
-    private String Unit;
+    @Column(name = "unit")
+    private String unit;
 
-    @Column(name = "Number")
-    private String Number;
+    @Column(name = "number")
+    private String number;
 
-    @Column(name = "Weight")
-    private String Weight;
+    @Column(name = "weight")
+    private String weight;
 
-    @Column(name = "WriteDate")
-    private String WriteDate;
+    @Column(name = "writeDate")
+    private String writeDate;
+    public Test(){
 
+    }
 
     @Builder  // alt insert   맨위에거 누르기
-    public weight_rec(Integer ID, String Unit, String Weight, String WriteDate, String Number  ) {
+    public Test(Integer ID, String unit, String weight, String writeDate, String number  ) {
         this.ID = ID;
-        this.Unit = Unit;
-        this.Weight = Weight;
-        this.WriteDate = WriteDate;
-        this.Number = Number;
+        this.unit = unit;
+        this.weight = weight;
+        this.writeDate = writeDate;
+        this.number = number;
 
     }
 }

@@ -7,7 +7,9 @@ import java.lang.RuntimeException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -129,6 +131,8 @@ public class MesController {
     private WorkPerformanceRepository workperformanceRepository;
     @Autowired
     private WorkStandardRepository workstandardRepository;
+    @Autowired
+    private TestRepository testRepository;
     // GetMapping
     @GetMapping("/barcode")
     public List<barcode> getBarcode() {
@@ -406,6 +410,10 @@ public class MesController {
     @PostMapping("/errorcode")
     public errorcode createerrorcode(@RequestBody errorcode errorcode) {
         return errorcodeRepository.save(errorcode);
+    }
+    @PostMapping("/test")
+    public Test createerrorcode(@RequestBody Test test) {
+        return testRepository.save(test);
     }
     @PostMapping("/fileboard")
     public fileboard createfileboard(@RequestBody fileboard fileboard) {
@@ -1682,6 +1690,16 @@ public class MesController {
         rawmaterialtag rawmaterialtag=rawmaterialtagRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         rawmaterialtag.setID(rawmaterialtagDetail.getID());
+        rawmaterialtag.setMaterialCode(rawmaterialtagDetail.getMaterialCode());
+        rawmaterialtag.setPlaceOrderNumber(rawmaterialtagDetail.getPlaceOrderNumber());
+        rawmaterialtag.setPlaceQuantity(rawmaterialtagDetail.getPlaceQuantity());
+        rawmaterialtag.setRawMaterialLOT(rawmaterialtagDetail.getRawMaterialLOT());
+        rawmaterialtag.setState(rawmaterialtagDetail.getState());
+        rawmaterialtag.setTagNumber(rawmaterialtagDetail.getTagNumber());
+        rawmaterialtag.setQuantity(rawmaterialtagDetail.getQuantity());
+        rawmaterialtag.setWriteDate(rawmaterialtagDetail.getWriteDate());
+        rawmaterialtag.setWriter(rawmaterialtagDetail.getWriter());
+        rawmaterialtag.setRemainder(rawmaterialtagDetail.getRemainder());
         rawmaterialtag updateRawMaterialtag = rawmaterialtagRepository.save(rawmaterialtag);
         return ResponseEntity.ok(updateRawMaterialtag);
     }
@@ -1690,6 +1708,11 @@ public class MesController {
         rfid rfid=rfidRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         rfid.setID(rfidDetail.getID());
+        rfid.setDeviceNum(rfidDetail.getDeviceNum());
+        rfid.setPlace(rfidDetail.getPlace());
+        rfid.setPort(rfidDetail.getPort());
+        rfid.setRFID(rfidDetail.getRFID());
+        rfid.setWriteDate(rfidDetail.getWriteDate());
         rfid updateD = rfidRepository.save(rfid);
         return ResponseEntity.ok(updateD);
     }
@@ -1698,6 +1721,10 @@ public class MesController {
         rfid_barrel rfid_barrel=rfid_barrelRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         rfid_barrel.setID(rfid_barrelDetail.getID());
+        rfid_barrel.setBarrel(rfid_barrelDetail.getBarrel());
+        rfid_barrel.setRFID(rfid_barrelDetail.getRFID());
+        rfid_barrel.setWriteDate(rfid_barrelDetail.getWriteDate());
+        rfid_barrel.setWriter(rfid_barrelDetail.getWriter());
         rfid_barrel updateRFID_Barrel = rfid_barrelRepository.save(rfid_barrel);
         return ResponseEntity.ok(updateRFID_Barrel);
     }
@@ -1706,6 +1733,12 @@ public class MesController {
         setplus setplus=setplusRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         setplus.setID(setplusDetail.getID());
+        setplus.setSetProduct(setplusDetail.getSetProduct());
+        setplus.setSetQuantity(setplusDetail.getSetQuantity());
+        setplus.setProductCode(setplusDetail.getProductCode());
+        setplus.setQuantity(setplusDetail.getQuantity());
+        setplus.setWriteDate(setplusDetail.getWriteDate());
+        setplus.setWriter(setplusDetail.getWriter());
         setplus updateSetPlus = setplusRepository.save(setplus);
         return ResponseEntity.ok(updateSetPlus);
     }
@@ -1714,6 +1747,16 @@ public class MesController {
         shipinspection shipinspection=shipinspectionRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         shipinspection.setID(shipinspectionDetail.getID());
+        shipinspection.setComponents(shipinspectionDetail.getComponents());
+        shipinspection.setForeignBody(shipinspectionDetail.getForeignBody());
+        shipinspection.setInspectionTime(shipinspectionDetail.getInspectionTime());
+        shipinspection.setLable(shipinspectionDetail.getLable());
+        shipinspection.setPacking(shipinspectionDetail.getPacking());
+        shipinspection.setDescription(shipinspectionDetail.getDescription());
+        shipinspection.setSmell(shipinspectionDetail.getSmell());
+        shipinspection.setProductCode(shipinspectionDetail.getProductCode());
+        shipinspection.setWriteDate(shipinspectionDetail.getWriteDate());
+        shipinspection.setWriter(shipinspectionDetail.getWriter());
         shipinspection updateShipInspection = shipinspectionRepository.save(shipinspection);
         return ResponseEntity.ok(updateShipInspection);
     }
@@ -1722,6 +1765,23 @@ public class MesController {
         shiporderdoc shiporderdoc=shiporderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         shiporderdoc.setID(shiporderdocDetail.getID());
+        shiporderdoc.setBarCode(shiporderdocDetail.getBarCode());
+        shiporderdoc.setCarryover(shiporderdocDetail.getCarryover());
+        shiporderdoc.setClientCompany(shiporderdocDetail.getClientCompany());
+        shiporderdoc.setManager(shiporderdocDetail.getManager());
+        shiporderdoc.setOrderNumber(shiporderdocDetail.getOrderNumber());
+        shiporderdoc.setDescription(shiporderdocDetail.getDescription());
+        shiporderdoc.setRealRetention(shiporderdocDetail.getRealRetention());
+        shiporderdoc.setShipOrderDate(shiporderdocDetail.getShipOrderDate());
+        shiporderdoc.setProductCode(shiporderdocDetail.getProductCode());
+        shiporderdoc.setQuantity(shiporderdocDetail.getQuantity());
+        shiporderdoc.setShippingDate(shiporderdocDetail.getShippingDate());
+        shiporderdoc.setShipOrderDocNumber(shiporderdocDetail.getShipOrderDocNumber());
+        shiporderdoc.setWriteDate(shiporderdocDetail.getWriteDate());
+        shiporderdoc.setWriter(shiporderdocDetail.getWriter());
+        shiporderdoc.setShippingQuantity(shiporderdocDetail.getShippingQuantity());
+        shiporderdoc.setShipRemainder(shiporderdocDetail.getShipRemainder());
+        shiporderdoc.setState(shiporderdocDetail.getState());
         shiporderdoc updateShipOrderDoc = shiporderdocRepository.save(shiporderdoc);
         return ResponseEntity.ok(updateShipOrderDoc);
     }
@@ -1730,6 +1790,12 @@ public class MesController {
         sort sort=sortRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         sort.setID(sortDetail.getID());
+        sort.setBigSort(sortDetail.getBigSort());
+        sort.setSortCode(sortDetail.getSortCode());
+        sort.setSortName(sortDetail.getSortName());
+        sort.setDescription(sortDetail.getDescription());
+        sort.setWriteDate(sortDetail.getWriteDate());
+        sort.setWriter(sortDetail.getWriter());
         sort updateSort = sortRepository.save(sort);
         return ResponseEntity.ok(updateSort);
     }
@@ -1738,6 +1804,9 @@ public class MesController {
         temperature temperature=temperatureRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         temperature.setID(temperatureDetail.getID());
+        temperature.setChName(temperatureDetail.getChName());
+        temperature.setTemperature(temperatureDetail.getTemperature());
+        temperature.setWriteDate(temperatureDetail.getWriteDate());
         temperature updateTemperature = temperatureRepository.save(temperature);
         return ResponseEntity.ok(updateTemperature);
     }
@@ -1746,6 +1815,18 @@ public class MesController {
         temperaturecheck temperaturecheck=temperaturecheckRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         temperaturecheck.setID(temperaturecheckDetail.getID());
+        temperaturecheck.setChecker(temperaturecheckDetail.getChecker());
+        temperaturecheck.setCheckTime(temperaturecheckDetail.getCheckTime());
+        temperaturecheck.setImproving(temperaturecheckDetail.getImproving());
+        temperaturecheck.setManager(temperaturecheckDetail.getManager());
+        temperaturecheck.setMaterialFreezer(temperaturecheckDetail.getMaterialFreezer());
+        temperaturecheck.setDescription(temperaturecheckDetail.getDescription());
+        temperaturecheck.setProblem(temperaturecheckDetail.getProblem());
+        temperaturecheck.setRawFreezer(temperaturecheckDetail.getRawFreezer());
+        temperaturecheck.setRipeningRoom(temperaturecheckDetail.getRipeningRoom());
+        temperaturecheck.setThawRoom(temperaturecheckDetail.getThawRoom());
+        temperaturecheck.setWriteDate(temperaturecheckDetail.getWriteDate());
+        temperaturecheck.setWriter(temperaturecheckDetail.getWriter());
         temperaturecheck updateTemperaturecheck = temperaturecheckRepository.save(temperaturecheck);
         return ResponseEntity.ok(updateTemperaturecheck);
     }
@@ -1754,6 +1835,10 @@ public class MesController {
         unit unit=unitRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         unit.setID(unitDetail.getID());
+        unit.setUnit(unitDetail.getUnit());
+        unit.setDescription(unitDetail.getDescription());
+        unit.setWriteDate(unitDetail.getWriteDate());
+        unit.setWriter(unitDetail.getWriter());
         unit updateUnit = unitRepository.save(unit);
         return ResponseEntity.ok(updateUnit);
     }
@@ -1762,6 +1847,14 @@ public class MesController {
         usepage usepage=usepageRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         usepage.setID(usepageDetail.getID());
+        usepage.setBigMenu(usepageDetail.getBigMenu());
+        usepage.setLavorer(usepageDetail.getLavorer());
+        usepage.setManager(usepageDetail.getManager());
+        usepage.setMaster(usepageDetail.getMaster());
+        usepage.setPageName(usepageDetail.getPageName());
+        usepage.setSubMenu(usepageDetail.getSubMenu());
+        usepage.setWriteDate(usepageDetail.getWriteDate());
+        usepage.setWriter(usepageDetail.getWriter());
         usepage updateUsePage = usepageRepository.save(usepage);
         return ResponseEntity.ok(updateUsePage);
     }
@@ -1770,6 +1863,11 @@ public class MesController {
         warehouse warehouse=warehouseRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         warehouse.setID(warehouseDetail.getID());
+        warehouse.setWarehouseCode(warehouseDetail.getWarehouseCode());
+        warehouse.setWarehouseName(warehouseDetail.getWarehouseName());
+        warehouse.setDescription(warehouseDetail.getDescription());
+        warehouse.setWriteDate(warehouseDetail.getWriteDate());
+        warehouse.setWriter(warehouseDetail.getWriter());
         warehouse updateWareHouse = warehouseRepository.save(warehouse);
         return ResponseEntity.ok(updateWareHouse);
     }
@@ -1778,6 +1876,19 @@ public class MesController {
         wash wash=washRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         wash.setID(washDetail.getID());
+        wash.setChecker(washDetail.getChecker());
+        wash.setCleaningMethod(washDetail.getCleaningMethod());
+        wash.setImproving(washDetail.getImproving());
+        wash.setInputWater(washDetail.getInputWater());
+        wash.setManager(washDetail.getManager());
+        wash.setDescription(washDetail.getDescription());
+        wash.setProblem(washDetail.getProblem());
+        wash.setWashTime(washDetail.getWashTime());
+        wash.setProductCode(washDetail.getProductCode());
+        wash.setWater(washDetail.getWater());
+        wash.setWaterChange(washDetail.getWaterChange());
+        wash.setWriteDate(washDetail.getWriteDate());
+        wash.setWriter(washDetail.getWriter());
         wash updateWash = washRepository.save(wash);
         return ResponseEntity.ok(updateWash);
     }
@@ -1786,6 +1897,9 @@ public class MesController {
         weight weight=weightRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         weight.setID(weightDetail.getID());
+        weight.setUnit(weightDetail.getUnit());
+        weight.setWeight(weightDetail.getWeight());
+        weight.setWriteDate(weightDetail.getWriteDate());
         weight updateWeight = weightRepository.save(weight);
         return ResponseEntity.ok(updateWeight);
     }
@@ -1794,6 +1908,10 @@ public class MesController {
         weight_rec weight_rec=weight_recRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         weight_rec.setID(weight_recDetail.getID());
+        weight_rec.setUnit(weight_recDetail.getUnit());
+        weight_rec.setNumber(weight_recDetail.getNumber());
+        weight_rec.setWeight(weight_recDetail.getWeight());
+        weight_rec.setWriteDate(weight_recDetail.getWriteDate());
         weight_rec updateWeight_rec = weight_recRepository.save(weight_rec);
         return ResponseEntity.ok(updateWeight_rec);
     }
@@ -1801,7 +1919,24 @@ public class MesController {
     public ResponseEntity <worker> updateWorker(@PathVariable Integer ID, @RequestBody worker workerDetail) {
         worker worker=workerRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
+        worker.setBelong(workerDetail.getBelong());
         worker.setID(workerDetail.getID());
+        worker.setBlockedDate(workerDetail.getBlockedDate());
+        worker.setBlockedUser(workerDetail.getBlockedUser());
+        worker.setCountry(workerDetail.getCountry());
+        worker.setDepartment(workerDetail.getDepartment());
+        worker.setFont(workerDetail.getFont());
+        worker.setHiredate(workerDetail.getHiredate());
+        worker.setLoginBlock(workerDetail.getLoginBlock());
+        worker.setMESAutority(workerDetail.getMESAutority());
+        worker.setName(workerDetail.getName());
+        worker.setPassword(workerDetail.getPassword());
+        worker.setPosition(workerDetail.getPosition());
+        worker.setPWCDate(workerDetail.getPWCDate());
+        worker.setWriter(workerDetail.getWriter());
+        worker.setSkin(workerDetail.getSkin());
+        worker.setTask(workerDetail.getTask());
+        worker.setWorkerCode(workerDetail.getWorkerCode());
         worker updateWorker = workerRepository.save(worker);
         return ResponseEntity.ok(updateWorker);
     }
@@ -1810,6 +1945,25 @@ public class MesController {
         workorderdoc workorderdoc=workorderdocRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         workorderdoc.setID(workorderdocDetail.getID());
+        workorderdoc.setCheckDate(workorderdocDetail.getCheckDate());
+        workorderdoc.setConfirmMan(workorderdocDetail.getConfirmMan());
+        workorderdoc.setDueDate(workorderdocDetail.getDueDate());
+        workorderdoc.setMaterialCode(workorderdocDetail.getMaterialCode());
+        workorderdoc.setMTotalQuantity(workorderdocDetail.getMTotalQuantity());
+        workorderdoc.setDescription(workorderdocDetail.getDescription());
+        workorderdoc.setOrderNumber(workorderdocDetail.getOrderNumber());
+        workorderdoc.setPriority(workorderdocDetail.getPriority());
+        workorderdoc.setProductCode(workorderdocDetail.getProductCode());
+        workorderdoc.setProcessChartName1(workorderdocDetail.getProcessChartName1());
+        workorderdoc.setProcessChartName2(workorderdocDetail.getProcessChartName2());
+        workorderdoc.setPTotalQuantity(workorderdocDetail.getPTotalQuantity());
+        workorderdoc.setWriteDate(workorderdocDetail.getWriteDate());
+        workorderdoc.setWriter(workorderdocDetail.getWriter());
+        workorderdoc.setRemainder(workorderdocDetail.getRemainder());
+        workorderdoc.setShipRemainder(workorderdocDetail.getShipRemainder());
+        workorderdoc.setState(workorderdocDetail.getState());
+        workorderdoc.setWorkOrderDocNumber(workorderdocDetail.getWorkOrderDocNumber());
+        workorderdoc.setWorkload(workorderdocDetail.getWorkload());
         workorderdoc updateWorkOrderDoc = workorderdocRepository.save(workorderdoc);
         return ResponseEntity.ok(updateWorkOrderDoc);
     }
@@ -1818,6 +1972,12 @@ public class MesController {
         workperformance workperformance=workperformanceRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         workperformance.setID(workperformanceDetail.getID());
+        workperformance.setLavorer(workperformanceDetail.getLavorer());
+        workperformance.setProcessCode(workperformanceDetail.getProcessCode());
+        workperformance.setWorkOrderDocNumber(workperformanceDetail.getWorkOrderDocNumber());
+        workperformance.setDescription(workperformanceDetail.getDescription());
+        workperformance.setWriteDate(workperformanceDetail.getWriteDate());
+        workperformance.setWriter(workperformanceDetail.getWriter());
         workperformance updateWorkPerformance = workperformanceRepository.save(workperformance);
         return ResponseEntity.ok(updateWorkPerformance);
     }
@@ -1826,8 +1986,539 @@ public class MesController {
         workstandard workstandard=workstandardRepository.findById(ID)
                 .orElseThrow(()->new RuntimeException("{ID}"));
         workstandard.setID(workstandardDetail.getID());
+        workstandard.setDocument(workstandardDetail.getDocument());
+        workstandard.setPrecautions(workstandardDetail.getPrecautions());
+        workstandard.setProcessName(workstandardDetail.getProcessName());
+        workstandard.setTestCycle(workstandardDetail.getTestCycle());
+        workstandard.setTreatment(workstandardDetail.getTreatment());
+        workstandard.setWorkCode(workstandardDetail.getWorkCode());
+        workstandard.setWorkContents(workstandardDetail.getWorkContents());
+        workstandard.setWorkName(workstandardDetail.getWorkName());
+        workstandard.setWriteDate(workstandardDetail.getWriteDate());
+        workstandard.setWriter(workstandardDetail.getWriter());
         workstandard updateWorkStandard = workstandardRepository.save(workstandard);
         return ResponseEntity.ok(updateWorkStandard);
     }
-
+    @DeleteMapping("/barcode/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteBarcode(@PathVariable Integer ID) {
+        barcode barcode=barcodeRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        barcodeRepository.delete(barcode);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/bom/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteBom(@PathVariable Integer ID) {
+        bom bom=bomRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        bomRepository.delete(bom);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/client/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteClient(@PathVariable Integer ID) {
+        client client=clientRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        clientRepository.delete(client);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/customer/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteCustomer(@PathVariable Integer ID) {
+        customer customer=customerRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        customerRepository.delete(customer);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/department/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteDepartment(@PathVariable Integer ID) {
+        department department=departmentRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        departmentRepository.delete(department);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/equipment/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteEquipment(@PathVariable Integer ID) {
+        equipment equipment=equipmentRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        equipmentRepository.delete(equipment);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/equipmentchecklist/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteEquipmentCheckList(@PathVariable Integer ID) {
+        equipmentchecklist equipmentchecklist=equipmentchecklistRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        equipmentchecklistRepository.delete(equipmentchecklist);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/equipmentcheck/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteEquipmentCheck(@PathVariable Integer ID) {
+        equipmentcheck equipmentcheck=equipmentcheckRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        equipmentcheckRepository.delete(equipmentcheck);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/equipmentinspection/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteEquipmentInspection(@PathVariable Integer ID) {
+        equipmentinspection equipmentinspection=equipmentinspectionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        equipmentinspectionRepository.delete(equipmentinspection);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/equipmentprevention/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteEquipmentPrevention(@PathVariable Integer ID) {
+        equipmentprevention equipmentprevention=equipmentpreventionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        equipmentpreventionRepository.delete(equipmentprevention);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/errorcode/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteErrorCode(@PathVariable Integer ID) {
+        errorcode errorcode=errorcodeRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        errorcodeRepository.delete(errorcode);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/fileboard/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteFileBoard(@PathVariable Integer ID) {
+        fileboard fileboard=fileboardRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        fileboardRepository.delete(fileboard);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/filter/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteFilter(@PathVariable Integer ID) {
+        filter filter=filterRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        filterRepository.delete(filter);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/heating/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteHeating(@PathVariable Integer ID) {
+        heating heating=heatingRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        heatingRepository.delete(heating);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/inventory/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteInventory(@PathVariable Integer ID) {
+        inventory inventory=inventoryRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        inventoryRepository.delete(inventory);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/lavorer/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteLavoer(@PathVariable Integer ID) {
+        lavorer lavorer=lavorerRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        lavorerRepository.delete(lavorer);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/loginlog/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteLoginLog(@PathVariable Integer ID) {
+        loginlog loginlog=loginlogRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        loginlogRepository.delete(loginlog);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/materialmove/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteMaterialMove(@PathVariable Integer ID) {
+        materialmove materialmove=materialmoveRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        materialmoveRepository.delete(materialmove);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/noticeboard/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteNoticeBoard(@PathVariable Integer ID) {
+        noticeboard noticeboard=noticeboardRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        noticeboardRepository.delete(noticeboard);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/orderdoc/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteOrderDoc(@PathVariable Integer ID) {
+        orderdoc orderdoc=orderdocRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        orderdocRepository.delete(orderdoc);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/orders/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteOrders(@PathVariable Integer ID) {
+        orders orders=ordersRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        ordersRepository.delete(orders);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/ordersheet/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteOrderSheet(@PathVariable Integer ID) {
+        ordersheet ordersheet=ordersheetRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        ordersheetRepository.delete(ordersheet);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/placeorderdoc/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deletePlaceOrderDoc(@PathVariable Integer ID) {
+        placeorderdoc placeorderdoc=placeorderdocRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        placeorderdocRepository.delete(placeorderdoc);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/placeorders/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deletePlaceOrders(@PathVariable Integer ID) {
+        placeorders placeorders=placeordersRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        placeordersRepository.delete(placeorders);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/position/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deletePosition(@PathVariable Integer ID) {
+        position position=positionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        positionRepository.delete(position);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/process/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProcess(@PathVariable Integer ID) {
+        process process=processRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        processRepository.delete(process);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/processchart/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProcessChart(@PathVariable Integer ID) {
+        processchart processchart=processchartRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        processchartRepository.delete(processchart);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/processcode/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProcessCode(@PathVariable Integer ID) {
+        processcode processcode=processcodeRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        processcodeRepository.delete(processcode);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/product/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProduct(@PathVariable Integer ID) {
+        product product=productRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        productRepository.delete(product);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/productcorrect/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProductCorrect(@PathVariable Integer ID) {
+        productcorrect productcorrect=productcorrectRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        productcorrectRepository.delete(productcorrect);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/producthistory/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProductHistory(@PathVariable Integer ID) {
+        producthistory producthistory=producthistoryRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        producthistoryRepository.delete(producthistory);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/productmove/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProductMove(@PathVariable Integer ID) {
+        productmove productmove=productmoveRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        productmoveRepository.delete(productmove);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/productreturn/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteProductReturn(@PathVariable Integer ID) {
+        productreturn productreturn=productreturnRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        productreturnRepository.delete(productreturn);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/qainspection/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteQAInspection(@PathVariable Integer ID) {
+        qainspection qainspection=qainspectionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        qainspectionRepository.delete(qainspection);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/qaproduct/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteQAproduct(@PathVariable Integer ID) {
+        qaproduct qaproduct=qaproductRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        qaproductRepository.delete(qaproduct);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rawhistory/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRawHistory(@PathVariable Integer ID) {
+        rawhistory rawhistory=rawhistoryRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rawhistoryRepository.delete(rawhistory);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rawinspection/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRawInspection(@PathVariable Integer ID) {
+        rawinspection rawinspection=rawinspectionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rawinspectionRepository.delete(rawinspection);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rawmaterial/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRawMaterial(@PathVariable Integer ID) {
+        rawmaterial rawmaterial=rawmaterialRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rawmaterialRepository.delete(rawmaterial);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rawmaterialmaster/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRawmaterialMaster(@PathVariable Integer ID) {
+        rawmaterialmaster rawmaterialmaster=rawmaterialmasterRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rawmaterialmasterRepository.delete(rawmaterialmaster);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rawmaterialtag/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRawMaterialtag(@PathVariable Integer ID) {
+        rawmaterialtag rawmaterialtag=rawmaterialtagRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rawmaterialtagRepository.delete(rawmaterialtag);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rfid/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteD(@PathVariable Integer ID) {
+        rfid rfid=rfidRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rfidRepository.delete(rfid);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/rfid_barrel/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteRFID_Barrel(@PathVariable Integer ID) {
+        rfid_barrel rfid_barrel=rfid_barrelRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        rfid_barrelRepository.delete(rfid_barrel);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/setplus/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteSetPlus(@PathVariable Integer ID) {
+        setplus setplus=setplusRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        setplusRepository.delete(setplus);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/shipinspection/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteShipInspection(@PathVariable Integer ID) {
+        shipinspection shipinspection=shipinspectionRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        shipinspectionRepository.delete(shipinspection);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/shiporderdoc/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteShipOrderDoc(@PathVariable Integer ID) {
+        shiporderdoc shiporderdoc=shiporderdocRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        shiporderdocRepository.delete(shiporderdoc);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/sort/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteSort(@PathVariable Integer ID) {
+        sort sort=sortRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        sortRepository.delete(sort);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/temperature/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteTemperature(@PathVariable Integer ID) {
+        temperature temperature=temperatureRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        temperatureRepository.delete(temperature);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/temperaturecheck/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteTemperaturecheck(@PathVariable Integer ID) {
+        temperaturecheck temperaturecheck=temperaturecheckRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        temperaturecheckRepository.delete(temperaturecheck);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/unit/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteUnit(@PathVariable Integer ID) {
+        unit unit=unitRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        unitRepository.delete(unit);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/usepage/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteUsePage(@PathVariable Integer ID) {
+        usepage usepage=usepageRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        usepageRepository.delete(usepage);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/warehouse/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWareHouse(@PathVariable Integer ID) {
+        warehouse warehouse=warehouseRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        warehouseRepository.delete(warehouse);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/wash/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWash(@PathVariable Integer ID) {
+        wash wash=washRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        washRepository.delete(wash);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/weight/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWeight(@PathVariable Integer ID) {
+        weight weight=weightRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        weightRepository.delete(weight);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/weight_rec/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWeight_rec(@PathVariable Integer ID) {
+        weight_rec weight_rec=weight_recRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        weight_recRepository.delete(weight_rec);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/worker/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWorker(@PathVariable Integer ID) {
+        worker worker=workerRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        workerRepository.delete(worker);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/workorderdoc/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWorkOrderDoc(@PathVariable Integer ID) {
+        workorderdoc workorderdoc=workorderdocRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        workorderdocRepository.delete(workorderdoc);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/workperformance/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWorkPerformance(@PathVariable Integer ID) {
+        workperformance workperformance=workperformanceRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        workperformanceRepository.delete(workperformance);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+    @DeleteMapping("/workstandard/{ID}")
+    public ResponseEntity <Map<String,Boolean>> deleteWorkStandard(@PathVariable Integer ID) {
+        workstandard workstandard=workstandardRepository.findById(ID)
+                .orElseThrow(()->new RuntimeException("{ID}"));
+        workstandardRepository.delete(workstandard);
+        Map<String, Boolean> response=new HashMap<>();
+        response.put("deleted",Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
 }
