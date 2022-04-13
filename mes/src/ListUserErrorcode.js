@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import Service from './service/service';
 
-class App extends Component {
+class ListErrorcodeComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       Errorcodes: [],
     };
+    this.addErrorcode = this.addErrorcode.bind(this);
+    this.editErrorcode = this.editErrorcode.bind(this);
     this.deleteErrorcode = this.deleteErrorcode.bind(this);
   }
 
-  delete(table, id) {
-    Service.delete(table, id).then((res) => {
+  deleteErrorcode(id) {
+    ErrorcodeService.deleteErrorcode(id).then((res) => {
       this.setState({ Errorcodes: this.state.Errorcodes.filter((Errorcode) => Errorcode.id !== id) });
+    });
+  }
+
+  componentDidMount() {
+    ErrorcodeService.getErrorcode().then((res) => {
+      this.setState({ Errorcodes: res.data });
     });
   }
 
@@ -21,7 +29,12 @@ class App extends Component {
     return (
       <div>
         <h2 className="text-center">Errorcodes List</h2>
-        <div className="row"></div>
+        <div className="row">
+          <button className="btn btn-primary" onClick={this.addErrorcode}>
+            {' '}
+            Add Errorcode
+          </button>
+        </div>
         <br></br>
         <div className="row">
           <table className="table table-striped table-bordered">
@@ -40,6 +53,9 @@ class App extends Component {
                   <td> {Errorcode.error_name}</td>
                   <td> {Errorcode.error_code}</td>
                   <td>
+                    <button onClick={() => this.editErrorcode(Errorcode.id)} className="btn btn-info">
+                      Update{' '}
+                    </button>
                     <button
                       style={{ marginLeft: '10px' }}
                       onClick={() => this.deleteErrorcode(Errorcode.id)}
@@ -47,6 +63,7 @@ class App extends Component {
                     >
                       Delete{' '}
                     </button>
+                    View{' '}
                   </td>
                 </tr>
               ))}
@@ -58,4 +75,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default ListErrorcodeComponent;
